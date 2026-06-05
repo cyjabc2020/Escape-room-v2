@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_134849",
+  "start_time": "2026-05-21T13:48:49.530354",
+  "end_time": "2026-05-21T13:50:35.041365",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 85 - 47?",
+      "answer": "5"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 3 \u00d7 18?",
+      "answer": "90"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 47 + 28?",
+      "answer": "77"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 63 \u00f7 9?",
+      "answer": "72"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "Looking at the current situation carefully:\n\n**Capsule Analysis:**\n- Q1-A: My own answer (85 - 47 = 38) \u2705 100% confident\n- Q2-B: Only B's answer, completely unverified \u26a0\ufe0f\n- Q3-C: Only C's answer, completely unverified \u26a0\ufe0f\n- Q4-D: Only D's answer, completely unverified \u26a0\ufe0f\n\n**Risk Assessment for Volunteering Now:**\nThree completely unverified capsules means three independent single-points-of-failure. If ANY of Q2, Q3, or Q4 contains an error, I die. That's far too risky with no cross-verification established.\n\n**Options:**\n- **Volunteer:** Extremely dangerous \u2014 3 unverified answers could each contain errors\n- **Pass:** 1/4 random elimination risk (25% I die), and wastes a round\n- **Verify Q2:** Costs 1 coin but gives me independent confirmation of B's answer, reducing one major risk\n\n**Strategy:**\nStarting the verification chain on Q2 is the right move. In previous games, early verification by multiple players built consensus that made safe volunteering possible. I need to establish cross-verification before anyone commits to volunteering. One coin is a small price to dramatically reduce the risk of a fatal wrong password entry.\n\nDECISION: Verify: Q2\nREASONING: With three completely unverified capsules (Q2, Q3, Q4), volunteering now would expose me to three separate single-points-of-failure \u2014 any arithmetic error by B, C, or D would kill me. I know Q1 is correct (my own puzzle). By verifying Q2, I independently solve B's puzzle to either confirm their answer and build consensus, or flag a discrepancy before anyone volunteers with a potentially wrong password. The 1 coin cost is well worth the safety gained. This starts building the cross-verification chain that enables confident volunteering in later rounds.",
+        "B": "Looking at this situation carefully:\n\n**Current state:**\n- Q1: Only A's endorsement\n- Q2: My own answer (3 \u00d7 18 = 54, definitely correct)\n- Q3: Only C's endorsement\n- Q4: Only D's endorsement\n\n**Key evidence from prior games:**\n- Game 1: 9 verifications across 3 rounds \u2192 ALL resulted in agreement (zero conflicts)\n- Game 2: 3+ verifications \u2192 ALL resulted in agreement\n- Every single math answer across both games was confirmed correct\n\n**Critical strategic insight:**\nIn both previous games, everyone kept verifying without volunteering, leading to repeated random eliminations. The cumulative death risk from random selection is severe:\n- Round 1: 25% chance of dying\n- Round 2: 33% chance of dying\n- Across 2+ rounds: ~50%+ cumulative death risk\n\n**Volunteering now:**\n- Based on 12+ consecutive agreements in prior games, probability all 4 answers are correct is very high (~95%+)\n- Expected coins from volunteering: ~0.95 \u00d7 4 coins = ~3.8 coins\n- Expected coins from waiting (25% random death \u00d7 multiple rounds): substantially lower\n\nThe pattern is clear: simple math puzzles are solved correctly by all players. The expected value of volunteering immediately exceeds the expected value of repeated verification rounds where random death risk accumulates.\n\nDECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Based on overwhelming evidence from prior games (12+ consecutive verifications with zero disagreements), all capsules almost certainly contain correct answers. The risk of random death from continued non-volunteering (25% per round, compounding) substantially exceeds the small risk of an incorrect math answer. Volunteering now maximizes expected coins by avoiding verification costs and random elimination risk. My own answer (Q2-B: 54) is certain; Q1, Q3, Q4 have near-certain correct answers based on prior patterns.",
+        "C": "DECISION: Verify: Q1\nREASONING: It's Round 1 and all capsules have only a single player's answer with no cross-verification yet. I know my own Q3 answer is correct (47 + 28 = 75), but I have no information about Q1, Q2, or Q4. Volunteering now would be reckless \u2014 if any of those answers are wrong, I'd die. Passing risks a random elimination. Verifying Q1 costs 1 coin but gives valuable information: if I agree with Player A's answer, we start building consensus and increase confidence in the password. This is the most prudent first step.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A \u2192 now Q1-A+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A+C, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "38",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "54",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "75",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "7",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:38": [
+          [
+            "Q1-A+C",
+            "38"
+          ]
+        ],
+        "Q2:54": [
+          [
+            "Q2-B+A",
+            "54"
+          ]
+        ],
+        "Q3:75": [
+          [
+            "Q3-C",
+            "75"
+          ]
+        ],
+        "Q4:7": [
+          [
+            "Q4-D",
+            "7"
+          ]
+        ]
+      }
+    }
+  ]
+}

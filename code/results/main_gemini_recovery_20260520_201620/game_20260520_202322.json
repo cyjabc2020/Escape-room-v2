@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_202322",
+  "start_time": "2026-05-20T20:23:22.781217",
+  "end_time": "2026-05-20T20:23:55.897362",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 77 - 38?",
+      "answer": "70"
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 36 \u00f7 4?",
+      "answer": "7"
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 9 \u00d7 7?",
+      "answer": "77"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 100 - 67?",
+      "answer": "37"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: As demonstrated in the previous game, the puzzles are straightforward math questions, making it highly likely that the initial answers provided by all agents are correct. Volunteering in Round 1 avoids the 25% risk of dying to a random elimination if no one else volunteers, while simultaneously maximizing my final coin payout since I spend nothing on verifications. Taking this immediate, calculated risk is the optimal strategy for both survival and reward.",
+        "B": "DECISION: Verify: Q1\nREASONING: Since this is the first round, there is no consensus on the answers for the other puzzles yet. Volunteering blindly is extremely risky, as any mistake made by another player would result in my immediate death. Spending 1 coin to verify Q1 helps build the necessary consensus to ensure our final password is correct. While there is a 25% risk of random elimination if no one volunteers, the risk of certain death from entering an unverified password is much higher.",
+        "C": "DECISION: Verify: Q4\nREASONING: In past games, volunteering in Round 1 with unverified answers proved highly dangerous since some initial answers can be incorrect. Verifying a puzzle builds consensus and significantly reduces the risk of submitting a wrong password. While verifying carries a 25% chance of random elimination if no one volunteers, it is statistically much safer than the likely death of guessing an unverified password. I will spend one coin to verify Question 4 to help the team safely escape.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "39",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "9",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "63",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "33",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:39": [
+          [
+            "Q1-A+B",
+            "39"
+          ]
+        ],
+        "Q2:9": [
+          [
+            "Q2-B",
+            "9"
+          ]
+        ],
+        "Q3:63": [
+          [
+            "Q3-C",
+            "63"
+          ]
+        ],
+        "Q4:33": [
+          [
+            "Q4-D+C",
+            "33"
+          ]
+        ]
+      }
+    }
+  ]
+}

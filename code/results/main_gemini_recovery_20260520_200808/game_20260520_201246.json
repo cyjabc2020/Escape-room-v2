@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_201246",
+  "start_time": "2026-05-20T20:12:46.671108",
+  "end_time": "2026-05-20T20:13:26.391106",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 5 \u00d7 14?",
+      "answer": "88"
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 88 \u00f7 8?",
+      "answer": "24"
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 35 \u00f7 5?",
+      "answer": "10"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 4 \u00d7 15?",
+      "answer": "39"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: The puzzles are simple math questions, meaning the initial answers provided by each player are almost certainly correct. Volunteering immediately ensures that we all escape, completely avoids the risk of a random elimination if everyone passes, and allows me to keep my maximum 4 coins.",
+        "B": "DECISION: Verify: Q1\nREASONING: It is Round 1 and none of the capsules have been verified yet. Volunteering blindly is too risky because an incorrect answer means immediate death. By verifying Q1, I can help build consensus and ensure we have reliable answers before anyone risks entering the password.",
+        "C": "DECISION: Verify: Q1\nREASONING: It is Round 1 and there is no consensus on any of the answers yet. Volunteering blindly is extremely risky because a single incorrect answer means death. By verifying Q1, I can start confirming the accuracy of the other players' answers and safely build towards the correct password.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A+B \u2192 now Q1-A+B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B+C, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "70",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "11",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "7",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "60",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:70": [
+          [
+            "Q1-A+B+C",
+            "70"
+          ]
+        ],
+        "Q2:11": [
+          [
+            "Q2-B",
+            "11"
+          ]
+        ],
+        "Q3:7": [
+          [
+            "Q3-C",
+            "7"
+          ]
+        ],
+        "Q4:60": [
+          [
+            "Q4-D",
+            "60"
+          ]
+        ]
+      }
+    }
+  ]
+}

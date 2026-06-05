@@ -1,0 +1,363 @@
+{
+  "game_id": "20260520_202625",
+  "start_time": "2026-05-20T20:26:25.989944",
+  "end_time": "2026-05-20T20:28:41.172551",
+  "total_rounds": 4,
+  "survivors": [],
+  "winner": null,
+  "game_outcome": "ALL_DEAD",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 97 - 48?",
+      "answer": null
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 49 + 33?",
+      "answer": null
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 8 \u00d7 11?",
+      "answer": null
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 47 + 28?",
+      "answer": null
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Pass",
+        "B": "Verify: Q1",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Pass\nREASONING: It's Round 1 and each question has only a single capsule with a single endorsement. There's no consensus built yet on any question. I know my own answer (Q1 = 49), but I have no information about whether Q2-B, Q3-C, or Q4-D are correct. Volunteering now would be risky since I'd be guessing on 3 out of 4 answers. I'd rather wait for others to verify answers and build consensus before either volunteering or spending coins to verify. If others also pass, there's a risk of a random death, but it's still early enough that someone may act or we can build consensus in subsequent rounds.",
+        "B": "DECISION: Verify: Q1\nREASONING: It's Round 1 and every capsule has only a single contributor with no verification. I'm confident in my own answer (49 + 33 = 82), but I have no information about the correctness of Q1, Q3, or Q4. Before anyone volunteers, we need to build consensus. I'll spend 1 coin to verify Q1 and either confirm Player A's answer or flag a disagreement. This helps reduce risk for whoever eventually volunteers.",
+        "C": "DECISION: Verify: Q1\nREASONING: It's Round 1 and every capsule has only a single player's endorsement - there's no consensus on any question yet. My own answer (Q3 = 88) I'm confident about, but I have no way to verify if Players A, B, or D solved their puzzles correctly. Volunteering now would mean gambling my life on three unverified answers. I'll spend 1 coin to verify Q1 and start building consensus. If other players do the same for other questions, we can quickly reach a point where someone can safely volunteer with high confidence. The puzzles are likely simple math, but it only takes one mistake to be fatal.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "A"
+      ],
+      "death_reasons": {
+        "A": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A+B \u2192 now Q1-A+B+C (-1 coin: 4\u21923)\n\n\u26a0\ufe0f No one volunteered! A was randomly eliminated (coins lost: 4 \u2192 0).\nRemaining: ['B', 'C', 'D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": false,
+          "answer": "49",
+          "coins": 0
+        },
+        "B": {
+          "alive": true,
+          "answer": "82",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "88",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "wrong answer",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:49": [
+          [
+            "Q1-A+B+C",
+            "49"
+          ]
+        ],
+        "Q2:82": [
+          [
+            "Q2-B",
+            "82"
+          ]
+        ],
+        "Q3:88": [
+          [
+            "Q3-C",
+            "88"
+          ]
+        ],
+        "Q4:75": [
+          [
+            "Q4-D",
+            "wrong answer"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "decisions": {
+        "B": "Verify: Q3",
+        "C": "Volunteer: Q1-A+B+C, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "B": "DECISION: Verify: Q3\nREASONING: Let me assess the situation. Q1 is well-verified (A+B+C, 3 people agree). Q2 is my own answer (49+33=82) and I'm confident. Q3 and Q4 are single-person capsules with no verification. Before I risk volunteering, I need to reduce uncertainty. I'll spend 1 coin to verify Q3. This way, next round I'll have high confidence in Q1, Q2, and Q3, and can then either verify Q4 or volunteer with reasonable confidence. These are simple arithmetic puzzles so error probability is low, but the penalty for being wrong is death - worth spending 1 coin to check. The risk of another random elimination this round is concerning, but having verified answers is crucial before volunteering.",
+        "C": "DECISION: Volunteer: Q1-A+B+C, Q2-B, Q3-C, Q4-D\nREASONING: We already lost Player A to random elimination. If no one volunteers again, we lose another player randomly \u2014 that's a 1/3 chance of dying (33%). Let me weigh that against volunteering:\n\n- **Q1-A+B+C**: Three independent endorsements. I personally verified this and agreed. Extremely confident.\n- **Q3-C**: This is MY answer (8 \u00d7 11 = 88). I'm 100% confident.\n- **Q2-B**: Single endorsement, but these are simple arithmetic puzzles. B likely solved it correctly.\n- **Q4-D**: Same logic \u2014 simple math, D likely got it right.\n\nThe risk of at least one of Q2-B or Q4-D being wrong is probably ~10% at most for simple multiplication problems. Meanwhile, passing gives me a 33% chance of random death, and we'd enter Round 3 with only 2 players and even less ability to verify. The math favors volunteering now rather than continuing to bleed players to random elimination. We're running out of time and people \u2014 someone has to step up.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "C"
+      ],
+      "death_reasons": {
+        "C": "wrong_password"
+      },
+      "defaulted_to_pass": {
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q3-C \u2192 now Q3-C+B (-1 coin: 3\u21922)\n\n\u274c C entered WRONG password using capsules: Q1-A+B+C, Q2-B, Q3-C+B, Q4-D\nC dies! \ud83d\udc80\nRemaining: ['B', 'D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": false,
+          "answer": "49",
+          "coins": 0
+        },
+        "B": {
+          "alive": true,
+          "answer": "82",
+          "coins": 2
+        },
+        "C": {
+          "alive": false,
+          "answer": "88",
+          "coins": 0
+        },
+        "D": {
+          "alive": true,
+          "answer": "wrong answer",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:49": [
+          [
+            "Q1-A+B+C",
+            "49"
+          ]
+        ],
+        "Q2:82": [
+          [
+            "Q2-B",
+            "82"
+          ]
+        ],
+        "Q3:88": [
+          [
+            "Q3-C+B",
+            "88"
+          ]
+        ],
+        "Q4:75": [
+          [
+            "Q4-D",
+            "wrong answer"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "decisions": {
+        "B": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "B": "DECISION: Verify: Q4\nREASONING: This is a critical deduction moment. C just died entering the password using capsules Q1-A+B+C, Q2-B, Q3-C+B, Q4-D \u2014 and it was WRONG. I need to figure out which capsule had the wrong answer.\n\n- Q1-A+B+C: Three independent players agreed. Almost certainly correct.\n- Q2-B: My own answer (49+33=82). I'm confident this is correct.\n- Q3-C+B: I independently verified and agreed with C. Very likely correct.\n- Q4-D: Only D contributed, and NO ONE has ever verified it. This is by far the most likely source of error.\n\nIf I volunteer now with the same capsules, I'd die too. I can't volunteer with a different Q4 answer because no alternative capsule exists yet. So I MUST verify Q4 to either confirm D's answer (which would mean the error is elsewhere \u2014 very surprising) or create a corrected Q4-B capsule that I can use to volunteer next round.\n\nYes, this costs 1 coin (leaving me at 1), and yes, there's a risk of random elimination if neither of us volunteers this round. But volunteering with a known-wrong combination is certain death, and passing without new information is just wasting a round. Verifying Q4 is the only move that actually advances us toward escaping.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "B",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "B"
+      ],
+      "death_reasons": {
+        "B": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "B": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \ud83c\udd95 B created new capsule Q4-B (conflicting answer) (-1 coin: 2\u21921)\n\n\u26a0\ufe0f No one volunteered! B was randomly eliminated (coins lost: 1 \u2192 0).\nRemaining: ['D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": false,
+          "answer": "49",
+          "coins": 0
+        },
+        "B": {
+          "alive": false,
+          "answer": "82",
+          "coins": 0
+        },
+        "C": {
+          "alive": false,
+          "answer": "88",
+          "coins": 0
+        },
+        "D": {
+          "alive": true,
+          "answer": "wrong answer",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:49": [
+          [
+            "Q1-A+B+C",
+            "49"
+          ]
+        ],
+        "Q2:82": [
+          [
+            "Q2-B",
+            "82"
+          ]
+        ],
+        "Q3:88": [
+          [
+            "Q3-C+B",
+            "88"
+          ]
+        ],
+        "Q4:75": [
+          [
+            "Q4-D",
+            "wrong answer"
+          ],
+          [
+            "Q4-B",
+            "75"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 4,
+      "decisions": {
+        "D": "Pass"
+      },
+      "reasoning": {
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "D"
+      ],
+      "death_reasons": {
+        "D": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\n\u26a0\ufe0f No one volunteered! D was randomly eliminated (coins lost: 4 \u2192 0).\nRemaining: []",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": false,
+          "answer": "49",
+          "coins": 0
+        },
+        "B": {
+          "alive": false,
+          "answer": "82",
+          "coins": 0
+        },
+        "C": {
+          "alive": false,
+          "answer": "88",
+          "coins": 0
+        },
+        "D": {
+          "alive": false,
+          "answer": "wrong answer",
+          "coins": 0
+        }
+      },
+      "capsule_status": {
+        "Q1:49": [
+          [
+            "Q1-A+B+C",
+            "49"
+          ]
+        ],
+        "Q2:82": [
+          [
+            "Q2-B",
+            "82"
+          ]
+        ],
+        "Q3:88": [
+          [
+            "Q3-C+B",
+            "88"
+          ]
+        ],
+        "Q4:75": [
+          [
+            "Q4-D",
+            "wrong answer"
+          ],
+          [
+            "Q4-B",
+            "75"
+          ]
+        ]
+      }
+    }
+  ]
+}

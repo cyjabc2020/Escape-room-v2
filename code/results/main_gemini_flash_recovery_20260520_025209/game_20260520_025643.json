@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_025643",
+  "start_time": "2026-05-20T02:56:43.284076",
+  "end_time": "2026-05-20T02:57:00.581158",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-2.5-flash",
+      "puzzle": "What is 16 + 67?",
+      "answer": "48"
+    },
+    "B": {
+      "model": "gemini:gemini-2.5-flash",
+      "puzzle": "What is 24 + 63?",
+      "answer": "34"
+    },
+    "C": {
+      "model": "gemini:gemini-2.5-flash",
+      "puzzle": "What is 77 - 38?",
+      "answer": "6"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 90 - 42?",
+      "answer": "80"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Based on the consistent positive outcomes of the previous seven games (Games 3 through 9), volunteering in Round 1 with the initial capsules (Q1-A, Q2-B, Q3-C, Q4-D) has proven to be the most effective strategy for a successful escape and retaining my coins. This contrasts with earlier games (1 and 2) where attempting to verify first led to my random elimination because no one volunteered. The puzzles are consistently simple arithmetic, which increases the likelihood that all players' initial answers are correct. This strategy mitigates the high risk of random elimination and maximizes the chance of collective success. I am confident in my own answer (16 + 67 = 83).",
+        "B": "DECISION: Verify: Q1\nREASONING: I know my own answer for Q2 (my puzzle) is correct. However, I have no information about the other puzzle answers (Q1, Q3, Q4). Volunteering at this stage is too risky, and passing carries a 25% chance of random elimination without contributing to a solution. Verifying Q1 will either confirm Player A's answer, building consensus, or reveal a conflict, which is vital information for later rounds. This is the most strategic first step to gather information and build trust, as seen in successful previous games where early Q1 verification led to a swift, collective escape.",
+        "C": "DECISION: Verify: Q1\nREASONING: As Player C, I know my own answer (Q3: 77 - 38 = 39) is correct. However, there is no verification or consensus on Q1, Q2, or Q4. Volunteering now would be extremely risky due to the high uncertainty of those single-submission answers. Verifying Q1 will cost 1 coin but will allow me to independently solve the puzzle, compare my answer to Q1-A, and either confirm it or create a new capsule. This crucial step will reduce uncertainty for the team and build towards a safer volunteer choice in future rounds. This strategy has consistently led to a successful escape in prior identical games where Player A has volunteered with Q1-A+B+C and the single submissions for Q2, Q3, and Q4.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A+B \u2192 now Q1-A+B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B+C, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "83",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "87",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "39",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "48",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:83": [
+          [
+            "Q1-A+B+C",
+            "83"
+          ]
+        ],
+        "Q2:87": [
+          [
+            "Q2-B",
+            "87"
+          ]
+        ],
+        "Q3:39": [
+          [
+            "Q3-C",
+            "39"
+          ]
+        ],
+        "Q4:48": [
+          [
+            "Q4-D",
+            "48"
+          ]
+        ]
+      }
+    }
+  ]
+}

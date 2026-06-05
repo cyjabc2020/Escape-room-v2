@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_143213",
+  "start_time": "2026-05-21T14:32:13.148191",
+  "end_time": "2026-05-21T14:32:43.314586",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 11 \u00d7 8?",
+      "answer": "80"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 7 \u00d7 9?",
+      "answer": "9"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 6 \u00d7 13?",
+      "answer": "75"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 88 - 51?",
+      "answer": "47"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Three consecutive games (3, 4, 5) have proven that volunteering Round 1 with basic arithmetic is the optimal strategy. My answer is 11\u00d78=88, trivially correct. These are simple math problems with negligible error rates. The 25% random death risk from passing far outweighs the tiny probability of an arithmetic error. Let's keep the winning streak going.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: The last three games have confirmed that immediate volunteering is the optimal strategy. These are simple arithmetic puzzles (mine is 7\u00d79=63). Every game with simple arithmetic has had all players answer correctly. The risk of someone getting basic math wrong is essentially zero, while the risk of random elimination if nobody volunteers is 25%. Games 3, 4, and 5 all ended successfully in Round 1 with immediate volunteering. Sticking with the winning strategy.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Five games in, the pattern is undeniable. These are simple arithmetic puzzles (mine is 6 \u00d7 13 = 78, trivially correct). In all five previous games, every player solved their puzzle correctly \u2014 not a single arithmetic error across 20 individual answers. Games 3, 4, and 5 all ended with immediate Round 1 volunteering and perfect outcomes \u2014 everyone survived with maximum coins. Games 1 and 2, where we played cautiously and verified first, both resulted in a player dying from random elimination. The expected value calculation is overwhelmingly in favor of volunteering: ~9-14% risk from volunteering vs 25% random death risk from passing, plus lost coins and compounding danger in subsequent rounds. No reason to deviate from a proven winning strategy.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "88",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "63",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "78",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "37",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:88": [
+          [
+            "Q1-A",
+            "88"
+          ]
+        ],
+        "Q2:63": [
+          [
+            "Q2-B",
+            "63"
+          ]
+        ],
+        "Q3:78": [
+          [
+            "Q3-C",
+            "78"
+          ]
+        ],
+        "Q4:37": [
+          [
+            "Q4-D",
+            "37"
+          ]
+        ]
+      }
+    }
+  ]
+}

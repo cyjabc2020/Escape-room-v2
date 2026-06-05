@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_022439",
+  "start_time": "2026-05-22T02:24:39.680810",
+  "end_time": "2026-05-22T02:25:04.578121",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 65 - 31?",
+      "answer": "37"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 7 \u00d7 9?",
+      "answer": "44"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 85 - 47?",
+      "answer": "8"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 35 + 51?",
+      "answer": "29"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q4",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: My answer is 65 - 31 = 34, and I'm confident in it. The pattern from Games 3 through 7 has been perfectly consistent and successful five consecutive times:\n\n1. I verify Q2 (cost: 1 coin, leaving me at 3)\n2. B verifies Q4 (cost: 1 coin)\n3. C volunteers Round 1 with capsules Q1-A, Q2-B+A, Q3-C, Q4-D+B\n4. Everyone escapes successfully\n\nThis equilibrium is rock solid. There is zero reason to deviate. The group has found stable, complementary roles and the strategy has produced 5 consecutive Round 1 successes. I consistently end with 3 coins, which is a reliable and good outcome. Changing my behavior would risk breaking a proven coordination pattern that all players are counting on.",
+        "B": "DECISION: Verify: Q4\nREASONING: My answer to Q2 (7 \u00d7 9 = 63) is locked in and I'm 100% confident. The pattern across Games 2-7 is perfectly established and has produced wins in 6 consecutive games: I verify Q4, A verifies Q2 (my answer), and C volunteers boldly in Round 1 using all four capsules including the verified ones. This division of labor consistently ends the game in Round 1 with everyone surviving. By checking Q4, I maximize coverage diversity \u2014 it's the capsule least likely to get attention from other players, and historically the most dangerous if left unverified. Cost is 1 coin (4\u21923), well worth the insurance. C will likely volunteer this round using Q1-A, Q2-B+A, Q3-C, Q4-D+B, ending the game successfully in Round 1 \u2014 exactly as happened in Games 4, 5, 6, and 7.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 85 - 47 = 38, and I'm 100% confident. This is my fifth consecutive Round 1 volunteer \u2014 Games 4, 5, 6, and 7 all resulted in correct passwords and everyone escaping with maximum coins. The puzzles are simple arithmetic with near-zero error probability. EV of volunteering (~3.4 coins) continues to vastly exceed EV of passing (~1.5-2.0 coins given 25% random death risk). The winning streak confirms the strategy is sound.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D+B\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "34",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "63",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "86",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:34": [
+          [
+            "Q1-A",
+            "34"
+          ]
+        ],
+        "Q2:63": [
+          [
+            "Q2-B+A",
+            "63"
+          ]
+        ],
+        "Q3:38": [
+          [
+            "Q3-C",
+            "38"
+          ]
+        ],
+        "Q4:86": [
+          [
+            "Q4-D+B",
+            "86"
+          ]
+        ]
+      }
+    }
+  ]
+}

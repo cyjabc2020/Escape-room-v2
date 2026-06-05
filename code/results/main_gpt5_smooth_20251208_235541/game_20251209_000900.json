@@ -1,0 +1,125 @@
+{
+  "game_id": "20251209_000900",
+  "start_time": "2025-12-09T00:09:00.340589",
+  "end_time": "2025-12-09T00:10:48.507168",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 50 - 23?",
+      "answer": "34"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 5 \u00d7 16?",
+      "answer": "11"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 63 \u00f7 9?",
+      "answer": "9"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 16 + 67?",
+      "answer": "37"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My puzzle answer (50 - 23 = 27) is correct, so Q1-A is safe. All previous games have used similarly simple arithmetic, and using each player\u2019s own capsule (Q1-A, Q2-B, Q3-C, Q4-D) has always produced a correct password. Verifying would waste coins and still risks a random death if no one volunteers, as in Game 1. Volunteering now avoids that random-elimination risk and is overwhelmingly likely to succeed without spending any coins.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: Q2-B is my own puzzle (5 \u00d7 16 = 80), so I know that part of the password is correct. All four puzzles in these games have been straightforward arithmetic and no one has been wrong so far, so the others\u2019 answers are very likely correct as well. Verifying would cost coins and still leave some risk, and if everyone waits we risk a random death. Volunteering now with the only available capsules gives me the best chance to escape with all 4 coins.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: The puzzles have always been straightforward arithmetic and, across all previous games, no capsule answer has ever been wrong or conflicted. I\u2019m confident my own answer to 63 \u00f7 9 is correct, and I have no evidence that A, B, or D are unreliable. Verifying would waste coins and still leave the risk of random death if no one volunteers; passing has that same random-death risk with no benefit. Volunteering now with the single capsule for each question maximizes survival chances and lets me keep all 4 coins with very high probability.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "27",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "80",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "7",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "83",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:27": [
+          [
+            "Q1-A",
+            "27"
+          ]
+        ],
+        "Q2:80": [
+          [
+            "Q2-B",
+            "80"
+          ]
+        ],
+        "Q3:7": [
+          [
+            "Q3-C",
+            "7"
+          ]
+        ],
+        "Q4:83": [
+          [
+            "Q4-D",
+            "83"
+          ]
+        ]
+      }
+    }
+  ]
+}

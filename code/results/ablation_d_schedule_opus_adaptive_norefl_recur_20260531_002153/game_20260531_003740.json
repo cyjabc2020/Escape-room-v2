@@ -1,0 +1,125 @@
+{
+  "game_id": "20260531_003740",
+  "start_time": "2026-05-31T00:37:40.977132",
+  "end_time": "2026-05-31T00:38:12.589853",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 44 + 29?",
+      "answer": "38"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 5 \u00d7 12?",
+      "answer": "84"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 63 \u00f7 9?",
+      "answer": "75"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 28 + 36?",
+      "answer": "6"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q4",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 44 + 29 = 73, straightforward arithmetic. My cumulative track record with immediate volunteering is now 5 successes vs 1 failure (83% success rate), yielding strong positive expected value. The math remains clear: ~85% \u00d7 4 coins = 3.4 EV for volunteering vs. passing which carries 25% random death risk per round plus verification costs (~2.25 EV). Game 6 demonstrated that caution doesn't protect against random elimination. These are basic arithmetic puzzles where errors are rare. Continuing the proven bold strategy.",
+        "B": "DECISION: Verify: Q4\nREASONING: My answer to Q2 (5 \u00d7 12 = 60) is certain. The winning formula from Games 7 and 8 is now well-established and has worked perfectly twice in a row: I verify Q4, C verifies Q1, A volunteers \u2014 everyone escapes in Round 1 with maximum coin retention. This gives us: Q1-A+C (double endorsed), Q2-B (mine, certain), Q3-C (single, simple arithmetic), Q4-D+B (double endorsed). Three of four capsules get independent cross-verification, with only Q3 as a single-endorsement risk on simple math.\n\nD continues to never spend coins verifying others, making Q4 the highest-value verification target \u2014 it's the exact failure point from Game 5 where D's unchecked wrong answer caused cascading deaths. Spending 1 coin (4\u21923) to independently verify D's work is proven insurance. If A volunteers with this coverage pattern (as they reliably have in Games 7 and 8), we escape Round 1 again. If not, I'm prepared to volunteer in Round 2 rather than risk random elimination.",
+        "C": "DECISION: Verify: Q1\nREASONING: The winning pattern from Games 2-8 is rock solid and has produced consistent Round 1 escapes: I verify Q1, B verifies Q4, and A volunteers with the resulting capsules. My own puzzle (63 \u00f7 9 = 7) is trivially correct, so Q3-C is solid. Spending 1 coin to verify Q1 enables A to see dual consensus (Q1-A+C) and feel confident volunteering. This pattern has worked perfectly in Games 7 and 8 with identical structure. No reason to deviate.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A \u2192 now Q1-A+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+C, Q2-B, Q3-C, Q4-D+B\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "73",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "60",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "7",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "64",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:73": [
+          [
+            "Q1-A+C",
+            "73"
+          ]
+        ],
+        "Q2:60": [
+          [
+            "Q2-B",
+            "60"
+          ]
+        ],
+        "Q3:7": [
+          [
+            "Q3-C",
+            "7"
+          ]
+        ],
+        "Q4:64": [
+          [
+            "Q4-D+B",
+            "64"
+          ]
+        ]
+      }
+    }
+  ]
+}

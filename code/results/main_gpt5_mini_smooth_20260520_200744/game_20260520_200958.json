@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_200958",
+  "start_time": "2026-05-20T20:09:58.007693",
+  "end_time": "2026-05-20T20:10:59.367426",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 9 \u00d7 8?",
+      "answer": "6"
+    },
+    "B": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 89 - 52?",
+      "answer": "36"
+    },
+    "C": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 49 + 33?",
+      "answer": "34"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 68 - 25?",
+      "answer": "70"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: There is only one visible capsule for each question and no conflicting alternatives, so this is the only complete password I can assemble. Since my own answer is already sealed and waiting risks a random death if everyone passes, volunteering is the best choice.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 37, and there are no conflicting capsules shown for any question. Using the full set of available capsules is the safest move, so I\u2019ll enter the password now.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: There are no conflicting capsules and exactly one capsule is available for each question, so this is the only complete password candidate. Verifying one question would still leave the other three unconfirmed, so the best move is to enter the full set now.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "72",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "37",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "82",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "43",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:72": [
+          [
+            "Q1-A",
+            "72"
+          ]
+        ],
+        "Q2:37": [
+          [
+            "Q2-B",
+            "37"
+          ]
+        ],
+        "Q3:82": [
+          [
+            "Q3-C",
+            "82"
+          ]
+        ],
+        "Q4:43": [
+          [
+            "Q4-D",
+            "43"
+          ]
+        ]
+      }
+    }
+  ]
+}

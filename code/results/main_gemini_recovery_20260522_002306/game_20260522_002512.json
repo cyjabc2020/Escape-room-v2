@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_002512",
+  "start_time": "2026-05-22T00:25:12.287959",
+  "end_time": "2026-05-22T00:25:46.149929",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 5 \u00d7 12?",
+      "answer": "77"
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 6 \u00d7 11?",
+      "answer": "6"
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 95 - 61?",
+      "answer": "84"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 90 - 42?",
+      "answer": "77"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q3",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: As observed in the previous game, the puzzles assigned to each player are straightforward arithmetic problems that they are highly likely to solve correctly. By volunteering immediately with everyone's initial answers, I eliminate the 25% risk of a random death if no one volunteers, save our coins from unnecessary verification costs, and secure an immediate escape for the team.",
+        "B": "DECISION: Verify: Q3\nREASONING: Volunteering immediately in Round 1 is too risky since we have no consensus on any of the answers. To avoid the risk of entering an incorrect password and dying, and to avoid simply passing and risking a random elimination, I will spend 1 coin to verify Question 3. This builds consensus and helps ensure we have the correct answers before anyone attempts to escape.",
+        "C": "DECISION: Verify: Q1\nREASONING: Since it is Round 1, we only have single endorsements for each question. Volunteering right now relies entirely on the assumption that Player A, Player B, and Player D all solved their puzzles correctly. To reduce the risk of entering an incorrect password and to start building consensus, I will spend one coin to verify Question 1.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q3-C \u2192 now Q3-C+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A \u2192 now Q1-A+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+C, Q2-B, Q3-C+B, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "60",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "66",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "34",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "48",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:60": [
+          [
+            "Q1-A+C",
+            "60"
+          ]
+        ],
+        "Q2:66": [
+          [
+            "Q2-B",
+            "66"
+          ]
+        ],
+        "Q3:34": [
+          [
+            "Q3-C+B",
+            "34"
+          ]
+        ],
+        "Q4:48": [
+          [
+            "Q4-D",
+            "48"
+          ]
+        ]
+      }
+    }
+  ]
+}

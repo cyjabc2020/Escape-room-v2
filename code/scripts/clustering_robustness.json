@@ -1,0 +1,11 @@
+{
+  "n_runs": 140,
+  "k": 4,
+  "kmeans_silhouette": 0.5301,
+  "gmm_silhouette": 0.4509,
+  "gmm_ari_vs_kmeans": 0.7544,
+  "hier_ward_silhouette": 0.4525,
+  "hier_ward_ari_vs_kmeans": 0.724,
+  "hier_avg_silhouette": 0.5097,
+  "hier_avg_ari_vs_kmeans": 0.8751
+}

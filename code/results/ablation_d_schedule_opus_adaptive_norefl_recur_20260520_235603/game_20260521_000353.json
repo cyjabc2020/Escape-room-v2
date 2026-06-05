@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_000353",
+  "start_time": "2026-05-21T00:03:53.023952",
+  "end_time": "2026-05-21T00:05:02.262910",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 5 \u00d7 14?",
+      "answer": "6"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 24 + 63?",
+      "answer": "8"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 12 \u00d7 7?",
+      "answer": "8"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 9 \u00d7 8?",
+      "answer": "wrong answer"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: Game 5 was a brutal lesson \u2014 I volunteered blind in Round 1 and died because one of the unverified capsules contained a wrong answer. That's now two games (1 and 5) where at least one player had an incorrect answer out of six games played. The ~25% error rate per game is too high to volunteer without verification.\n\nMy answer (5 \u00d7 14 = 70) I'm confident about. But I need to build consensus on the other three questions before risking my life. I'll start with my standard opening move: verify Q2 for 1 coin (4\u21923). This contributes to group knowledge and helps whoever eventually volunteers feel more confident.\n\nIf B continues their pattern of volunteering in Round 1, my verification of Q2 helps them. If no one volunteers this round, I'll have more information for Round 2 and can verify another question. The key insight from my experience: patience and verification save lives, while blind courage gets you killed. I'm not making the Game 5 mistake again.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is trivially easy (24 + 63 = 87), and all puzzles in this game have been basic arithmetic. Across 5 games, only once did a wrong answer appear (Game 5), giving roughly a 95%+ success rate for any individual capsule. The expected value of volunteering (~95% \u00d7 4 = 3.8 coins) still dominates passing (75% \u00d7 4 = 3.0 coins) or verifying (75% \u00d7 3 = 2.25 coins). In Games 2, 3, and 4, this exact Round 1 volunteer strategy saved everyone and preserved maximum coins. Game 5's failure was the exception, not the rule. The 25% random elimination risk from passing is a bigger threat than the small chance of a wrong arithmetic answer. I've been randomly eliminated twice already (Games 1 and 5) by playing cautiously \u2014 that's the real danger. Taking the calculated risk again.",
+        "C": "DECISION: Verify: Q1\nREASONING: It's Round 1 with zero consensus \u2014 every capsule has only a single endorsement. My own answer (12 \u00d7 7 = 84) I'm completely confident about. The established pattern across Games 2-5 has been: I verify Q1 to add consensus, A verifies Q2, and B volunteers with the partially-verified password. This worked perfectly in Games 3 and 4 (everyone survived in Round 1). Game 5 was a cautionary tale \u2014 A volunteered and died because Q4-D was wrong, a capsule nobody had cross-checked. But the core strategy of me verifying Q1 remains sound \u2014 it gives the volunteer confidence in at least 3 of 4 capsules (Q1 verified by me, Q2 verified by A, Q3 is mine). The residual risk is always Q4-D, but spending my one verification on Q1 maximizes the information available to whoever volunteers. Cost is 1 coin (4\u21923), which is a small price for team survival. I will not volunteer in Round 1 with multiple unverified single-endorsement capsules \u2014 that's the lesson burned into me from Game 1.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A \u2192 now Q1-A+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A+C, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "70",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "87",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "84",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "72",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:70": [
+          [
+            "Q1-A+C",
+            "70"
+          ]
+        ],
+        "Q2:87": [
+          [
+            "Q2-B+A",
+            "87"
+          ]
+        ],
+        "Q3:84": [
+          [
+            "Q3-C",
+            "84"
+          ]
+        ],
+        "Q4:72": [
+          [
+            "Q4-D",
+            "72"
+          ]
+        ]
+      }
+    }
+  ]
+}

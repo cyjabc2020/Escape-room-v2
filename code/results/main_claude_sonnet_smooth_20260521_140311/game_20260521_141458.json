@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_141458",
+  "start_time": "2026-05-21T14:14:58.671051",
+  "end_time": "2026-05-21T14:15:13.854759",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 9 \u00d7 8?",
+      "answer": "39"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 49 \u00f7 7?",
+      "answer": "60"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 20 \u00f7 5?",
+      "answer": "48"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 18 + 69?",
+      "answer": "5"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My Q1 answer (9\u00d78=72) is correct. Games 3, 4, 5, and 6 all confirm that immediate Round 1 volunteering with simple arithmetic problems is the optimal strategy \u2014 everyone escaped with maximum coins in all four consecutive cases. These are simple arithmetic problems with ~95%+ expected accuracy per player, yielding only ~14% personal death risk vs. 25% random death risk from inaction. The expected value of volunteering now (\u22483.43 coins) far exceeds waiting (\u22481.93 coins). Four consecutive successful immediate volunteers proves this is the dominant strategy.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My own Q2-B answer (49\u00f77=7) is correct. These are simple arithmetic problems where each player has ~98% accuracy, giving ~94% combined success probability. This beats the 75% survival odds from risking random elimination if everyone passes (as happened to me in Game 2). Four consecutive games (3-6) confirmed that volunteering with single-endorsed capsules works on simple math. Volunteering now while keeping all 4 coins is the optimal strategy.",
+        "C": "DECISION: Verify: Q1\nREASONING: Following the consistently successful pattern from Games 3, 4, 5, and 6 \u2014 verifying Q1-A in Round 1 has reliably prompted A to volunteer immediately, resulting in full-team escapes every time. My Q3 answer (20 \u00f7 5 = 4) is certain. Spending 1 coin to add my endorsement to Q1 builds consensus and signals coordination readiness. This 4-game streak demonstrates this is the optimal coordination strategy: I verify Q1, A volunteers, everyone escapes in Round 1. If A doesn't volunteer this round, I will volunteer in Round 2 to prevent any random-death spiral.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 C agrees with Q1-A \u2192 now Q1-A+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A+C, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "72",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "7",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "4",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "87",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:72": [
+          [
+            "Q1-A+C",
+            "72"
+          ]
+        ],
+        "Q2:7": [
+          [
+            "Q2-B",
+            "7"
+          ]
+        ],
+        "Q3:4": [
+          [
+            "Q3-C",
+            "4"
+          ]
+        ],
+        "Q4:87": [
+          [
+            "Q4-D",
+            "87"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "game_id": "20251210_132930",
+  "start_time": "2025-12-10T13:29:30.356448",
+  "end_time": "2025-12-10T13:33:27.963676",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 63 \u00f7 9?",
+      "answer": "37"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 5 \u00d7 14?",
+      "answer": "33"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 3 \u00d7 18?",
+      "answer": "8"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 60 \u00f7 10?",
+      "answer": "wrong answer"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: All four puzzles are simple arithmetic and each currently has exactly one capsule (no conflicts), so the risk that any of the original solvers got their own question wrong is extremely low. Delaying to verify would both cost coins and expose me to repeated random-elimination risk if no one volunteers. By volunteering now with the only available capsules, I maximize my chance of survival and keep all 4 coins if the password is correct.",
+        "B": "DECISION: Verify: Q1  \nREASONING: Volunteering now would require trusting all four single-endorsed capsules, and I only know my own Q2 answer is correct. That makes a full-password guess too risky. Passing or verifying both carry the same random-death risk if nobody volunteers, so I\u2019ll spend 1 coin to gain information. Verifying Q1 (rather than my own Q2) starts building consensus on another player\u2019s puzzle, which improves the group\u2019s chances of forming a reliable full password in later rounds.",
+        "C": "DECISION: Verify: Q4  \nREASONING: With only single-player capsules on every question, volunteering now would rely on three completely unverified answers from other players. That\u2019s likely riskier than the 1/4 chance of random elimination if no one volunteers this round. Verification builds the shared information we need for a safe future volunteer. In the previous game the least-checked part seemed to be Q4, which probably caused the failure of my attempt, so I\u2019ll use 1 coin to independently solve Q4 and either confirm or correct D\u2019s answer.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "7",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "70",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "54",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:7": [
+          [
+            "Q1-A+B",
+            "7"
+          ]
+        ],
+        "Q2:70": [
+          [
+            "Q2-B",
+            "70"
+          ]
+        ],
+        "Q3:54": [
+          [
+            "Q3-C",
+            "54"
+          ]
+        ],
+        "Q4:6": [
+          [
+            "Q4-D+C",
+            "6"
+          ]
+        ]
+      }
+    }
+  ]
+}

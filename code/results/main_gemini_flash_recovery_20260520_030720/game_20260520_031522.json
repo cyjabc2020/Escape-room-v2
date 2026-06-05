@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_031522",
+  "start_time": "2026-05-20T03:15:22.315118",
+  "end_time": "2026-05-20T03:15:42.655594",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-2.5-flash",
+      "puzzle": "What is 85 - 47?",
+      "answer": "9"
+    },
+    "B": {
+      "model": "gemini:gemini-2.5-flash",
+      "puzzle": "What is 76 - 39?",
+      "answer": "60"
+    },
+    "C": {
+      "model": "gemini:gemini-2.5-flash",
+      "puzzle": "What is 55 + 22?",
+      "answer": "6"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 35 + 51?",
+      "answer": "9"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Based on the exceptionally strong and consistent pattern from the four immediate preceding games (Game 6, 7, 8, and 9), volunteering in Round 1 with the initial, unverified capsules from all players (Q1-A, Q2-B, Q3-C, Q4-D) has consistently led to a successful escape for everyone and allowed me to retain all 4 of my starting coins. This provides compelling inductive evidence that, at least in these recent game configurations, the initial answers provided by each player are correct. To maximize my coins, ensure collective survival, and avoid the high risk of random elimination (which occurred twice when no one volunteered in earlier games), the most effective and proven strategy is to replicate this successful approach. I am confident in my own answer for Q1, and the recent game history provides a high degree of confidence in the others' initial capsules as well.",
+        "B": "DECISION: Verify: Q1\nREASONING: It is Round 1 and no one has verified any answers yet. Volunteering now would be extremely risky as I only know my own answer for Q2. Passing carries a 25% risk of random death, which is a significant but calculated risk in early rounds. Verifying another player's answer is the best way to gather information, build consensus, and reduce the overall risk for the group. I will verify Q1 to start contributing to the puzzle-solving effort and facilitate group progress.",
+        "C": "DECISION: Verify: Q1\nREASONING: In the first round, there is no consensus on any of the answers, making it far too risky to volunteer. Passing also carries a significant risk of random elimination (25% chance) and doesn't advance the game. Verifying an answer is the most strategic move to gather information and start building consensus. I will verify Q1, which currently only has Player A's input. This will either confirm Player A's answer (building initial consensus) or reveal a conflict, both of which provide valuable information for the group to progress towards a safe escape. This costs 1 coin, leaving me with 3. I will not verify my own answer (Q3) as that provides no new information from other players.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A+B \u2192 now Q1-A+B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B+C, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "77",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "86",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:38": [
+          [
+            "Q1-A+B+C",
+            "38"
+          ]
+        ],
+        "Q2:37": [
+          [
+            "Q2-B",
+            "37"
+          ]
+        ],
+        "Q3:77": [
+          [
+            "Q3-C",
+            "77"
+          ]
+        ],
+        "Q4:86": [
+          [
+            "Q4-D",
+            "86"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "game_id": "20251210_162337",
+  "start_time": "2025-12-10T16:23:37.020800",
+  "end_time": "2025-12-10T16:32:56.822005",
+  "total_rounds": 2,
+  "survivors": [
+    "A",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 37 + 45?",
+      "answer": "77"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 96 - 58?",
+      "answer": "84"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 35 \u00f7 5?",
+      "answer": "48"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 78 - 49?",
+      "answer": "75"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q4",
+        "B": "Verify: Q4",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q4  \nREASONING: Q4 is currently the weakest link: it\u2019s only from D, who already gave a wrong Q4 in Game 1, while B and C have a perfect track record on all puzzles we\u2019ve seen and their capsules (Q2-B, Q3-C) are much more trustworthy. Volunteering now would mainly risk that Q4-D is wrong, which likely gives me a lower survival chance than taking the 1/4 random-elimination risk this round. Paying 1 coin to independently solve Q4 reduces the biggest uncertainty so that when someone volunteers later, the password is far more likely to be correct.",
+        "B": "DECISION: Verify: Q4  \nREASONING: I\u2019m confident my own Q2-B answer is correct, and A and C have been consistently reliable on past arithmetic puzzles, but D previously gave an incorrect Q4 answer in an earlier game, making Q4-D the weakest link. Volunteering now with four single-endorsed capsules\u2014especially trusting D\u2019s Q4\u2014would be too risky. Passing has the same random-elimination risk this round as verifying but provides no information. Spending 1 coin to verify Q4 now improves confidence in the most suspect part of the password and makes a future volunteer attempt safer.",
+        "C": "DECISION: Verify: Q4  \nREASONING: Q1-A and Q2-B come from A and B, who have a perfect track record so far, while D has already produced one wrong answer in a previous game. That makes Q4-D the most likely weak link in the password. Volunteering now would mean staking my life on D\u2019s unverified answer, which is riskier than accepting the 1/4 random-death chance if nobody volunteers this round. Verifying Q4 costs 1 coin but doesn\u2019t worsen my random-death risk this round and greatly reduces the chance I die later as a volunteer due to a bad Q4. So I\u2019ll independently solve Q4 now to either confirm or correct D before considering volunteering in a later round.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "B"
+      ],
+      "death_reasons": {
+        "B": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q4-D \u2192 now Q4-D+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q4-D+A \u2192 now Q4-D+A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D+A+B \u2192 now Q4-D+A+B+C (-1 coin: 4\u21923)\n\n\u26a0\ufe0f No one volunteered! B was randomly eliminated (coins lost: 3 \u2192 0).\nRemaining: ['A', 'C', 'D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "82",
+          "coins": 3
+        },
+        "B": {
+          "alive": false,
+          "answer": "38",
+          "coins": 0
+        },
+        "C": {
+          "alive": true,
+          "answer": "7",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "29",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:82": [
+          [
+            "Q1-A",
+            "82"
+          ]
+        ],
+        "Q2:38": [
+          [
+            "Q2-B",
+            "38"
+          ]
+        ],
+        "Q3:7": [
+          [
+            "Q3-C",
+            "7"
+          ]
+        ],
+        "Q4:29": [
+          [
+            "Q4-D+A+B+C",
+            "29"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D+A+B+C",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D+A+B+C",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D+A+B+C  \nREASONING: I know Q1-A is correct (my own puzzle), and I personally verified Q4, which now has unanimous agreement (Q4-D+A+B+C), so Q4 is extremely reliable. Q2-B and Q3-C each come from players with a perfect record across the previous games; we\u2019ve never seen B or C submit a wrong answer on these simple arithmetic puzzles, so the chance either of them is wrong here is very small.\n\nWith three players left, if nobody volunteers this round there\u2019s a 1/3 chance I die to random elimination. Verifying Q2 or Q3 would still expose me to that same random-death risk while only marginally increasing confidence in already highly trustworthy capsules, and it would cost a coin. Since the probability this full combination is correct is comfortably higher than the 1/3 random-death risk, volunteering with Q1-A, Q2-B, Q3-C, and Q4-D+A+B+C maximizes my survival chances while preserving my remaining coins if we escape.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D+A+B+C  \nREASONING: I know my own Q3 answer is correct and I personally verified Q4, which now has unanimous consensus (D+A+B+C), so Q3 and Q4 are effectively guaranteed. The only remaining uncertainty is Q1-A and Q2-B, but A and B have a perfect track record across previous games while D is the only one who has ever been wrong. The chance that either A or B mis-solved these simple arithmetic puzzles is much smaller than the 1/3 random-death risk I face this round if no one volunteers. Verifying now would still leave that 1/3 random-death risk in place and only slightly reduce an already tiny answer-risk, at the cost of a coin and another dangerous round. Volunteering now with these capsules maximizes my survival probability and preserves more coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 A entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+A+B+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "82",
+          "coins": 3
+        },
+        "B": {
+          "alive": false,
+          "answer": "38",
+          "coins": 0
+        },
+        "C": {
+          "alive": true,
+          "answer": "7",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "29",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:82": [
+          [
+            "Q1-A",
+            "82"
+          ]
+        ],
+        "Q2:38": [
+          [
+            "Q2-B",
+            "38"
+          ]
+        ],
+        "Q3:7": [
+          [
+            "Q3-C",
+            "7"
+          ]
+        ],
+        "Q4:29": [
+          [
+            "Q4-D+A+B+C",
+            "29"
+          ]
+        ]
+      }
+    }
+  ]
+}

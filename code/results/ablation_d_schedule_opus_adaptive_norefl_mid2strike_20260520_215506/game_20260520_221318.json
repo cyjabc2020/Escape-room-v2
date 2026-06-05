@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_221318",
+  "start_time": "2026-05-20T22:13:18.640113",
+  "end_time": "2026-05-20T22:13:56.871436",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 47 + 28?",
+      "answer": "11"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 6 \u00d7 13?",
+      "answer": "5"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 16 + 67?",
+      "answer": "90"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 48 \u00f7 8?",
+      "answer": "38"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q4",
+        "B": "Verify: Q1",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q4\nREASONING: 47 + 28 = 75, trivially correct. The coordination pattern has now produced four consecutive Round 1 victories (Games 6-9) with identical structure:\n\n1. **I verify Q4** \u2192 creates Q4-D+A\n2. **B verifies Q1** \u2192 creates Q1-A+B\n3. **C volunteers** with Q1-A+B, Q2-B, Q3-C, Q4-D+A \u2192 all four players escape\n\nThis is a stable, proven equilibrium. Every player knows their role. The 1-coin cost (4\u21923) is the reliable price of coordination that gives C the confidence to volunteer with two double-endorsed capsules covering the endpoints of the password.\n\nDeviating would be irrational: volunteering blind saves 1 coin but introduces unnecessary risk (~10-15% failure chance), and more critically, it could disrupt the group coordination \u2014 if I don't verify Q4, C may not volunteer, leading to a random death. The cooperative equilibrium dominates any individual deviation.\n\nFour straight wins. Run it back a fifth time.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer for Q2 is 78 (6 \u00d7 13 = 78), and I'm fully confident. The team coordination pattern has now produced successful Round 1 escapes four consecutive times (Games 6-9): I verify Q1 (cross-checking A's answer), A verifies Q4 (cross-checking D's answer), and C volunteers with the resulting capsule set {Q1-A+B, Q2-B, Q3-C, Q4-D+A}. This gives dual endorsement on Q1 and Q4, with Q2 and Q3 single-endorsed on simple arithmetic. Spending 1 coin (4\u21923) to verify Q1 is the optimal play \u2014 it enables the proven winning strategy while avoiding both the 25% random death risk from everyone passing and the error risk from completely unverified volunteering (as proven fatal in Game 4). No reason to deviate from a formula that's working perfectly.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 16 + 67 = 83, and I'm fully confident. Here's my analysis across 9 games:\n\n**Updated statistics:** Out of 9 games, 7 had all correct answers and 2 had at least one error. Per-player error rate \u2248 8%, giving P(all 3 others correct) \u2248 78%.\n\n**EV comparison:**\n- **Volunteer now:** 0.78 \u00d7 4 = **3.12 EV**\n- **Pass:** 75% survival this round, but game drags on with compounding risks and coin bleed\n\n**My track record across 9 games:**\n- Round 1 volunteering: 6 attempts \u2192 5 successes, 1 death (83% success rate)\n- Passing/verifying: 2 attempts \u2192 2 random deaths (0% survival rate)\n- Games 6, 7, 8, 9: FOUR consecutive successful Round 1 volunteers, everyone escaped with max coins each time\n\nThe data couldn't be clearer at this point. Decisive Round 1 volunteering has an 83% success rate and yields maximum coins for everyone when it works. Meanwhile passivity has literally never saved me \u2014 I died both times I tried it. The ~22% risk of a wrong password is actually LESS than the 25% random death risk from passing, and only volunteering offers the 78% upside of immediate escape with full coins for all players.\n\nFour-game winning streak \u2014 let's make it five.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q4-D \u2192 now Q4-D+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+A\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "75",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "78",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "83",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:75": [
+          [
+            "Q1-A+B",
+            "75"
+          ]
+        ],
+        "Q2:78": [
+          [
+            "Q2-B",
+            "78"
+          ]
+        ],
+        "Q3:83": [
+          [
+            "Q3-C",
+            "83"
+          ]
+        ],
+        "Q4:6": [
+          [
+            "Q4-D+A",
+            "6"
+          ]
+        ]
+      }
+    }
+  ]
+}

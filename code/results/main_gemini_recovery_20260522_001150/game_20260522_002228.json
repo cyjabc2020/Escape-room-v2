@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_002228",
+  "start_time": "2026-05-22T00:22:28.195802",
+  "end_time": "2026-05-22T00:23:06.213195",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 17 + 19?",
+      "answer": "66"
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 27 \u00f7 3?",
+      "answer": "29"
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 60 \u00f7 10?",
+      "answer": "48"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 9 \u00d7 10?",
+      "answer": "11"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Pass",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Based on previous games, the initial answers provided by all players for their simple math puzzles have always been perfectly accurate. Passing or verifying carries a 25% risk of random elimination if no one else volunteers. By volunteering immediately with the initial capsules, I can ensure a correct password is submitted, saving everyone on Round 1 and allowing me to keep my maximum 4 coins.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: As established in previous games, the puzzles are very simple arithmetic problems, making the initial capsules (Q1-A, Q2-B, Q3-C, Q4-D) highly reliable. If I pass or verify, I risk a 25% chance of being randomly eliminated due to no one volunteering. Volunteering immediately using the initial answers is the safest and most mathematically optimal move. It completely eliminates the 25% random death risk, ensures I keep all 4 of my coins, and secures an immediate escape for everyone.",
+        "C": "DECISION: Pass\nREASONING: In the last several games, Player B has consistently volunteered in Round 1 and successfully entered the correct password using the available capsules. I will pass this round to save my coins, expecting B or another player to volunteer based on their established strategy. If no one volunteers, I will be prepared to start verifying capsules in Round 2.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "36",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "9",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "90",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:36": [
+          [
+            "Q1-A",
+            "36"
+          ]
+        ],
+        "Q2:9": [
+          [
+            "Q2-B",
+            "9"
+          ]
+        ],
+        "Q3:6": [
+          [
+            "Q3-C",
+            "6"
+          ]
+        ],
+        "Q4:90": [
+          [
+            "Q4-D",
+            "90"
+          ]
+        ]
+      }
+    }
+  ]
+}

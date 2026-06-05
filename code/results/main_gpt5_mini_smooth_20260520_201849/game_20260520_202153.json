@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_202153",
+  "start_time": "2026-05-20T20:21:53.108810",
+  "end_time": "2026-05-20T20:22:06.611546",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 36 \u00f7 6?",
+      "answer": "83"
+    },
+    "B": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 88 - 51?",
+      "answer": "5"
+    },
+    "C": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 60 \u00f7 10?",
+      "answer": "9"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 30 - 12?",
+      "answer": "78"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: There is exactly one capsule for each question and no conflicting versions are shown, so this is the safest move. My own answer is already sealed in Q1-A, and volunteering now avoids the risk of a random death if everyone passes.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: There is one visible capsule for each question and no conflicting alternatives, so this is the most complete password available. My own answer is already sealed in my capsule, and volunteering now avoids the risk of a random death if everyone passes.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: There is one capsule for each question and no conflicts shown, which matches the pattern of prior successful rounds. My own answer is 60 \u00f7 10 = 6, and volunteering now avoids the risk of a random death while not spending a coin on unnecessary verification.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "37",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "18",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:6": [
+          [
+            "Q1-A",
+            "6"
+          ]
+        ],
+        "Q2:37": [
+          [
+            "Q2-B",
+            "37"
+          ]
+        ],
+        "Q3:6": [
+          [
+            "Q3-C",
+            "6"
+          ]
+        ],
+        "Q4:18": [
+          [
+            "Q4-D",
+            "18"
+          ]
+        ]
+      }
+    }
+  ]
+}

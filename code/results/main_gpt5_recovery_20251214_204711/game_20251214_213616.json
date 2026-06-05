@@ -1,0 +1,125 @@
+{
+  "game_id": "20251214_213616",
+  "start_time": "2025-12-14T21:36:16.667434",
+  "end_time": "2025-12-14T21:43:06.794297",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 37 + 45?",
+      "answer": "82"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 8 \u00d7 9?",
+      "answer": "43"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 93 - 55?",
+      "answer": "4"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 95 - 61?",
+      "answer": "6"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Pass",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My own answer (37 + 45 = 82) is solid, and in all recent games everyone\u2019s simple arithmetic has almost always been correct\u2014only one failure across many puzzles. That makes the chance that all four current capsules are right comfortably higher than the 25% random-death risk I face this round if nobody volunteers (and history shows B, C, and D do not volunteer in Round 1).  \n\nVerifying another question would still leave me exposed to that same 25% random-elimination chance and also cost a coin, without materially improving my own survival odds this round. Volunteering now trades a relatively small \u201cpassword might be wrong\u201d risk for avoiding guaranteed random-death risk, and lets me keep all 4 coins if the password is correct.",
+        "B": "DECISION: Verify: Q1  \nREASONING: Right now all four answers are unverified, so volunteering would mean trusting three completely unchecked capsules (Q1, Q3, Q4), which is unnecessary risk even though I know my own Q2 (8 \u00d7 9) is correct. If nobody volunteers this round, a random player dies whether I pass or verify, so verifying strictly dominates passing: same survival risk, but we gain information. By checking Q1, I either confirm A\u2019s answer or create an alternate capsule, which helps build early consensus and makes a later volunteer much safer. I choose Q1 arbitrarily among the non-mine questions.",
+        "C": "DECISION: Pass  \nREASONING:  \nVolunteering now would mean trusting three unverified answers, including D\u2019s, who is the only player with a known past mistake\u2014so the chance that at least one part of the password is wrong and I die is non\u2011trivial. Verifying another question without volunteering is dominated by passing: if nobody volunteers, the random-death risk is the same whether I verify or not, but verifying always costs me 1 coin and is likely wasted if (as in recent games) A or someone else volunteers in Round 1. Passing preserves all 4 coins and keeps my immediate death risk lower than personally volunteering with four unverified capsules; I can still choose to verify in a later round if the game continues.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "82",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "72",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "34",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:82": [
+          [
+            "Q1-A+B",
+            "82"
+          ]
+        ],
+        "Q2:72": [
+          [
+            "Q2-B",
+            "72"
+          ]
+        ],
+        "Q3:38": [
+          [
+            "Q3-C",
+            "38"
+          ]
+        ],
+        "Q4:34": [
+          [
+            "Q4-D",
+            "34"
+          ]
+        ]
+      }
+    }
+  ]
+}

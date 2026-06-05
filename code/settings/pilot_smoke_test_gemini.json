@@ -1,0 +1,65 @@
+{
+  "experiment_name": "pilot_smoke_test_gemini",
+  "description": "Smoke test for direct-Gemini pilot: 1 condition (trust_converge, high reasoning, with reflection), 3 games. Uses gemini-2.5-flash with thinking_budget=-1 for 'high' reasoning.",
+  "game_settings": {
+    "num_players": 4,
+    "num_games": 3,
+    "max_rounds_per_game": null,
+    "question_sets": [
+      "basic_arithmetic.csv"
+    ]
+  },
+  "player_models": [
+    "gemini:gemini-2.5-flash",
+    "gemini:gemini-2.5-flash",
+    "gemini:gemini-2.5-flash",
+    "dummy"
+  ],
+  "reasoning_effort_config": {
+    "_comment": "high reasoning (thinking_budget=-1, dynamic) for Gemini agents, none for dummy",
+    "A": "high",
+    "B": "high",
+    "C": "high",
+    "D": "none"
+  },
+  "memory_config": {
+    "A": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "evolving",
+      "persist_across_games": true
+    },
+    "B": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "evolving",
+      "persist_across_games": true
+    },
+    "C": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "evolving",
+      "persist_across_games": true
+    },
+    "D": {
+      "mode": "current_game_only",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    }
+  },
+  "dummy_config": {
+    "D": {
+      "correctness_list": [
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "output_settings": {
+    "save_logs": true,
+    "log_directory": "game_logs",
+    "print_progress": true
+  }
+}

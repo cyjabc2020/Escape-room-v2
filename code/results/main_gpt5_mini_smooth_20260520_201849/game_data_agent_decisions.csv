@@ -1,0 +1,29 @@
+game_id,round,agent_id,agent_decision,whom_to_verify,agent_status_end_of_round,death_reason,defaulted_to_pass,coins_end_of_round
+20260520_201849,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_201849,1,C,Pass,N/A,ALIVE,N/A,False,4
+20260520_201849,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201849,1,A,Verify: Q2,N/A,ALIVE,N/A,False,3
+20260520_201934,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_201934,1,C,Verify: Q2,N/A,ALIVE,N/A,False,3
+20260520_201934,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201934,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202005,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_202005,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202005,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202005,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202102,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_202102,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202102,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202102,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202121,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_202121,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202121,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202121,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202133,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_202133,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202133,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202133,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202153,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_202153,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202153,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_202153,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4

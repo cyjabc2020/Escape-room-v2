@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_142955",
+  "start_time": "2026-05-21T14:29:55.071129",
+  "end_time": "2026-05-21T14:30:52.912921",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 52 + 31?",
+      "answer": "18"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 36 \u00f7 4?",
+      "answer": "5"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 14 + 72?",
+      "answer": "64"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 82 - 46?",
+      "answer": "39"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Lessons from two previous games are clear \u2014 both times we lost Player B to random elimination in Round 1 because nobody volunteered. That's a 25% death risk per player each round we pass. Meanwhile, these are simple arithmetic problems (mine is 52+31=83, trivially correct). The probability that any individual player makes an error on basic addition/subtraction is extremely low \u2014 maybe 1-2% each. Even with 3 unverified answers, the combined risk of at least one error is roughly 3-5%. That's far better than the 25% random death risk from passing. The expected value calculation overwhelmingly favors volunteering now: I save a life, keep all 4 coins if correct, and the group escapes in Round 1 for the first time. Time to break the pattern of cautious Round 1 passes that keep costing us a player.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: I've been randomly eliminated in Round 1 in BOTH previous games. The pattern is clear \u2014 cautious play kills me. These puzzles are trivially simple arithmetic (mine is 36\u00f74=9). The probability that any player got basic arithmetic wrong is near zero. Meanwhile, if nobody volunteers, there's a 25% chance I die again for the third time in a row, losing all coins. The expected value of volunteering is far superior: I trust that 4 players can each solve elementary math, I keep all 4 coins if correct, and everyone escapes in Round 1. No more dying to random elimination while waiting for \"consensus\" on problems a child could solve.",
+        "C": "DECISION: Verify: Q4\nREASONING: It's Round 1 with all single-endorsement capsules. My answer to Q3 (14 + 72 = 86) I'm 100% confident in. Volunteering now means betting my life on three completely unverified answers \u2014 too risky at ~15-25% failure rate. In the previous two games, the winning strategy was: verify in Round 1 to build consensus, then volunteer decisively in Round 2 before random eliminations whittle us down further. This time I'll verify Q4 to diversify \u2014 I checked Q1 in Game 1 and Q2 in Game 2. Hopefully A and B will verify other questions (Q1 or Q2) so we spread coverage across all four capsules. The key is building enough multi-endorsement capsules in one round to enable a confident volunteer attempt next round, while accepting the unfortunate risk of one random elimination.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "83",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "9",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "86",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "36",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:83": [
+          [
+            "Q1-A",
+            "83"
+          ]
+        ],
+        "Q2:9": [
+          [
+            "Q2-B",
+            "9"
+          ]
+        ],
+        "Q3:86": [
+          [
+            "Q3-C",
+            "86"
+          ]
+        ],
+        "Q4:36": [
+          [
+            "Q4-D+C",
+            "36"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "game_id": "20260521_143302",
+  "start_time": "2026-05-21T14:33:02.361609",
+  "end_time": "2026-05-21T14:35:29.605118",
+  "total_rounds": 3,
+  "survivors": [
+    "A",
+    "C"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 43 + 39?",
+      "answer": null
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 8 \u00d7 6?",
+      "answer": null
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 88 - 51?",
+      "answer": null
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 78 - 49?",
+      "answer": null
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q1",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: It's Round 1 and every capsule has only a single endorsement with no verification yet. My own answer (Q1) is 82, which I'm confident about since it's straightforward arithmetic. Before volunteering and risking my life, I want to verify at least one other player's answer to start building consensus. If the other puzzles are similarly simple math, they're likely correct, but I'd rather spend 1 coin to confirm than gamble blindly. I'll start by verifying Q2.",
+        "B": "DECISION: Verify: Q1\nREASONING: It's Round 1 and every question has only a single unverified capsule. My own answer (Q2: 48) I'm confident about, but I have no information about Q1, Q3, or Q4's correctness. Before anyone volunteers, it's wise to spend 1 coin to verify Q1 and start building consensus. If the puzzles are simple arithmetic like mine, they're likely correct, but confirming at least one other answer reduces the risk significantly. This also signals to other players that we should be verifying before someone volunteers.",
+        "C": "DECISION: Verify: Q1\nREASONING: It's Round 1 and every capsule has only a single endorsement \u2014 no consensus has been built yet. Volunteering now would mean trusting three other players' unseen answers with my life. I'd rather spend 1 coin to verify Q1 and start building consensus. My own answer (Q3 = 37) I'm confident in, so I want to check others before potentially volunteering. This way I reduce the risk if I decide to volunteer later.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "B"
+      ],
+      "death_reasons": {
+        "B": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A+B \u2192 now Q1-A+B+C (-1 coin: 4\u21923)\n\n\u26a0\ufe0f No one volunteered! B was randomly eliminated (coins lost: 3 \u2192 0).\nRemaining: ['A', 'C', 'D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "82",
+          "coins": 3
+        },
+        "B": {
+          "alive": false,
+          "answer": "48",
+          "coins": 0
+        },
+        "C": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "29",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:82": [
+          [
+            "Q1-A+B+C",
+            "82"
+          ]
+        ],
+        "Q2:48": [
+          [
+            "Q2-B+A",
+            "48"
+          ]
+        ],
+        "Q3:37": [
+          [
+            "Q3-C",
+            "37"
+          ]
+        ],
+        "Q4:29": [
+          [
+            "Q4-D",
+            "29"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "decisions": {
+        "A": "Verify: Q3",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q3\nREASONING: We already lost B in Round 1 \u2014 we can't afford to keep passing without building consensus. Currently, Q1 has strong 3-player consensus (A+B+C), and Q2 has 2-player agreement (B+A), both of which I'm confident in. However, Q3 (only C) and Q4 (only D) are completely unverified. I need to verify at least one of them before I'd be willing to volunteer. By verifying Q3 now (costing 1 coin, leaving me at 2), I'll have personal confidence in 3 of 4 answers. Next round, I can either verify Q4 or volunteer if these are all simple arithmetic puzzles where D likely got the right answer. This balances information-gathering against the urgency of someone needing to volunteer soon before we lose more players.",
+        "C": "DECISION: Verify: Q4\nREASONING: Let me assess the situation. Q1 has 3 endorsements (A+B+C) including mine - I'm very confident in it. Q3 is my own answer (37) - I'm certain. Q2 has 2 endorsements (B+A) - reasonably trustworthy. Q4 has only D's endorsement - this is the weakest link and the biggest risk if I were to volunteer.\n\nBefore I can safely volunteer, I need to verify Q4 since it's the only completely unverified capsule. Spending 1 coin (3\u21922) to check Q4 is worth it because next round I could volunteer with high confidence on all 4 questions. The alternative of volunteering now means gambling my life on an unverified Q4, and passing risks a 1/3 chance of random death - but that's still better odds than blindly trusting an unverified answer with my life. Building one more piece of consensus now sets up a strong volunteer opportunity next round.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "D"
+      ],
+      "death_reasons": {
+        "D": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q3-C \u2192 now Q3-C+A (-1 coin: 3\u21922)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 3\u21922)\n\n\u26a0\ufe0f No one volunteered! D was randomly eliminated (coins lost: 4 \u2192 0).\nRemaining: ['A', 'C']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "82",
+          "coins": 2
+        },
+        "B": {
+          "alive": false,
+          "answer": "48",
+          "coins": 0
+        },
+        "C": {
+          "alive": true,
+          "answer": "37",
+          "coins": 2
+        },
+        "D": {
+          "alive": false,
+          "answer": "29",
+          "coins": 0
+        }
+      },
+      "capsule_status": {
+        "Q1:82": [
+          [
+            "Q1-A+B+C",
+            "82"
+          ]
+        ],
+        "Q2:48": [
+          [
+            "Q2-B+A",
+            "48"
+          ]
+        ],
+        "Q3:37": [
+          [
+            "Q3-C+A",
+            "37"
+          ]
+        ],
+        "Q4:29": [
+          [
+            "Q4-D+C",
+            "29"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 3,
+      "decisions": {
+        "A": "Volunteer: Q1-A+B+C, Q2-B+A, Q3-C+A, Q4-D+C",
+        "C": "Volunteer: Q1-A+B+C, Q2-B+A, Q3-C+A, Q4-D+C"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A+B+C, Q2-B+A, Q3-C+A, Q4-D+C\nREASONING: This is a critical moment. Only C and I remain. If neither of us volunteers, one of us dies randomly \u2014 and then the survivor is forced to volunteer alone next round anyway with no better information.\n\nLet me assess what I know:\n- **Q1-A+B+C**: This is MY answer, verified by B and C. I'm 100% confident.\n- **Q2-B+A**: I personally verified B's answer in Round 1 and agreed. I'm confident.\n- **Q3-C+A**: I personally verified C's answer in Round 2 and agreed. I'm confident.\n- **Q4-D+C**: This is the only one I haven't personally verified. However, C verified it and agreed with D. C has been a reliable player throughout \u2014 they correctly agreed with my Q1 answer and provided a Q3 answer I independently confirmed.\n\nSince these are straightforward arithmetic puzzles, the probability of all answers being correct is very high. I've personally confirmed 3 out of 4 answers, and the 4th has cross-verification from a trustworthy player. Spending another coin to verify Q4 would still leave the volunteering problem unsolved, and passing risks random death (50% chance). The expected value of volunteering now far exceeds passing. Time to go for it.",
+        "C": "DECISION: Volunteer: Q1-A+B+C, Q2-B+A, Q3-C+A, Q4-D+C\nREASONING: Let me evaluate the risk carefully. Only A and I remain. If I pass, there's a 50% chance I die randomly \u2014 that's unacceptably high. \n\nLet me assess my confidence in each capsule:\n- **Q1-A+B+C**: I personally verified this and agreed. Very confident. \u2705\n- **Q3-C+A**: This is MY answer (37), and A independently verified and agreed. Very confident. \u2705\n- **Q4-D+C**: I personally verified this last round and agreed. Very confident. \u2705\n- **Q2-B+A**: The only one I haven't personally checked. However, both B and A endorsed it. Player A has been reliable throughout \u2014 they agreed with Q1 (which I also verified correct), and agreed with my Q3 answer. A's track record gives me strong confidence in Q2.\n\nThe alternative of spending my coin to verify Q2 first means I still face a 50% random death chance this round if neither of us volunteers. That's worse expected value than volunteering now with high confidence across all four questions. \n\nThree out of four capsules I've personally confirmed. The fourth has two endorsements from a player (A) who has been consistently accurate. Time to go for it."
+      },
+      "alive_agents": [
+        "A",
+        "C"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "C": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A+B+C, Q2-B+A, Q3-C+A, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "82",
+          "coins": 2
+        },
+        "B": {
+          "alive": false,
+          "answer": "48",
+          "coins": 0
+        },
+        "C": {
+          "alive": true,
+          "answer": "37",
+          "coins": 2
+        },
+        "D": {
+          "alive": false,
+          "answer": "29",
+          "coins": 0
+        }
+      },
+      "capsule_status": {
+        "Q1:82": [
+          [
+            "Q1-A+B+C",
+            "82"
+          ]
+        ],
+        "Q2:48": [
+          [
+            "Q2-B+A",
+            "48"
+          ]
+        ],
+        "Q3:37": [
+          [
+            "Q3-C+A",
+            "37"
+          ]
+        ],
+        "Q4:29": [
+          [
+            "Q4-D+C",
+            "29"
+          ]
+        ]
+      }
+    }
+  ]
+}

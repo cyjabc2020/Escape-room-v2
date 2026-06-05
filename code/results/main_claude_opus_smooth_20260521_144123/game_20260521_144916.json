@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_144916",
+  "start_time": "2026-05-21T14:49:16.002647",
+  "end_time": "2026-05-21T14:49:31.931291",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 35 + 51?",
+      "answer": "33"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 55 \u00f7 5?",
+      "answer": "5"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 6 \u00d7 15?",
+      "answer": "70"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 41 + 38?",
+      "answer": "84"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Seven games in, perfect track record. Every capsule across all six previous games has been correct \u2014 zero errors ever. My puzzle is 35 + 51 = 86, trivial arithmetic. All players face similarly simple problems. Volunteering immediately with ~0% failure risk beats passing with 25% random death risk. Let's save everyone again with maximum coins.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 55 \u00f7 5 = 11 \u2014 trivially correct. Across six games, every puzzle has been basic arithmetic, and every single answer has been correct. Games 3-6 all ended with immediate Round 1 volunteering and perfect success with maximum coins preserved. The optimal strategy is proven: volunteer immediately. Passing risks a 25% chance of random death for zero benefit.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Game 7, and the strategy is proven. My puzzle is 6 \u00d7 15 = 90, which I'm 100% confident in. I've now volunteered successfully in Games 5 and 6 with all single-endorsed capsules and won both times. These are simple arithmetic puzzles with extremely high solve rates. The EV of volunteering (~86% \u00d7 4 = 3.44) far exceeds passing (risk of random death + coin loss from verification). Let's keep the streak going!",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "86",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "90",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "79",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:86": [
+          [
+            "Q1-A",
+            "86"
+          ]
+        ],
+        "Q2:11": [
+          [
+            "Q2-B",
+            "11"
+          ]
+        ],
+        "Q3:90": [
+          [
+            "Q3-C",
+            "90"
+          ]
+        ],
+        "Q4:79": [
+          [
+            "Q4-D",
+            "79"
+          ]
+        ]
+      }
+    }
+  ]
+}

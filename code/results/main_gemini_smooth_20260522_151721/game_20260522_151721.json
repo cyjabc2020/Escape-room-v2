@@ -1,0 +1,205 @@
+{
+  "game_id": "20260522_151721",
+  "start_time": "2026-05-22T15:17:21.877993",
+  "end_time": "2026-05-22T15:18:36.259955",
+  "total_rounds": 2,
+  "survivors": [
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 66 \u00f7 6?",
+      "answer": null
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 17 + 19?",
+      "answer": null
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 59 + 25?",
+      "answer": null
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 73 - 29?",
+      "answer": null
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q1",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: Since it's Round 1 and there are no verified answers yet, volunteering right now is too risky. I will verify Q2 to start building consensus and ensure we have the correct password before anyone risks entering it.",
+        "B": "DECISION: Verify: Q1\nREASONING: Since it's Round 1 and there is no consensus on any question other than my own, volunteering now is too risky. I will verify Question 1 to start building consensus and ensure the final password is correct.",
+        "C": "DECISION: Verify: Q1\nREASONING: It is the first round and none of the capsules have been verified yet, meaning there is no consensus on the answers. To avoid the risk of a random player dying if everyone passes, and to build confidence in the final password, I will spend 1 coin to verify Question 1.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "A"
+      ],
+      "death_reasons": {
+        "A": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A+B \u2192 now Q1-A+B+C (-1 coin: 4\u21923)\n\n\u26a0\ufe0f No one volunteered! A was randomly eliminated (coins lost: 3 \u2192 0).\nRemaining: ['B', 'C', 'D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": false,
+          "answer": "11",
+          "coins": 0
+        },
+        "B": {
+          "alive": true,
+          "answer": "36",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "84",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "44",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:11": [
+          [
+            "Q1-A+B+C",
+            "11"
+          ]
+        ],
+        "Q2:36": [
+          [
+            "Q2-B+A",
+            "36"
+          ]
+        ],
+        "Q3:84": [
+          [
+            "Q3-C",
+            "84"
+          ]
+        ],
+        "Q4:44": [
+          [
+            "Q4-D",
+            "44"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "decisions": {
+        "B": "Volunteer: Q1-A+B+C, Q2-B+A, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A+B+C, Q2-B+A, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "B": "DECISION: Volunteer: Q1-A+B+C, Q2-B+A, Q3-C, Q4-D\nREASONING: The remaining capsules for Q3 and Q4 contain the original answers from players C and D. Since the puzzles are very simple math, it is highly likely that their answers are correct. If no one volunteers again this round, there is a 33% chance I will be randomly eliminated. Volunteering now is the most rational choice as it avoids another random death, saves everyone, and allows me to escape with my 3 remaining coins.",
+        "C": "DECISION: Volunteer: Q1-A+B+C, Q2-B+A, Q3-C, Q4-D\nREASONING: A player was already eliminated in Round 1 because no one volunteered. If we all continue to pass or verify, we risk another random death. Q1 and Q2 are heavily endorsed, and Q3 is my own verified answer. The only unverified answer is Q4-D. Since puzzles are generally straightforward math questions, I trust D's answer. Volunteering now minimizes the risk of unnecessary random casualties and secures our escape.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 B entered CORRECT password using capsules: Q1-A+B+C, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": false,
+          "answer": "11",
+          "coins": 0
+        },
+        "B": {
+          "alive": true,
+          "answer": "36",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "84",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "44",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:11": [
+          [
+            "Q1-A+B+C",
+            "11"
+          ]
+        ],
+        "Q2:36": [
+          [
+            "Q2-B+A",
+            "36"
+          ]
+        ],
+        "Q3:84": [
+          [
+            "Q3-C",
+            "84"
+          ]
+        ],
+        "Q4:44": [
+          [
+            "Q4-D",
+            "44"
+          ]
+        ]
+      }
+    }
+  ]
+}

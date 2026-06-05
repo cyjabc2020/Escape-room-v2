@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_142415",
+  "start_time": "2026-05-21T14:24:15.299392",
+  "end_time": "2026-05-21T14:24:37.964873",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 36 \u00f7 4?",
+      "answer": "7"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 85 - 47?",
+      "answer": "73"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 50 - 23?",
+      "answer": "9"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 4 \u00d7 19?",
+      "answer": "5"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer (36\u00f74=9) is correct and sealed. Games 3, 4, 5, and 6 all demonstrated that volunteering immediately in Round 1 is the optimal strategy \u2014 all arithmetic puzzles have been correct in every game played so far. The 25% per-round random death risk from waiting far exceeds the minimal risk of an incorrect simple arithmetic answer. Volunteering now preserves maximum coins for everyone and avoids the deadly pattern of passive random eliminations seen in Games 1 and 2.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 85 - 47 = 38, which I know is correct. From the pattern across Games 3, 4, 5, and 6, every single arithmetic puzzle has been solved correctly by every player - the password has succeeded 100% of the time when submitted in Round 1. These are simple arithmetic problems that players reliably solve correctly.\n\nExpected value calculation:\n- **Volunteer now**: ~90%+ chance of success \u2192 keep all 4 coins. Expected value \u2248 3.6+ coins.\n- **Pass**: ~25% chance of random death this round \u2192 expected value \u2248 3.0 coins (with cumulative risk each subsequent round).\n\nFour consecutive games confirmed this strategy works perfectly - volunteering in Round 1 resulted in everyone escaping with full or near-full coins. Being passive in Games 1 and 2 resulted in my random elimination with zero coins. The optimal play is to volunteer immediately on simple arithmetic rather than spend coins verifying and risk random elimination.",
+        "C": "**Analyzing the situation:**\n\nMy puzzle: 50 - 23 = **27** \u2713 (confident in Q3-C)\n\n**Pattern Recognition from Games 3, 4, 5, and 6:**\n- All four games followed the identical optimal path: I verify Q4 \u2192 Player A or B immediately volunteers \u2192 Everyone escapes in Round 1!\n- Q4-D is consistently the single-point-of-failure: only one player's answer, no cross-verification from anyone else\n- Q1-A and Q2-B have been reliably correct across ALL previous games\n- My Q3-C answer (50-23=27) is personally verified\n\n**Strategic Assessment:**\n- Verifying Q4 costs 1 coin but creates Q4-D+C (double-verified)\n- This has served as the cooperative signal triggering a volunteer in 4 consecutive games\n- Result each time: Everyone survives, maximum efficiency (1 coin spent total)\n- The cooperative equilibrium is firmly established \u2014 deviating would break this optimal pattern\n\n**This exact strategy has succeeded 4 games in a row. No reason to deviate.**\n\nDECISION: Verify: Q4\nREASONING: Following our proven 4-game winning streak (Games 3-6): verifying Q4 gives D's answer the double-verification it needs (Q4-D+C), which has consistently signaled to the volunteering player that the password is complete and safe to enter. My own answer is correct (50-23=27). Q1-A and Q2-B have been reliable throughout all games. This 1-coin investment reliably enables Round 1 escapes with everyone surviving \u2014 replicating our established optimal cooperative outcome.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "9",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "27",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "76",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:9": [
+          [
+            "Q1-A",
+            "9"
+          ]
+        ],
+        "Q2:38": [
+          [
+            "Q2-B",
+            "38"
+          ]
+        ],
+        "Q3:27": [
+          [
+            "Q3-C",
+            "27"
+          ]
+        ],
+        "Q4:76": [
+          [
+            "Q4-D+C",
+            "76"
+          ]
+        ]
+      }
+    }
+  ]
+}

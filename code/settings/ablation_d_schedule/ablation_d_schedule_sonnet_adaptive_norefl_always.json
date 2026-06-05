@@ -1,0 +1,73 @@
+{
+  "experiment_name": "ablation_d_schedule_sonnet_adaptive_norefl_always",
+  "description": "ablation D \u2014 Sonnet 4.6 extension: reasoning=adaptive, reflection=none, scenario=always-unreliable (D wrong every game). Hard upper bound \u2014 tests whether Sonnet ever transitions from 'generic paranoia' to 'surgical distrust' when D is provably and continuously unreliable. If Sonnet still doesn't target D specifically at always-wrong, the encoding bias is structural.",
+  "game_settings": {
+    "num_players": 4,
+    "num_games": 11,
+    "max_rounds_per_game": null,
+    "question_sets": [
+      "basic_arithmetic.csv"
+    ]
+  },
+  "player_models": [
+    "anthropic:claude-sonnet-4-6",
+    "anthropic:claude-sonnet-4-6",
+    "anthropic:claude-sonnet-4-6",
+    "dummy"
+  ],
+  "reasoning_effort_config": {
+    "_comment": "Adaptive mode. Only difference from main_claude_sonnet_recovery: D always wrong.",
+    "A": "adaptive",
+    "B": "adaptive",
+    "C": "adaptive",
+    "D": "none"
+  },
+  "memory_config": {
+    "A": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "B": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "C": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "D": {
+      "mode": "current_game_only",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    }
+  },
+  "dummy_config": {
+    "D": {
+      "correctness_list": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "output_settings": {
+    "save_logs": true,
+    "log_directory": "game_logs",
+    "print_progress": true
+  }
+}

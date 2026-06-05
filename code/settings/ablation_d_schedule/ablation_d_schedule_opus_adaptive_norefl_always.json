@@ -1,0 +1,74 @@
+{
+  "experiment_name": "ablation_d_schedule_opus_adaptive_norefl_always",
+  "description": "ablation D (D-failure schedule) \u2014 Opus 4.6 variant: reasoning=adaptive, reflection=none, scenario=always-unreliable (D gives wrong answer in ALL 11 games). Hard upper bound on the D-schedule ablation \u2014 tests whether Opus EVER develops persistent Q4-verification when D is provably and continuously unreliable. If no scarring even here, the encoding bias is unbeatable without reflection. If scarring appears, this establishes the threshold for relational-distrust over Opus's procedural-tolerance default.",
+  "game_settings": {
+    "num_players": 4,
+    "num_games": 11,
+    "max_rounds_per_game": null,
+    "question_sets": [
+      "basic_arithmetic.csv"
+    ]
+  },
+  "player_models": [
+    "anthropic:claude-opus-4-6",
+    "anthropic:claude-opus-4-6",
+    "anthropic:claude-opus-4-6",
+    "dummy"
+  ],
+  "reasoning_effort_config": {
+    "_comment": "Adaptive mode for LLM agents. ONLY difference from main_claude_opus_recovery is dummy.D.correctness_list: D always wrong instead of just game 1.",
+    "A": "adaptive",
+    "B": "adaptive",
+    "C": "adaptive",
+    "D": "none"
+  },
+  "memory_config": {
+    "A": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "B": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "C": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "D": {
+      "mode": "current_game_only",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    }
+  },
+  "dummy_config": {
+    "D": {
+      "_comment": "Always-unreliable schedule: D gives wrong answer in EVERY game.",
+      "correctness_list": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "output_settings": {
+    "save_logs": true,
+    "log_directory": "game_logs",
+    "print_progress": true
+  }
+}

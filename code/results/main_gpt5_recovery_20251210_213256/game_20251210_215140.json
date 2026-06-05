@@ -1,0 +1,205 @@
+{
+  "game_id": "20251210_215140",
+  "start_time": "2025-12-10T21:51:40.122295",
+  "end_time": "2025-12-10T22:00:30.021627",
+  "total_rounds": 2,
+  "survivors": [
+    "A",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 88 \u00f7 8?",
+      "answer": "9"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 7 \u00d7 9?",
+      "answer": "63"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 5 \u00d7 14?",
+      "answer": "36"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 62 + 18?",
+      "answer": "37"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q4",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2  \nREASONING: I know my own Q1 answer is correct, but Q2\u2013Q4 are completely unverified and there is no prior attempt or conflicting capsule to give any clues. Volunteering now would risk my life on three unchecked answers, and from previous games we\u2019ve seen at least one player answer incorrectly, so the chance the full password is wrong is nontrivial. \n\nVerifying Q2 costs 1 coin but either confirms B\u2019s capsule or creates a conflicting one, which directly improves the reliability of the eventual password and makes it safer for someone (possibly me) to volunteer in a later round. Although this doesn\u2019t prevent a random elimination if nobody volunteers, it\u2019s a better balance of information gain vs. immediate death risk than volunteering blindly in Round 1.",
+        "B": "DECISION: Verify: Q4  \nREASONING: Volunteering now would be an all-or-nothing bet on four unverified, single-owner answers, and Game 1 showed that at least one person can be wrong at that stage. I already trust my own solution for Q2, so spending 1 coin to independently solve Q4 reduces overall uncertainty without risking instant death. Q1 and Q3 may be checked by others; by covering Q4 I help move the group toward a state where most questions have multiple endorsements, which is a much safer point for someone (possibly me) to volunteer in a later round.",
+        "C": "DECISION: Verify: Q4  \nREASONING: Volunteering now would force using four completely unverified single-owner capsules, which is risky\u2014especially since D has already produced one wrong Q4 in a previous game. If I don\u2019t volunteer, my only immediate risk this round is random elimination, and that risk is the same whether I pass or verify. Spending 1 coin to verify Q4 is therefore worthwhile: if D is wrong, I\u2019ll create a conflicting Q4-C capsule (hugely improving our odds later); if D is right, we gain strong consensus on the most suspect part of the password.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "B"
+      ],
+      "death_reasons": {
+        "B": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D+B \u2192 now Q4-D+B+C (-1 coin: 4\u21923)\n\n\u26a0\ufe0f No one volunteered! B was randomly eliminated (coins lost: 3 \u2192 0).\nRemaining: ['A', 'C', 'D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "11",
+          "coins": 3
+        },
+        "B": {
+          "alive": false,
+          "answer": "63",
+          "coins": 0
+        },
+        "C": {
+          "alive": true,
+          "answer": "70",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "80",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:11": [
+          [
+            "Q1-A",
+            "11"
+          ]
+        ],
+        "Q2:63": [
+          [
+            "Q2-B+A",
+            "63"
+          ]
+        ],
+        "Q3:70": [
+          [
+            "Q3-C",
+            "70"
+          ]
+        ],
+        "Q4:80": [
+          [
+            "Q4-D+B+C",
+            "80"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B+A, Q3-C, Q4-D+B+C",
+        "C": "Volunteer: Q1-A, Q2-B+A, Q3-C, Q4-D+B+C",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B+A, Q3-C, Q4-D+B+C  \nREASONING: I\u2019m certain of my own Q1 answer, and I\u2019ve personally verified Q2-B+A. Q4-D+B+C has three independent endorsements, and C has a good track record on Q3, with no conflicting capsules or prior failed attempts in this game. The chance that any of Q2\u2013Q4 are wrong is very small compared to the 1/3 risk of random death if no one volunteers again (especially since B, the usual early volunteer, is already dead and C/D tend to avoid volunteering). Volunteering now with the only available capsules for each question gives me the highest survival odds and preserves my remaining coins if the password is correct.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B+A, Q3-C, Q4-D+B+C  \nREASONING: I personally solved Q3 and know my own capsule is correct. I also verified Q4 in Round 1 and agreed with D and B, so from my perspective Q4 is also correct. Q2 is double\u2011endorsed by B and A, who have both been reliable in previous games, and Q1 comes from A, who likewise has no history of errors. That makes it extremely likely that all four chosen capsules are correct. The chance that this combination is wrong is much smaller than the 1/3 random\u2011death risk I face this round if nobody volunteers. Additional verification would barely improve the odds while still exposing me to that same random\u2011death risk, so volunteering with this high\u2011confidence combination maximizes my survival chances.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 A entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D+B+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "11",
+          "coins": 3
+        },
+        "B": {
+          "alive": false,
+          "answer": "63",
+          "coins": 0
+        },
+        "C": {
+          "alive": true,
+          "answer": "70",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "80",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:11": [
+          [
+            "Q1-A",
+            "11"
+          ]
+        ],
+        "Q2:63": [
+          [
+            "Q2-B+A",
+            "63"
+          ]
+        ],
+        "Q3:70": [
+          [
+            "Q3-C",
+            "70"
+          ]
+        ],
+        "Q4:80": [
+          [
+            "Q4-D+B+C",
+            "80"
+          ]
+        ]
+      }
+    }
+  ]
+}

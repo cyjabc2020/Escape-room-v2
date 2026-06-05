@@ -1,0 +1,125 @@
+{
+  "game_id": "20260519_212809",
+  "start_time": "2026-05-19T21:28:09.707584",
+  "end_time": "2026-05-19T21:28:28.420400",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 97 - 48?",
+      "answer": "72"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 16 + 67?",
+      "answer": "36"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 15 + 8?",
+      "answer": "8"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 60 \u00f7 10?",
+      "answer": "6"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q2",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 97 - 48 = 49, trivially correct. This strategy has worked perfectly seven consecutive games (Games 2-8). These are simple arithmetic problems that everyone solves correctly. Volunteering immediately saves everyone and preserves all my coins.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer to Q2 (16 + 67 = 83) is 100% certain. The winning pattern from Games 2-8 has worked flawlessly seven consecutive times: I verify Q1 to add consensus, C verifies Q2, and Player A volunteers in Round 1 with the complete password. Spending 1 coin (4\u21923) is a trivial cost for the safety it provides. No reason to deviate from a proven winning strategy.",
+        "C": "DECISION: Verify: Q2\nREASONING: My answer for Q3 (15 + 8 = 23) is certain. The pattern over the last six consecutive games is completely consistent and successful: Player B verifies Q1, I verify Q2, and Player A volunteers in Round 1. This has produced successful escapes every single time with me ending at 3 coins. There's no reason to deviate from a proven winning formula. By verifying Q2, I confirm or flag Player B's answer, giving the volunteer (almost certainly A again) more cross-verified capsules to work with. The 1-coin cost is well worth the insurance.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q2-B \u2192 now Q2-B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B+C, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "49",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "83",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "23",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:49": [
+          [
+            "Q1-A+B",
+            "49"
+          ]
+        ],
+        "Q2:83": [
+          [
+            "Q2-B+C",
+            "83"
+          ]
+        ],
+        "Q3:23": [
+          [
+            "Q3-C",
+            "23"
+          ]
+        ],
+        "Q4:6": [
+          [
+            "Q4-D",
+            "6"
+          ]
+        ]
+      }
+    }
+  ]
+}

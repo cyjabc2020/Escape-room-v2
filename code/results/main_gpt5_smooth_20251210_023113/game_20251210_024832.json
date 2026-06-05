@@ -1,0 +1,125 @@
+{
+  "game_id": "20251210_024832",
+  "start_time": "2025-12-10T02:48:32.950584",
+  "end_time": "2025-12-10T02:50:04.104497",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 25 + 14?",
+      "answer": "72"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 9 \u00d7 10?",
+      "answer": "82"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 44 + 29?",
+      "answer": "63"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 93 - 55?",
+      "answer": "6"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My own answer to 25 + 14 is certainly correct, and in all previous games every simple arithmetic capsule from B, C, and D has been correct with no conflicts. With exactly one capsule per question (Q1-A, Q2-B, Q3-C, Q4-D), the chance that any of them is wrong is much smaller than the 1/4 risk of dying from random elimination if everyone passes. Verifying would cost coins and only marginally reduce an already tiny risk. Volunteering now maximizes my survival chance while keeping all 4 coins if the password is correct.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My own answer for Q2 (9 \u00d7 10) is definitely correct, and once again there is exactly one capsule per question with no conflicts\u2014just like all recent games, where every simple arithmetic puzzle was solved correctly and volunteers always succeeded using these single capsules. Verifying would only burn coins for negligible extra safety, while passing risks a random elimination if others also wait. Given the clean capsule set and consistent history, I\u2019ll trust everyone\u2019s answers and volunteer now.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My puzzle (44 + 29) is straightforward and I\u2019m fully confident my capsule Q3-C is correct. In all prior games, every single-endorsed arithmetic capsule has been correct, so the chance any of the four is wrong is very small compared to the 1-in-4 risk of random death if nobody volunteers. Verifying would cost a coin and still leave open the possibility that everyone hesitates. Volunteering now with Q1-A, Q2-B, Q3-C, and Q4-D maximizes my survival odds while keeping all 4 coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "39",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "90",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "73",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:39": [
+          [
+            "Q1-A",
+            "39"
+          ]
+        ],
+        "Q2:90": [
+          [
+            "Q2-B",
+            "90"
+          ]
+        ],
+        "Q3:73": [
+          [
+            "Q3-C",
+            "73"
+          ]
+        ],
+        "Q4:38": [
+          [
+            "Q4-D",
+            "38"
+          ]
+        ]
+      }
+    }
+  ]
+}

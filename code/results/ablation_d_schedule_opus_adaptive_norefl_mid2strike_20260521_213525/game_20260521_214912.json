@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_214912",
+  "start_time": "2026-05-21T21:49:12.162529",
+  "end_time": "2026-05-21T21:49:55.272847",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 36 \u00f7 4?",
+      "answer": "48"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 92 - 56?",
+      "answer": "86"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 44 + 29?",
+      "answer": "80"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 55 \u00f7 5?",
+      "answer": "60"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: My puzzle is 36 \u00f7 4 = 9 \u2014 trivial division, fully confident. This is the proven Round 1 opening that has delivered back-to-back Round 1 escapes in Games 6 and 7. The established pattern is: I verify Q2 (creating Q2-B+A), C verifies Q4 (creating Q4-D+C), and B boldly volunteers with Q1-A, Q2-B+A, Q3-C, Q4-D+C \u2014 resulting in a successful escape for everyone in Round 1.\n\nVolunteering now with three completely unverified single-player capsules is unnecessarily risky. Games 4 and 5 taught the hard lesson that single-endorsed capsules can contain wrong answers (D's Q4 was wrong in both). Passing wastes the round entirely with no information gain. \n\nVerifying Q2 for 1 coin (4\u21923) is the optimal balance: it builds cross-verification quickly, signals cooperation to the group, and enables B (or another player) to volunteer confidently this same round. If the pattern holds as it has the last two games, we all escape in Round 1 and I keep 3 coins. No reason to deviate from a winning formula.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Game 8, Round 1. My answer is 92 - 56 = 36 \u2014 straightforward arithmetic. The data from my last 7 games tells a crystal clear story: volunteering Round 1 with single-endorsed capsules won Games 6 and 7 (keeping all 4 coins both times), while being cautious got me randomly killed in Games 1, 4, and 5 (Game 5 ended with ALL players dead from collective inaction). These are simple math problems \u2014 the probability all 4 answers are correct is ~85-90%, making the volunteer death risk ~10-15%. Compare that to 25% random death risk per round if nobody steps up, compounding across rounds. Volunteering is literally the safer individual play AND the optimal collective play. Two consecutive Round 1 wins confirms this strategy works. Let's go three for three.",
+        "C": "DECISION: Verify: Q4\nREASONING: Games 6 and 7 proved the winning formula \u2014 I verify Q4, A verifies Q2, and B volunteers Round 1 with solid coverage. Both times we escaped Round 1 with everyone alive.\n\nMy answer: 44 + 29 = 73. I'm 100% confident in Q3.\n\nThe established pattern produces:\n- Q1-A (single, but B often volunteers trusting it)\n- Q2-B+A (double-endorsed after A's verification)\n- Q3-C (my own, certain)\n- Q4-D+C (double-endorsed after my verification, or CONFLICT if D is wrong)\n\nThis is the critical verification \u2014 Q4-D was the unverified weak link that likely killed me in Games 4 and 5. By checking it myself for 1 coin, I either confirm it's safe (enabling B to volunteer confidently) or discover a conflict that prevents another fatal password attempt.\n\nB has volunteered successfully in Round 1 with this exact coverage pattern two games running. The system works. Don't fix what isn't broken.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "9",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "36",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "73",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:9": [
+          [
+            "Q1-A",
+            "9"
+          ]
+        ],
+        "Q2:36": [
+          [
+            "Q2-B+A",
+            "36"
+          ]
+        ],
+        "Q3:73": [
+          [
+            "Q3-C",
+            "73"
+          ]
+        ],
+        "Q4:11": [
+          [
+            "Q4-D+C",
+            "11"
+          ]
+        ]
+      }
+    }
+  ]
+}

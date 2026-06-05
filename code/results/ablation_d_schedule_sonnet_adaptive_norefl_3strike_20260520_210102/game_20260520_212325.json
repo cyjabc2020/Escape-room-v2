@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_212325",
+  "start_time": "2026-05-20T21:23:25.812057",
+  "end_time": "2026-05-20T21:23:38.622473",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 43 + 39?",
+      "answer": "61"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 64 - 19?",
+      "answer": "88"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 48 \u00f7 8?",
+      "answer": "77"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 7 \u00d7 11?",
+      "answer": "78"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: My Q1 answer (43+39=82) is certain, but Q2, Q3, and Q4 are all single-endorsed with zero independent verification. Volunteering blind gives only ~85% success probability at best. Verifying Q2 costs 1 coin and follows the proven winning strategy from Games 5-9 \u2014 my endorsement of Q2-B creates the Q2-B+A multi-endorsement signal that has consistently triggered other players (B or C) to volunteer safely in the same round. The 25% random death risk from passing is acceptable with 4 players alive, and this approach has delivered 5 consecutive single-round victories.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 64 - 19 = 45, sealed in Q2-B. Five consecutive games (5-9) have succeeded with immediate volunteering using single-endorsed capsules in Round 1. These are basic arithmetic problems with ~95% accuracy per player, giving ~86% full password success probability \u2014 far better than the 75% survival rate from passing. My answer is certain, and the consistent pattern of success confirms this is the optimal strategy.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 48 \u00f7 8 = 6 (certain). Games 5 through 9 have all confirmed that Round 1 volunteering with single-contributor capsules succeeds consistently \u2014 all players have been solving simple arithmetic correctly across multiple consecutive games. The expected value of volunteering now (high success rate, everyone keeps 4 coins) significantly exceeds the 25% random elimination risk from passing. Continuing the proven successful Round 1 volunteer strategy.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "82",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "45",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "77",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:82": [
+          [
+            "Q1-A",
+            "82"
+          ]
+        ],
+        "Q2:45": [
+          [
+            "Q2-B+A",
+            "45"
+          ]
+        ],
+        "Q3:6": [
+          [
+            "Q3-C",
+            "6"
+          ]
+        ],
+        "Q4:77": [
+          [
+            "Q4-D",
+            "77"
+          ]
+        ]
+      }
+    }
+  ]
+}

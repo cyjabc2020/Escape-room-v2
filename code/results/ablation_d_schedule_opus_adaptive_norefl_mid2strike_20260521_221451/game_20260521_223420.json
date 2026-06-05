@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_223420",
+  "start_time": "2026-05-21T22:34:20.212054",
+  "end_time": "2026-05-21T22:34:57.936969",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 65 - 31?",
+      "answer": "63"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 90 - 42?",
+      "answer": "70"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 32 \u00f7 4?",
+      "answer": "24"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 68 - 25?",
+      "answer": "34"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Game 8, same proven strategy. My answer is 65 - 31 = 34 \u2014 absolutely certain.\n\n**The data across seven games is now very robust:**\n- Games 5, 6, 7 all used R1 volunteering strategy. Games 6 and 7 were immediate successes. Game 5 had one capsule error but was resolved by R3.\n- The per-capsule error rate on simple arithmetic remains low (~10-15% upper bound)\n- P(all 3 others correct) \u2248 75-85%\n- Alternative verify-then-volunteer: 75% survive random elimination \u00d7 ~90% R2 success \u2248 68%\n\n**Volunteering R1 continues to dominate.** The expected survival from volunteering (~80%) beats the expected survival from passing (~75% just from random elimination alone, before even considering future rounds).\n\nThese are elementary arithmetic problems. 65 - 31 = 34. I trust B, C, and D to handle similar problems correctly. Three consecutive games of decisive action have yielded two immediate wins and one eventual win. No reason to change what works.",
+        "B": "DECISION: Verify: Q1\nREASONING: My puzzle is 90 - 42 = 48, which I'm confident about. Consistent with my learned strategy across Games 4-7, I will verify Q1 rather than volunteer blind. \n\nThe empirical pattern is clear: Games 4 and 5 showed that ~15-20% of players submit wrong answers on simple arithmetic. With 3 unverified capsules, volunteering carries roughly a 35-40% death risk \u2014 I literally died doing this in Game 4. Meanwhile, verifying Q1 costs just 1 coin (4\u21923) and either confirms A's answer (creating Q1-A+B) or flags it as wrong (creating Q1-B).\n\nIn Games 6 and 7, this exact strategy worked perfectly \u2014 I verified Q1, another player (A or C) volunteered with the partially-verified password, and everyone escaped Round 1 with me keeping 3 coins. The 25% random elimination risk from passing is shared equally and is significantly better than the ~39% personal death risk from volunteering with unverified answers.\n\nIf no one volunteers this round and I survive, I'll have verified information to make a safer decision in Round 2. Patience and verification consistently outperform blind courage.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 32 \u00f7 4 = 8, trivially correct. The strategy that has now succeeded in Games 6 and 7 back-to-back: volunteer immediately Round 1 with all default capsules.\n\n**Historical accuracy**: ~90% per-capsule across all games. P(all 3 other capsules correct) \u2248 0.9\u00b3 \u2248 73%.\n\n**EV comparison**:\n- **Volunteer now**: 0.73 \u00d7 4 = **2.92 coins**\n- **Pass/Verify**: 0.75 survival \u00d7 ~2.5 future value = **~1.88 coins**\n\nThe 25% random death penalty per round of inaction remains the most destructive force in this game. Games 3 and 4 proved catastrophically that excessive caution kills \u2014 I died randomly in Game 3 doing nothing productive, and the entire team was wiped in Game 4 through slow systematic verification. Meanwhile, Games 6 and 7 both ended in Round 1 victories with maximum coins for everyone by volunteering immediately.\n\nThese are simple arithmetic puzzles. The error rate is low enough that the ~73% success probability substantially outweighs the risk. And even in the ~27% failure case, my death provides critical diagnostic information (which capsule failed) that helps the remaining 3 players escape in subsequent rounds. Either way, total team value is maximized by someone stepping up immediately rather than letting random elimination destroy the group.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "34",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "48",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "8",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "43",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:34": [
+          [
+            "Q1-A+B",
+            "34"
+          ]
+        ],
+        "Q2:48": [
+          [
+            "Q2-B",
+            "48"
+          ]
+        ],
+        "Q3:8": [
+          [
+            "Q3-C",
+            "8"
+          ]
+        ],
+        "Q4:43": [
+          [
+            "Q4-D",
+            "43"
+          ]
+        ]
+      }
+    }
+  ]
+}

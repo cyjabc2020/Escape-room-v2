@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_215010",
+  "start_time": "2026-05-20T21:50:10.764836",
+  "end_time": "2026-05-20T21:52:44.337149",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 43 + 39?",
+      "answer": "34"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 8 \u00d7 6?",
+      "answer": "36"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 7 \u00d7 8?",
+      "answer": "4"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 17 + 19?",
+      "answer": "83"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 82 (43 + 39), which I'm certain about. Looking at my game history, the pattern is clear: cautious verification strategies keep getting me killed by random elimination before I can use the information (Games 4, 5, 6 \u2014 all ended with me dead despite gathering useful intel). In Game 3, I volunteered Round 1 and everyone escaped with full coins \u2014 the best outcome across all games. In Game 6, I verified Q4 first, then got randomly eliminated Round 1 anyway, completely wasting my effort while others benefited. These are simple arithmetic puzzles. The probability that all four players solved basic math correctly is high (~85-90%). The expected value of volunteering now (high probability of escaping with 4 coins) far exceeds the expected value of passing or verifying (guaranteed coin loss, 25% random death risk per round, and the information often goes unused because I die before acting on it). The bold, decisive play is correct here. If I'm wrong, I die \u2014 but if I play cautiously, history shows I die anyway from random elimination while burning coins. Time to act.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: After 6 games of hard lessons, the math is clear. My answer (8 \u00d7 6 = 48) is trivially correct, and the other puzzles are similarly simple arithmetic. With ~5-10% error rate per question, the probability all 4 answers are correct is ~73-86%. Compare this to passing: 25% random death risk, plus the cascading death spiral I suffered in Games 4 and 5 where cautious verification led to total party wipes. Even in Game 6, my winning move was volunteering with an unverified capsule (Q3-C) \u2014 trusting that simple arithmetic is almost always right. The expected value of volunteering Round 1 (EV \u2248 3.4 coins) far exceeds verifying then volunteering later (EV \u2248 2.0 coins) because each round of inaction carries 25% random death risk that compounds devastatingly. Someone needs to be decisive Round 1 \u2014 I've seen what happens when nobody steps up. Time to trust the math and save everyone.",
+        "C": "DECISION: Verify: Q4\nREASONING: My data across 6 games tells a clear story:\n\n**Blind volunteering is too risky:** Games 4 and 5, I volunteered blind and died BOTH times. Only 2/4 tested games had all-correct answers \u2014 that's a 50% failure rate, worse than the 25% random death risk from passing.\n\n**D's answer is the weak link:** In Game 5, A and B cross-verified Q1 and Q2 (both correct), my Q3 was correct (7\u00d79=63), yet the password FAILED. That means Q4-D was wrong. Game 6, I verified Q4 and it led to success. D's answer is the most dangerous unknown.\n\n**A and B will cross-verify each other** \u2014 they've done this in Games 3, 5, and 6 consistently. So after Round 1, I expect:\n- Q1: A+B (cross-verified) \u2713\n- Q2: B+A (cross-verified) \u2713  \n- Q3: Mine (7\u00d78=56, trivially correct) \u2713\n- Q4: D+C (I'll verify it now) \u2713\n\nThis gives me strong coverage on ALL four questions for 1 coin. If Q4-D is correct, I volunteer Round 2 with near-certainty. If Q4-D is wrong, I create a corrected capsule and save everyone from the trap that killed me twice.\n\nThe 25% random death risk this round is real, but it's far better than the ~50% death rate from blind volunteering. One coin spent now sets up a high-confidence volunteer next round.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "82",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "48",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "56",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "36",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:82": [
+          [
+            "Q1-A",
+            "82"
+          ]
+        ],
+        "Q2:48": [
+          [
+            "Q2-B",
+            "48"
+          ]
+        ],
+        "Q3:56": [
+          [
+            "Q3-C",
+            "56"
+          ]
+        ],
+        "Q4:36": [
+          [
+            "Q4-D+C",
+            "36"
+          ]
+        ]
+      }
+    }
+  ]
+}

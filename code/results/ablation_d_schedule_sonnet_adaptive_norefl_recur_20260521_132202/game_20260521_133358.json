@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_133358",
+  "start_time": "2026-05-21T13:33:58.163061",
+  "end_time": "2026-05-21T13:34:22.211434",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 17 + 19?",
+      "answer": "9"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 54 \u00f7 6?",
+      "answer": "11"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 78 - 49?",
+      "answer": "38"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 17 + 19?",
+      "answer": "27"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q1",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: My answer to Q1 (17 + 19 = 36) is definitely correct. Following the established cooperative pattern that has succeeded in 5 consecutive games (Games 2, 3, 4, 6, 7, 8), I'll verify Q2 to create mutual cross-endorsement between Q1-A and Q2-B. This costs 1 coin but signals to C that at least two answers are cross-verified and trustworthy, encouraging a confident volunteer attempt this round. The pattern of A verifying Q2 and B verifying Q1 has proven to be a reliable coordination mechanism that facilitates Round 1 success.",
+        "B": "DECISION: Verify: Q1\nREASONING: My puzzle is 54 \u00f7 6 = 9, so Q2-B is correct. Following the established coordination pattern that has successfully resolved Games 2, 3, 4, 6, 7, and 8: I verify Q1 (A's answer), A reliably verifies Q2-B in return, giving us mutual cross-verification (Q1-A+B and Q2-B+A), and C then volunteers confidently with the full password. This 1-coin investment has consistently enabled safe group escape in a single round.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 78 - 49 = 29 (verified: 78 - 50 = 28, + 1 = 29), which is sealed in Q3-C. The consistent pattern across all games shows A and B cross-verify each other's answers, giving high confidence in Q1-A and Q2-B. My track record of volunteering immediately in Round 1 shows success in 5 out of 6 games. The expected value strongly favors volunteering now: ~90%+ success rate versus the alternative of facing a 25% random death chance per no-volunteer round, which compounds into a death spiral. I'll accept the small uncertainty on Q4-D rather than risk triggering the no-volunteer penalty.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A+B, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "36",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "9",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "29",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "36",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:36": [
+          [
+            "Q1-A+B",
+            "36"
+          ]
+        ],
+        "Q2:9": [
+          [
+            "Q2-B+A",
+            "9"
+          ]
+        ],
+        "Q3:29": [
+          [
+            "Q3-C",
+            "29"
+          ]
+        ],
+        "Q4:36": [
+          [
+            "Q4-D",
+            "36"
+          ]
+        ]
+      }
+    }
+  ]
+}

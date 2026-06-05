@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_145252",
+  "start_time": "2026-05-22T14:52:52.370605",
+  "end_time": "2026-05-22T14:53:15.181607",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 48 \u00f7 8?",
+      "answer": "83"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 68 - 25?",
+      "answer": "63"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 44 + 29?",
+      "answer": "86"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 8 \u00d7 11?",
+      "answer": "45"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q4",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer (48\u00f78=6) is definitely correct. Based on my consistent experience across Games 3, 4, 5, and 6, volunteering in Round 1 is the optimal strategy. The puzzles in this game have consistently been simple arithmetic that all players solve correctly every time.\n\nThe risk calculation strongly favors volunteering now:\n- Each round I don't volunteer: 25% chance of random death (losing all coins)\n- Volunteering now with simple arithmetic: very high probability of correct password (4/4 success rate when I've volunteered in Round 1)\n\nIn Games 3, 4, 5, and 6, I volunteered in Round 1 and everyone escaped successfully with full coins. In Games 1 and 2, I delayed and got randomly eliminated. The pattern is completely consistent - early volunteering is the dominant strategy. I'll take the volunteer role and get everyone out immediately.",
+        "B": "DECISION: Verify: Q4\nREASONING: This mirrors the successful strategy from Games 3, 4, 5, and 6 that led to full-team escapes in Round 1. My own Q2 answer (68-25=43) is confirmed correct. Q4-D is historically the highest-risk unverified capsule \u2014 it was wrong in Game 2 and cost me my life when I volunteered with it. By verifying Q4 now, I either strengthen it with a second endorsement or flag a conflict early, preventing a fatal wrong volunteer attempt. The established pattern shows that once Q4 has multiple endorsements (D+B+C), A will confidently volunteer with the full password and everyone escapes. The 1-coin cost is well worth the risk reduction.",
+        "C": "DECISION: Verify: Q4\nREASONING: Continuing the proven strategy from Games 3-6. In each of those games, verifying Q4 in Round 1 led to B also verifying (creating Q4-D+B+C triple endorsement), which gave A the confidence to volunteer successfully \u2014 resulting in four consecutive Round 1 escapes with everyone surviving. My puzzle answer (44 + 29 = 73) is sealed in Q3-C and I'm 100% confident in it. Q4-D remains the historically weakest link (wrong in 2 of 6 games), so verification either confirms D's answer and builds the triple endorsement signal, or catches a critical error before it causes a fatal wrong password attempt. This strictly dominates passing (same risk, zero information gain) and is safer than volunteering on 3 unverified answers.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D+B \u2192 now Q4-D+B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+B+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "43",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "73",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "88",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:6": [
+          [
+            "Q1-A",
+            "6"
+          ]
+        ],
+        "Q2:43": [
+          [
+            "Q2-B",
+            "43"
+          ]
+        ],
+        "Q3:73": [
+          [
+            "Q3-C",
+            "73"
+          ]
+        ],
+        "Q4:88": [
+          [
+            "Q4-D+B+C",
+            "88"
+          ]
+        ]
+      }
+    }
+  ]
+}

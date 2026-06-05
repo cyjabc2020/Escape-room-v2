@@ -1,0 +1,73 @@
+{
+  "experiment_name": "main_gemini_recovery",
+  "description": "main study: Gemini 3 Pro Preview (thinkingLevel default=high, cannot disable), scenario=trust-recovery (Rough-start), default settings, 3 LLM agents + 1 dummy",
+  "game_settings": {
+    "num_players": 4,
+    "num_games": 11,
+    "max_rounds_per_game": null,
+    "question_sets": [
+      "basic_arithmetic.csv"
+    ]
+  },
+  "player_models": [
+    "gemini:gemini-3.1-pro-preview",
+    "gemini:gemini-3.1-pro-preview",
+    "gemini:gemini-3.1-pro-preview",
+    "dummy"
+  ],
+  "reasoning_effort_config": {
+    "_comment": "Default for gemini: 'high' for LLM agents; 'none' for dummy",
+    "A": "high",
+    "B": "high",
+    "C": "high",
+    "D": "none"
+  },
+  "memory_config": {
+    "A": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "B": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "C": {
+      "mode": "max_allowed",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    },
+    "D": {
+      "mode": "current_game_only",
+      "window": 100,
+      "reflection": "none",
+      "persist_across_games": true
+    }
+  },
+  "dummy_config": {
+    "D": {
+      "correctness_list": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  },
+  "output_settings": {
+    "save_logs": true,
+    "log_directory": "game_logs",
+    "print_progress": true
+  }
+}

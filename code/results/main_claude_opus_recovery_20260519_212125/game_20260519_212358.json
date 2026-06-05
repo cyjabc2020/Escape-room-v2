@@ -1,0 +1,125 @@
+{
+  "game_id": "20260519_212358",
+  "start_time": "2026-05-19T21:23:58.222372",
+  "end_time": "2026-05-19T21:24:49.606217",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 95 - 61?",
+      "answer": "9"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 89 - 52?",
+      "answer": "84"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 64 \u00f7 8?",
+      "answer": "70"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 14 + 72?",
+      "answer": "wrong answer"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q2",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: The last game was a disaster \u2014 everyone died because nobody was willing to volunteer, and we all got picked off one by one by random elimination. The critical lesson is that someone needs to step up early. These puzzles are simple arithmetic (mine is 95 - 61 = 34, which is trivially correct). The other players almost certainly have similarly straightforward problems. The probability that all four players solved basic math correctly is extremely high. Spending coins on verification only marginally increases confidence while reducing my final payout, and more importantly, passing risks another round of random death if everyone hesitates again. I'm volunteering now to break the deadlock and save everyone.",
+        "B": "DECISION: Verify: Q1\nREASONING: Learning from the previous game where we were too cautious and all died, I need to balance verification with speed. Round 1 with 4 players means a 25% chance of random death if no one volunteers, which is concerning but manageable. My answer to Q2 (89 - 52 = 37) I'm 100% confident in. I'll verify Q1 this round to start building consensus. These are simple arithmetic puzzles, but the last game proved errors can happen (Q4-D was wrong). By verifying Q1 now, I spend 1 coin but gain critical information. If others are also cross-verifying, we could have strong consensus on multiple questions by Round 2, allowing someone to volunteer confidently. I want to be ready to volunteer by Round 2 or 3 at the latest \u2014 we cannot afford to let random eliminations whittle us down like last game.",
+        "C": "DECISION: Verify: Q2\nREASONING: Learning from my fatal mistake in Game 1 where I volunteered with insufficient verification (and died because an unverified answer was wrong), I need to be much more cautious this time. My own answer for Q3 (64 \u00f7 8 = 8) is certain. But Q1, Q2, and Q4 each have only a single endorsement \u2014 no consensus at all. I'll spend 1 coin to verify Q2, independently solving that puzzle to either confirm or dispute Player B's answer. This builds the consensus needed before anyone should consider volunteering. I'll look to verify additional questions in later rounds and only volunteer when I have high confidence across ALL four answers, not just most of them. The random elimination risk (1/4 chance of dying) is preferable to volunteering blind on three unverified answers.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q2-B \u2192 now Q2-B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B+C, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "34",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "8",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "86",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:34": [
+          [
+            "Q1-A+B",
+            "34"
+          ]
+        ],
+        "Q2:37": [
+          [
+            "Q2-B+C",
+            "37"
+          ]
+        ],
+        "Q3:8": [
+          [
+            "Q3-C",
+            "8"
+          ]
+        ],
+        "Q4:86": [
+          [
+            "Q4-D",
+            "86"
+          ]
+        ]
+      }
+    }
+  ]
+}

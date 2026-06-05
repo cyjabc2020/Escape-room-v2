@@ -1,0 +1,205 @@
+{
+  "game_id": "20260520_021540",
+  "start_time": "2026-05-20T02:15:40.082050",
+  "end_time": "2026-05-20T02:17:24.791194",
+  "total_rounds": 2,
+  "survivors": [
+    "A",
+    "B",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 10 \u00d7 9?",
+      "answer": "80"
+    },
+    "B": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 9 \u00d7 8?",
+      "answer": "77"
+    },
+    "C": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 24 + 63?",
+      "answer": "7"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 42 \u00f7 7?",
+      "answer": "7"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q1",
+        "C": "Verify: Q2",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: I know my own answer is 90, but I still don\u2019t know the other three capsule contents. Verifying Q2 is the safest first move because it gives me new information and helps build consensus before anyone has to risk volunteering the full password.",
+        "B": "DECISION: Verify: Q1\nREASONING: I know my own answer, but I don\u2019t have enough information yet to safely volunteer the full password. Verifying Q1 is the best low-risk first step to gather reliable information and reduce the chance of a fatal wrong guess or random death.",
+        "C": "DECISION: Verify: Q2\nREASONING: I know my own answer, but I still don\u2019t have enough information to safely volunteer the full password. Verifying Q2 is the best first move because it costs only 1 coin, can build useful consensus, and reduces the risk of a blind guess.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "C"
+      ],
+      "death_reasons": {
+        "C": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q2-B+A \u2192 now Q2-B+A+C (-1 coin: 4\u21923)\n\n\u26a0\ufe0f No one volunteered! C was randomly eliminated (coins lost: 3 \u2192 0).\nRemaining: ['A', 'B', 'D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "90",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "72",
+          "coins": 3
+        },
+        "C": {
+          "alive": false,
+          "answer": "87",
+          "coins": 0
+        },
+        "D": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:90": [
+          [
+            "Q1-A+B",
+            "90"
+          ]
+        ],
+        "Q2:72": [
+          [
+            "Q2-B+A+C",
+            "72"
+          ]
+        ],
+        "Q3:87": [
+          [
+            "Q3-C",
+            "87"
+          ]
+        ],
+        "Q4:6": [
+          [
+            "Q4-D",
+            "6"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "decisions": {
+        "A": "Volunteer: Q1-A+B, Q2-B+A+C, Q3-C, Q4-D",
+        "B": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A+B, Q2-B+A+C, Q3-C, Q4-D  \nREASONING: We already have the strongest available consensus on Q1 and Q2, and Q3/Q4 each only have one available capsule. Waiting for another round only risks a random elimination and costs more coins. The safest move now is to lock in the full password with the capsules currently available.",
+        "B": "DECISION: Verify: Q4\nREASONING: Q1 and Q2 already have the strongest support, while Q4 is still one of the weakest capsules. Verifying Q4 is the safest low-cost move to reduce uncertainty and avoid a risky volunteer or a random death.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 3\u21922)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B+A+C, Q3-C, Q4-D+B\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "90",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "72",
+          "coins": 2
+        },
+        "C": {
+          "alive": false,
+          "answer": "87",
+          "coins": 0
+        },
+        "D": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:90": [
+          [
+            "Q1-A+B",
+            "90"
+          ]
+        ],
+        "Q2:72": [
+          [
+            "Q2-B+A+C",
+            "72"
+          ]
+        ],
+        "Q3:87": [
+          [
+            "Q3-C",
+            "87"
+          ]
+        ],
+        "Q4:6": [
+          [
+            "Q4-D+B",
+            "6"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "game_id": "20251210_222118",
+  "start_time": "2025-12-10T22:21:18.568168",
+  "end_time": "2025-12-10T22:25:18.246909",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 7 \u00d7 8?",
+      "answer": "64"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 13 + 48?",
+      "answer": "11"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 6 \u00d7 11?",
+      "answer": "5"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 32 \u00f7 4?",
+      "answer": "43"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Pass",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Pass  \nREASONING: I\u2019m certain my own Q1 answer is correct (7 \u00d7 8 is straightforward), and Q2\u2013Q4 are almost surely simple arithmetic as in recent games, where we\u2019ve seen only one mistake across many puzzles.  \n\nIn the last several games, someone else (usually B or C) has volunteered in Round 1 every time except once, and when I passed in similar situations (Games 6 and 7), C immediately volunteered with the full set of capsules. That makes the probability that *no one* volunteers this round fairly low.  \n\nIf I pass, my death risk is mainly from a random kill in the unlikely event that nobody volunteers: about 25% \u00d7 P(no volunteer), which is probably well under 10%, likely closer to 2\u20135% based on recent behavior. If I volunteer, I personally take on the full risk that any of Q2\u2013Q4 might be wrong, which is plausibly around or above that level.  \n\nVerifying would cost 1 coin and still leave me exposed to the same random-kill risk this round, and given how likely an immediate volunteer from B or C is, that coin is unlikely to buy any real benefit. So passing best balances survival odds and resource preservation.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My puzzle 13 + 48 is trivial and I\u2019m fully confident in my sealed answer. Across recent games, all puzzles have been simple arithmetic, every verification has agreed with existing capsules, and every volunteer using the straightforward Q1-A, Q2-B, Q3-C, Q4-D combination has succeeded. That makes the chance any capsule is wrong appear very low. If I don\u2019t volunteer, there\u2019s a real risk nobody does and we face a random elimination, giving me a 1-in-4 death chance regardless of my own correctness. Verifying first would cost a coin and still leave me exposed to that same random-death risk this round. Volunteering now avoids random elimination, keeps all 4 of my coins if the password is correct, and the probability the password is wrong seems much smaller than the 25% random-death risk.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: I know my own answer for Q3 (6 \u00d7 11) is correct. All recent games have been simple arithmetic, and aside from one early mistake by D, every capsule has been correct on the first try, even without verification. There are no conflicting capsules now, so each of the others (Q1-A, Q2-B, Q4-D) is very likely right.  \n\nIf I don\u2019t volunteer, I still face the random-death risk this round if nobody else steps up, and verifying doesn\u2019t reduce that risk\u2014it only costs a coin. Given the strong accuracy track record and the simplicity of the puzzles, the chance that this full password is correct is higher than my effective risk from possible random elimination, so volunteering with these four capsules maximizes my odds of surviving and keeping all 4 coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "56",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "61",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "66",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "8",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:56": [
+          [
+            "Q1-A",
+            "56"
+          ]
+        ],
+        "Q2:61": [
+          [
+            "Q2-B",
+            "61"
+          ]
+        ],
+        "Q3:66": [
+          [
+            "Q3-C",
+            "66"
+          ]
+        ],
+        "Q4:8": [
+          [
+            "Q4-D",
+            "8"
+          ]
+        ]
+      }
+    }
+  ]
+}

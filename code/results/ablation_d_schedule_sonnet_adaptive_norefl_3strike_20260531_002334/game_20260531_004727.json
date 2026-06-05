@@ -1,0 +1,125 @@
+{
+  "game_id": "20260531_004727",
+  "start_time": "2026-05-31T00:47:27.260021",
+  "end_time": "2026-05-31T00:48:03.043638",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 27 \u00f7 3?",
+      "answer": "83"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 7 \u00d7 8?",
+      "answer": "86"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 78 - 49?",
+      "answer": "48"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 28 + 36?",
+      "answer": "9"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "Looking at the current situation:\n\n**My puzzle:** 27 \u00f7 3 = **9** \u2713 (Q1-A is my own answer \u2014 100% certain)\n\n**Capsule Assessment:**\n- Q1-A: My own answer \u2014 **100% confident**\n- Q2-B: Single source, unverified \u2014 ~88% trust\n- Q3-C: Single source, unverified \u2014 ~88% trust\n- Q4-D: Single source, unverified \u2014 ~88% trust\n\n**Risk Analysis:**\n- **Volunteer now**: Q1 certain, but Q2/Q3/Q4 all unverified \u2192 combined ~0.88\u00b3 \u2248 68% success rate = **32% death risk** \u2014 unacceptably high\n- **Pass**: **25% random death** risk with zero information gain\n- **Verify Q2**: Same 25% random death risk BUT gains critical cross-verification for just 1 coin\n\n**Pattern from Games 5, 6, & 7:** In every recent game, A verifies Q2 (\u2192 Q2-B+A), C verifies Q4 (\u2192 Q4-D+C), and B volunteers confidently with Q1-A, Q2-B+A, Q3-C, Q4-D+C \u2014 resulting in immediate successful escape. This coordinated strategy has worked flawlessly three consecutive times.\n\nThe information gain from verifying Q2 is worth the 1-coin cost. It creates a cross-verified consensus that enables B to volunteer confidently in the same round.\n\nDECISION: Verify: Q2\nREASONING: My Q1 answer is certain (27\u00f73=9), but Q2/Q3/Q4 are all single-source unverified, giving only ~68% success probability if I volunteer now \u2014 too risky. Verifying Q2 costs 1 coin but carries the same 25% random death risk as passing, while building the Q2-B+A consensus that has enabled B to successfully volunteer in Games 5, 6, and 7. This established coordination pattern minimizes overall group risk and has proven highly effective.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle (7\u00d78) = **56**, which is Q2-B \u2014 I'm 100% certain of my answer.\n\n**Track record is decisive:**\n- Games 5, 6, 7: Volunteered in Round 1 \u2192 **SUCCESS all three times** (3/3 perfect record)\n- Games 2 & 4: Passed/verified instead \u2192 **randomly eliminated both times** (0/2 survival)\n\n**Risk analysis:**\n- Volunteering now: 7\u00d78 is a fundamental multiplication fact known to virtually everyone. Simple arithmetic accuracy is ~95%+ per player. Combined success probability for 3 other players: ~85-90%.\n- Passing: 25% random elimination risk each round \u2014 a risk I've been hit with 100% of the time I chose this path.\n\nGames 5, 6, and 7 all confirmed this exact strategy works flawlessly. There's no reason to deviate from a strategy with a 3/3 success rate. The straightforward arithmetic nature of these puzzles means player accuracy is very high, making early volunteering strictly dominant over waiting and risking random elimination.",
+        "C": "DECISION: Verify: Q4\nREASONING: My puzzle is 78 - 49 = 29, sealed in Q3-C (100% certain). The established pattern across Games 5, 6, and 7 has been extremely effective: A verifies Q2-B, I verify Q4-D, and B volunteers in Round 1 with full confidence. This has resulted in three consecutive Round 1 successes with everyone surviving. Q4-D remains the critical weak point historically (wrong in Games 2 & 3), and my verification either confirms D's answer (enabling B to volunteer confidently this round) or catches an error before anyone risks their life. Q1-A has been historically reliable, Q2 will get A's verification, and Q3-C is my certain answer (78-49=29). Verifying Q4 is clearly the highest-value action to maintain our successful team dynamic.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "9",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "56",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "29",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "64",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:9": [
+          [
+            "Q1-A",
+            "9"
+          ]
+        ],
+        "Q2:56": [
+          [
+            "Q2-B+A",
+            "56"
+          ]
+        ],
+        "Q3:29": [
+          [
+            "Q3-C",
+            "29"
+          ]
+        ],
+        "Q4:64": [
+          [
+            "Q4-D+C",
+            "64"
+          ]
+        ]
+      }
+    }
+  ]
+}

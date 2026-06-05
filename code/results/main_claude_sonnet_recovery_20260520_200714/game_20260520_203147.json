@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_203147",
+  "start_time": "2026-05-20T20:31:47.457516",
+  "end_time": "2026-05-20T20:32:12.005991",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 56 \u00f7 7?",
+      "answer": "11"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 96 - 58?",
+      "answer": "37"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 63 \u00f7 9?",
+      "answer": "63"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 5 + 3?",
+      "answer": "83"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 56 \u00f7 7 = 8, which I'm fully confident about. Games 7, 8, 9, and 10 all proved that immediate volunteering in Round 1 achieves perfect outcomes \u2014 everyone survives with maximum coins in just one round. Simple arithmetic has maintained 100% historical accuracy across all games played. The verify-first strategy creates a coordination failure where everyone verifies but nobody volunteers, leading to 25% random death risk (as happened in Games 5 and 6). Volunteering now yields ~97-99% success probability versus only ~72.75% from the verify-then-hope approach. Four consecutive successful immediate volunteers confirms this is the optimal strategy.",
+        "B": "DECISION: Verify: Q1\nREASONING: It's Round 1 and I only know my own answer with certainty (Q2: 96-58=38). Volunteering now would mean trusting Q1-A, Q3-C, and Q4-D completely blindly \u2014 three unverified capsules with no cross-checks, which carries unnecessary risk given the death penalty for wrong answers.\n\nBased on the consistent coordination pattern established across Games 3-10: A tends to volunteer in Round 1 after verifications complete, C tends to verify Q4-D, and I (B) have been verifying Q1-A. By verifying Q1 myself, I spend 1 coin to gain personal first-hand knowledge of A's answer, building Q1-A+B consensus.\n\nAfter this round, I expect:\n- Q1-A+B: Personally verified by me \u2705\n- Q2-B: My own answer (96-58=38) \u2705\n- Q3-C: C's own sealed answer (reliable) \u2705\n- Q4-D+C: D's answer with C's independent verification (if pattern holds) \u2705\n\nThis gives strong justification for A to volunteer confidently in Round 1 using the verified capsules. Passing risks a 25% random elimination \u2014 worse expected outcome than spending 1 coin for valuable verification. This strategy has enabled successful escapes in every game from Game 3 through Game 10.",
+        "C": "DECISION: Verify: Q4\nREASONING: My Q3-C answer (63\u00f79=7) is 100% certain as my own puzzle. Based on the highly consistent pattern across Games 3-10, B will verify Q1 creating Q1-A+B, and Q4-D will remain the weakest single-endorsed link without my intervention. By verifying Q4, I gain personal certainty on it and create Q4-D+C double endorsement \u2014 this has proven valuable in every single game I've played (Games 3, 4, 6, 7, 8, 9, 10). In the last four consecutive games (7-10), A has volunteered in Round 1 using exactly Q1-A+B, Q2-B, Q3-C, Q4-D+C \u2014 my Q4 verification directly strengthened that password each time. This 1-coin investment is the optimal play regardless of whether A volunteers in Round 1 or we proceed to Round 2.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "8",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "38",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "7",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "8",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:8": [
+          [
+            "Q1-A+B",
+            "8"
+          ]
+        ],
+        "Q2:38": [
+          [
+            "Q2-B",
+            "38"
+          ]
+        ],
+        "Q3:7": [
+          [
+            "Q3-C",
+            "7"
+          ]
+        ],
+        "Q4:8": [
+          [
+            "Q4-D+C",
+            "8"
+          ]
+        ]
+      }
+    }
+  ]
+}

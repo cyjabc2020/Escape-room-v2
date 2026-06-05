@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_024050",
+  "start_time": "2026-05-22T02:40:50.973592",
+  "end_time": "2026-05-22T02:42:17.953165",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 44 + 29?",
+      "answer": "84"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 66 \u00f7 6?",
+      "answer": "6"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 33 + 27?",
+      "answer": "80"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 12 - 7?",
+      "answer": "8"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer for Q1 is 44 + 29 = 73, which I'm certain about. Game 5 validated the bold strategy \u2014 I volunteered immediately on simple arithmetic and won with full coins. The math hasn't changed:\n\n**Volunteering now:** These are elementary arithmetic problems. Across all my games, only ~1 out of 16+ answers was ever wrong (~6% error rate). Probability all 3 unverified answers are correct: ~(0.94)\u00b3 \u2248 83%. Expected value: 0.83 \u00d7 4 = 3.32 coins.\n\n**Verifying/Passing:** 25% random death risk per round \u2014 this has killed me TWICE (Games 2 and 4). Even if I survive, I spend coins and may never benefit from the information gathered. Expected value: ~2.0 coins after accounting for elimination risk and costs.\n\nThe cautious approach killed me in Games 2 and 4. The bold approach won me Game 5 with maximum coins. The expected value clearly favors volunteering immediately. Trust the group on simple arithmetic and take the initiative.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer to 66 \u00f7 6 = 11, which I'm fully confident about. It's Round 1 with all capsules at single endorsement \u2014 volunteering now means gambling my life on three completely unverified answers.\n\nAcross five previous games, I've established a clear optimal pattern: Verify Q1 in Round 1, then volunteer aggressively in Round 2. This works because (1) A consistently verifies Q2 (my answer) in return, and C often verifies Q4 or another question, giving us 2-3 multi-endorsed capsules by end of Round 1, and (2) these are simple arithmetic problems where errors are extremely rare, so even one round of cross-verification gives sufficient confidence.\n\nKey lessons from prior games: In Games 1 and 3, I died to random elimination by being too cautious and over-verifying. In Game 4, I volunteered in Round 2 with one single-endorsement capsule and succeeded. In Game 5, A boldly volunteered in Round 1 with two single-endorsement capsules and succeeded. The sweet spot is: verify once now (4\u21923 coins), then if the typical cross-verification pattern holds, I should have enough coverage to volunteer in Round 2 without hesitation. One coin spent on verification is cheap insurance compared to the ~25% random death risk of everyone passing.",
+        "C": "DECISION: Verify: Q4\nREASONING: My answer to Q3 (33 + 27 = 60) is sealed and I'm 100% confident. All other capsules are single-endorsement \u2014 volunteering now would repeat my fatal Game 2 mistake.\n\nGames 4 and 5 validated my strategy perfectly: Round 1, I verify Q4 while B typically verifies Q1 (and sometimes A verifies Q2). This distributed verification approach has consistently produced the best outcomes:\n\n- **Game 4**: I verified Q4, got triple coverage, volunteered Round 2 with all double-endorsed capsules \u2192 SUCCESS (3 coins)\n- **Game 5**: I verified Q4, A felt confident enough to volunteer Round 1 with the improved information \u2192 SUCCESS (3 coins, everyone survived)\n\nVerifying Q4 specifically because: (1) historical patterns show B verifies Q1, so Q4 maximizes collective coverage, (2) Q4-D was the unverified capsule that killed me in Game 2 \u2014 always verify D's work, (3) my verification gives any would-be volunteer (potentially A, who has shown willingness to go Round 1) a stronger set of capsules to work with.\n\nIf A volunteers this round like Game 5, my Q4 verification helps them succeed safely. If nobody volunteers, the 25% random death risk is acceptable \u2014 and I'll volunteer Round 2 with strong multi-endorsed capsules. Either way, this verification creates value for the team at a reasonable 1-coin cost.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "73",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "11",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "60",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "5",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:73": [
+          [
+            "Q1-A+B",
+            "73"
+          ]
+        ],
+        "Q2:11": [
+          [
+            "Q2-B",
+            "11"
+          ]
+        ],
+        "Q3:60": [
+          [
+            "Q3-C",
+            "60"
+          ]
+        ],
+        "Q4:5": [
+          [
+            "Q4-D+C",
+            "5"
+          ]
+        ]
+      }
+    }
+  ]
+}

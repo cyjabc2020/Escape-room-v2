@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_024902",
+  "start_time": "2026-05-20T02:49:02.448043",
+  "end_time": "2026-05-20T02:49:51.971669",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 55 \u00f7 5?",
+      "answer": "48"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 73 - 29?",
+      "answer": "7"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 28 + 36?",
+      "answer": "66"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 44 \u00f7 4?",
+      "answer": "72"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: My answer for Q1 is 55 \u00f7 5 = 11, and I'm confident in that. But Q2-B, Q3-C, and Q4-D are all single-author and unverified.\n\nMy consistent strategy across Games 2-4 has been highly effective: verify one question in Round 1 (specifically Q2), let other players cross-verify other questions simultaneously, and then either volunteer in Round 2 with strong evidence or let another bold player volunteer in Round 1 (as B did in Game 4).\n\nThis approach has yielded:\n- Game 2: Successful escape in Round 3 (methodical after B died from unverified capsules)\n- Game 3: Successful escape in Round 2 (I volunteered with 3 double-verified + 1 from proven-competent player)\n- Game 4: Successful escape in Round 1 (B volunteered after verifications came in)\n\nVolunteering now with three unverified capsules would repeat my fatal Game 1 mistake. Even simple arithmetic can go wrong \u2014 we've seen it happen. The cost of 1 coin for verification is well worth the information gain, especially since other players typically verify other questions in parallel, giving us broad coverage after just one round.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 73 - 29 = 44, straightforward arithmetic. Looking at my game history: Game 1 I passed and was randomly killed. Game 3 I verified and was randomly killed. Game 2 I volunteered and died to a bad answer (unlucky). Game 4 I volunteered and everyone escaped with maximum coins. The pattern is clear \u2014 passing and verifying expose me to a 25% random death chance each round, which has killed me twice. Volunteering on simple arithmetic gives me roughly 85-90% success odds based on observed data (3 out of 4 games had all-correct answers). Expected value of volunteering (0.9 \u00d7 4 = 3.6) far exceeds passing (0.75 \u00d7 4 = 3.0, and that's optimistic since it just delays the problem). Game 4 proved this strategy works \u2014 early volunteering saves everyone and preserves maximum coins. I'm trusting that four players can handle basic math and going for it.",
+        "C": "DECISION: Verify: Q4\nREASONING: Sticking with the strategy that has now produced three consecutive wins. My own answer Q3 (28 + 36 = 64) I'm 100% confident in. These are simple arithmetic puzzles, so the risk of any individual error is low, but volunteering blind in Round 1 with all single-player capsules is still unnecessarily risky when I can spend 1 coin to build consensus.\n\nTargeting Q4-D for verification because:\n1. **Proven pattern**: In Games 2, 3, and 4, I verified Q4 in Round 1 and it contributed to successful escapes every time. Meanwhile, A typically verifies Q2 and sometimes B verifies Q1, giving us broad coverage.\n2. **Historical risk**: Q4-D was wrong in Games 1 and 2 \u2014 while these are new puzzles and past errors don't predict future ones, it's still the capsule I've consistently chosen to verify and the pattern works.\n3. **Enabling early volunteering**: If A verifies Q2 (as they have in every game), we'll have Q2-B+A and Q4-D+C after this round \u2014 both double-endorsed. Combined with my trusted Q3-C, that's 3 out of 4 questions with high confidence. Someone (likely B, as in Game 4) may feel confident enough to volunteer immediately in Round 1, or we can safely volunteer in Round 2.\n\nCost is minimal (4\u21923 coins) and the information gain is substantial. This is the optimal play.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "11",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "44",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "64",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:11": [
+          [
+            "Q1-A",
+            "11"
+          ]
+        ],
+        "Q2:44": [
+          [
+            "Q2-B+A",
+            "44"
+          ]
+        ],
+        "Q3:64": [
+          [
+            "Q3-C",
+            "64"
+          ]
+        ],
+        "Q4:11": [
+          [
+            "Q4-D+C",
+            "11"
+          ]
+        ]
+      }
+    }
+  ]
+}

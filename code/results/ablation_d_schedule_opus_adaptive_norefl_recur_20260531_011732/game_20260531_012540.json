@@ -1,0 +1,125 @@
+{
+  "game_id": "20260531_012540",
+  "start_time": "2026-05-31T01:25:40.424205",
+  "end_time": "2026-05-31T01:29:05.569725",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 48 \u00f7 8?",
+      "answer": "9"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 7 \u00d7 11?",
+      "answer": "82"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 28 + 36?",
+      "answer": "47"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 3 \u00d7 18?",
+      "answer": "48"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: After 3 games, I need to fundamentally rethink my strategy. In Games 2 and 3, I followed a cautious verify-first approach and died both times to random elimination before I could benefit from the information I gathered. The math now clearly favors early volunteering:\n\n**Volunteering now:** My own answer (48 \u00f7 8 = 6) is certainly correct. I need Q2, Q3, Q4 to be correct. These are simple division problems \u2014 each player likely has ~95-97% accuracy. P(all 3 correct) \u2248 0.86-0.91. EV = ~0.9 \u00d7 4 coins \u2248 **3.6 coins**.\n\n**Verify-then-wait strategy:** Costs 1 coin immediately, then 25% chance of random death this round. Even if I survive, another 33% death chance next round. Historical results: I died in Round 2 in both Games 2 and 3. EV \u2248 **1.0 coins**.\n\nThe cautious strategy's random elimination risk (~40-50% cumulative death chance over 2 rounds) far outweighs the ~10% risk that a simple arithmetic answer is wrong. I've been optimizing for information when I should have been optimizing for survival. Time to be bold \u2014 everyone benefits if this works, and the odds strongly favor it.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer is 77 (7 \u00d7 11), which I'm confident about. Following the strategy that's worked successfully in Games 2 and 3: verify Q1 in Round 1 to build quick consensus (historically, C also verifies Q1 in R1, creating a 3-endorsement capsule fast), then verify Q4 in Round 2 (since D has historically been the least reliable \u2014 had a wrong answer in Game 1), then volunteer in Round 3 with high confidence in at least 3 of 4 answers. A typically verifies Q2 (my answer), which gives me confidence in my own capsule through external validation. The 1-coin cost is well worth the information gain, and this systematic approach has led to two consecutive successful escapes with 2 coins retained. No reason to deviate from a proven pattern.",
+        "C": "DECISION: Verify: Q4\nREASONING: Learning from the previous three games, I need to change my strategy. In all prior games, I verified Q1, which was redundant since B also verifies Q1. Meanwhile, Q4 (D's answer) was the perennial weak link \u2014 in Game 1, D's Q4 was actually wrong and had to be corrected. By verifying Q4 instead, I maximize information coverage: A typically verifies Q2 (\u2192Q2-B+A), B typically verifies Q1 (\u2192Q1-A+B), and I verify Q4 (\u2192Q4-D+C or a new conflicting capsule). This gives us double-verification on Q1, Q2, and Q4, plus my own Q3 \u2014 all four answers with reasonable confidence after just one round. I considered volunteering blind (lower death risk ~10-15% vs 25% random elimination), but Q4's track record of errors makes that gamble unnecessary when I can spend 1 coin to verify it. If Q4 checks out, I can volunteer in Round 2 with very high confidence across all four answers. My answer: 28 + 36 = 64.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "77",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "64",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "54",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:6": [
+          [
+            "Q1-A+B",
+            "6"
+          ]
+        ],
+        "Q2:77": [
+          [
+            "Q2-B",
+            "77"
+          ]
+        ],
+        "Q3:64": [
+          [
+            "Q3-C",
+            "64"
+          ]
+        ],
+        "Q4:54": [
+          [
+            "Q4-D+C",
+            "54"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_204645",
+  "start_time": "2026-05-20T20:46:45.479931",
+  "end_time": "2026-05-20T20:46:56.348465",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 96 - 58?",
+      "answer": "8"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 95 - 61?",
+      "answer": "9"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 6 \u00d7 4?",
+      "answer": "83"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 78 - 49?",
+      "answer": "72"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer to 96-58 is 38. Based on eight consecutive successful games (Games 3-10) where all players correctly solved simple arithmetic puzzles, the probability that all four answers are correct is extremely high. Volunteering directly preserves my full 4 coins rather than spending 1 on verification that the consistent pattern shows is unnecessary. The track record strongly supports confident action here.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 95 - 61 = 34, which I'm certain about. Games 3 through 10 all demonstrated that volunteering immediately in Round 1 is optimal for simple arithmetic puzzles \u2014 eight consecutive successes with everyone keeping maximum coins. These are basic arithmetic questions with extremely high probability of correct answers. Volunteering now preserves everyone's maximum coins and avoids the 25% random death risk from passing.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer (6 \u00d7 4 = 24) is definitely correct. The consistent pattern across Games 3-10 shows that volunteering immediately in Round 1 leads to successful escapes with full coins preserved. All puzzles have been simple arithmetic with 100% accuracy in recent games. The 25% random death risk from not volunteering is far worse than the negligible risk of a basic arithmetic error. Taking initiative to volunteer now is the dominant strategy.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "34",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "24",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "29",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:38": [
+          [
+            "Q1-A",
+            "38"
+          ]
+        ],
+        "Q2:34": [
+          [
+            "Q2-B",
+            "34"
+          ]
+        ],
+        "Q3:24": [
+          [
+            "Q3-C",
+            "24"
+          ]
+        ],
+        "Q4:29": [
+          [
+            "Q4-D",
+            "29"
+          ]
+        ]
+      }
+    }
+  ]
+}

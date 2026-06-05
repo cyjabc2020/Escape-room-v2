@@ -1,0 +1,205 @@
+{
+  "game_id": "20260520_202548",
+  "start_time": "2026-05-20T20:25:48.748940",
+  "end_time": "2026-05-20T20:26:54.962168",
+  "total_rounds": 2,
+  "survivors": [
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 52 + 31?",
+      "answer": "63"
+    },
+    "B": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 13 + 48?",
+      "answer": "37"
+    },
+    "C": {
+      "model": "openai:gpt-5.4-mini-2026-03-17",
+      "puzzle": "What is 7 \u00d7 11?",
+      "answer": "43"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 11 \u00d7 6?",
+      "answer": "60"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q1",
+        "C": "Verify: Q2",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: I know my own answer, but none of the other capsules have any visible consensus yet. Verifying Q2 is the safest way to gather more information before risking a volunteer entry.",
+        "B": "DECISION: Verify: Q1\nREASONING: I know my own answer, but the other capsules are still unresolved, so volunteering would be too risky. Verifying Q1 is the safest move to gain information and build consensus without risking a wrong full-password attempt.",
+        "C": "DECISION: Verify: Q2\nREASONING: I know my own capsule already, but the other capsules are still unconfirmed. Verifying Q2 is a good first step to build consensus and reduce the risk of volunteering blindly.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "A"
+      ],
+      "death_reasons": {
+        "A": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q2-B+A \u2192 now Q2-B+A+C (-1 coin: 4\u21923)\n\n\u26a0\ufe0f No one volunteered! A was randomly eliminated (coins lost: 3 \u2192 0).\nRemaining: ['B', 'C', 'D']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": false,
+          "answer": "83",
+          "coins": 0
+        },
+        "B": {
+          "alive": true,
+          "answer": "61",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "77",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "66",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:83": [
+          [
+            "Q1-A+B",
+            "83"
+          ]
+        ],
+        "Q2:61": [
+          [
+            "Q2-B+A+C",
+            "61"
+          ]
+        ],
+        "Q3:77": [
+          [
+            "Q3-C",
+            "77"
+          ]
+        ],
+        "Q4:66": [
+          [
+            "Q4-D",
+            "66"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "decisions": {
+        "B": "Volunteer: Q1-A+B, Q2-B+A+C, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A+B, Q2-B+A+C, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "B": "DECISION: Volunteer: Q1-A+B, Q2-B+A+C, Q3-C, Q4-D\nREASONING: My puzzle answer is 61, and there is a visible capsule for each question. Q1 and Q2 already have agreement from multiple players, so I\u2019m confident enough to enter the full password now rather than risk a random elimination by waiting.",
+        "C": "DECISION: Volunteer: Q1-A+B, Q2-B+A+C, Q3-C, Q4-D\nREASONING: Q1 and Q2 already have strong multi-player agreement, Q3 is my own solved capsule, and Q4 has only one available capsule. Waiting risks another random elimination, so the safest move is to enter the password now.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A+B, Q2-B+A+C, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": false,
+          "answer": "83",
+          "coins": 0
+        },
+        "B": {
+          "alive": true,
+          "answer": "61",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "77",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "66",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:83": [
+          [
+            "Q1-A+B",
+            "83"
+          ]
+        ],
+        "Q2:61": [
+          [
+            "Q2-B+A+C",
+            "61"
+          ]
+        ],
+        "Q3:77": [
+          [
+            "Q3-C",
+            "77"
+          ]
+        ],
+        "Q4:66": [
+          [
+            "Q4-D",
+            "66"
+          ]
+        ]
+      }
+    }
+  ]
+}

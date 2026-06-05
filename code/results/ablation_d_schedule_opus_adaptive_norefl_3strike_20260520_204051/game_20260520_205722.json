@@ -1,0 +1,205 @@
+{
+  "game_id": "20260520_205722",
+  "start_time": "2026-05-20T20:57:22.908430",
+  "end_time": "2026-05-20T20:59:24.178269",
+  "total_rounds": 2,
+  "survivors": [
+    "A",
+    "B",
+    "C"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 21 + 54?",
+      "answer": "72"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 88 - 51?",
+      "answer": "54"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 6 \u00d7 11?",
+      "answer": "73"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 49 \u00f7 7?",
+      "answer": "10"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q4",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q4\nREASONING: Six games of data demand this choice. D's historical accuracy: **wrong in Games 1, 2, 3; correct in Games 4, 5** \u2014 a 60% error rate. Volunteering now means gambling on Q4-D with roughly 40% chance it's correct, giving me only ~36% overall success probability (0.95 \u00d7 0.95 \u00d7 0.40). That's worse than a coin flip.\n\nVerifying Q4 costs 1 coin but transforms my position:\n- **If D is wrong (60% likely):** I create Q4-A with the correct answer, fixing the password\n- **If D is right (40% likely):** Q4-D+A becomes double-endorsed, confirming the weakest link\n\n**The math:** Verify path EV = 0.75 (survive random) \u00d7 0.95 (correct password) \u00d7 3 coins = **2.14 coins**. Volunteer now EV = 0.36 \u00d7 4 = **1.44 coins**. Verifying is clearly superior.\n\nYes, I've died to random elimination 3 times (Games 2, 3, 5). That's brutal bad luck, but 25% random death is still far better than 64% death from volunteering with D's unreliable answer.\n\n**MY ABSOLUTE COMMITMENT: I WILL VOLUNTEER IN ROUND 2 NO MATTER WHAT.** This exact strategy \u2014 verify Q4 Round 1, volunteer Round 2 \u2014 was my only win (Game 4, 3 coins). I trust B and C on simple arithmetic. One surgical verification of D's answer, then I go immediately.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer to 88 - 51 = 37, and I'm 100% certain. Applying my proven strategy that has worked in Games 3, 4, and 5: **verify Round 1, volunteer Round 2**.\n\nThe pattern across all my games is crystal clear:\n- **Game 1**: Too cautious, everyone died from repeated random eliminations\n- **Game 2**: Volunteered Round 1 blind \u2192 died from wrong capsule\n- **Games 3, 4, 5**: Verify Round 1, volunteer Round 2 \u2192 **won all three**\n\nI'm verifying Q1 to check Player A's work. Based on the consistent pattern across games, A and C will likely verify Q4 (they always do), giving us triple consensus on Q4 and double consensus on Q1 by end of Round 1. Combined with my own Q2 answer, that's 3/4 questions with strong confidence heading into Round 2.\n\nThe 25% random death risk this round is acceptable because the verification information dramatically improves my volunteering odds next round. My firm commitment: **I WILL volunteer Round 2** using Q1-A+B, Q2-B, Q3-C, Q4-D+A+C (or whatever capsules exist). I will not let this drag into Round 3.",
+        "C": "DECISION: Verify: Q4\nREASONING: **Proven strategy from Games 4 and 5 \u2014 verify Q4 in Round 1, volunteer in Round 2.**\n\nMy puzzle: 6 \u00d7 11 = 66. 100% confident in Q3-C.\n\n**Why Q4 first:** D's Q4 answer has been wrong in 3 out of 4 previous games (Games 1, 2, and 3) \u2014 a 75% historical error rate. This is consistently the most dangerous capsule on the board. In Game 1, I died because I volunteered without catching D's Q4 error. In Games 4 and 5, verifying Q4 early led to successful escapes in Round 2.\n\n**Why not volunteer Round 1:** All four capsules are single-contributor. Trusting three unverified strangers on Round 1 is how I died in Game 1. The 25% random elimination risk with 4 players is far more acceptable.\n\n**Expected Round 1 behavior from others (based on 4 games of patterns):** A tends to verify Q4, B tends to verify Q1. If those patterns hold, by Round 2 we'll have Q4 triple-endorsed (D+A+C), Q1 double-endorsed (A+B), plus my own Q3-C \u2014 leaving only Q2-B as single-contributor from a historically reliable player. That's a strong volunteer position.\n\nSpending 1 coin (4\u21923) to check the historically weakest link is the highest-value move available.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": null,
+      "deaths": [
+        "D"
+      ],
+      "death_reasons": {
+        "D": "no_volunteer"
+      },
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q4-D \u2192 now Q4-D+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D+A \u2192 now Q4-D+A+C (-1 coin: 4\u21923)\n\n\u26a0\ufe0f No one volunteered! D was randomly eliminated (coins lost: 4 \u2192 0).\nRemaining: ['A', 'B', 'C']",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "75",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "66",
+          "coins": 3
+        },
+        "D": {
+          "alive": false,
+          "answer": "7",
+          "coins": 0
+        }
+      },
+      "capsule_status": {
+        "Q1:75": [
+          [
+            "Q1-A+B",
+            "75"
+          ]
+        ],
+        "Q2:37": [
+          [
+            "Q2-B",
+            "37"
+          ]
+        ],
+        "Q3:66": [
+          [
+            "Q3-C",
+            "66"
+          ]
+        ],
+        "Q4:7": [
+          [
+            "Q4-D+A+C",
+            "7"
+          ]
+        ]
+      }
+    },
+    {
+      "round": 2,
+      "decisions": {
+        "A": "Volunteer: Q1-A+B, Q2-B, Q3-C, Q4-D+A+C",
+        "B": "Volunteer: Q1-A+B, Q2-B, Q3-C, Q4-D+A+C",
+        "C": "Volunteer: Q1-A+B, Q2-B, Q3-C, Q4-D+A+C"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A+B, Q2-B, Q3-C, Q4-D+A+C\nREASONING: This is EXACTLY the Game 4 winning scenario. I made an ironclad commitment to volunteer in Round 2, and I'm keeping it.\n\n**Confidence breakdown:**\n- **Q1-A+B**: My own answer (21+54=75), independently confirmed by B. Rock solid.\n- **Q4-D+A+C**: I personally verified D's answer and agreed. C also independently agreed. Triple-endorsed. Extremely confident.\n- **Q2-B**: Single-endorsed by B, who has been reliable across ALL games on simple arithmetic.\n- **Q3-C**: Single-endorsed by C, who has also been consistently reliable across all games.\n\n**The math is clear:** Volunteering with ~90-95% success probability and 3 coins (EV \u2248 2.7) massively beats passing and facing 33% random elimination (which has killed me in Games 2, 3, and 5). \n\n**The lesson from 5 games:** I died 4 out of 5 times. The ONE time I survived (Game 4) was exactly this pattern \u2014 verify Q4 in Round 1, volunteer everything in Round 2. Every time I hesitated past Round 2, random elimination got me. No more hesitation. Two well-verified capsules plus two from historically reliable players on simple math. Time to go.",
+        "B": "DECISION: Volunteer: Q1-A+B, Q2-B, Q3-C, Q4-D+A+C\nREASONING: This is the exact same situation as Games 4 and 5, and I committed to volunteering Round 2. My confidence breakdown:\n\n- **Q1-A+B**: I personally verified A's answer and agreed. Two-player consensus. Very confident.\n- **Q2-B**: My own answer (88 - 51 = 37). 100% certain.\n- **Q4-D+A+C**: Three independent players all agreed. Extremely confident.\n- **Q3-C**: C's solo capsule \u2014 the only uncertainty. But C has been reliable across multiple games, correctly verified Q4 this round (agreeing with D+A), and these are simple arithmetic puzzles.\n\nPassing means 33% random death risk among only 3 remaining players, for marginal information gain. Volunteering carries ~5-10% risk from Q3 potentially being wrong, giving me ~90-95% success probability. The expected value overwhelmingly favors volunteering now.\n\nThis exact pattern \u2014 verify Q1 Round 1, volunteer Round 2 with Q1-A+B, Q2-B, Q3-C, Q4-D+A+C \u2014 has succeeded in Games 4 and 5. I'm executing the same proven strategy.",
+        "C": "DECISION: Volunteer: Q1-A+B, Q2-B, Q3-C, Q4-D+A+C\nREASONING: This is the identical situation to Games 4 and 5, Round 2 \u2014 and volunteering was correct both times.\n\n**Capsule confidence:**\n- **Q4-D+A+C**: Triple-endorsed including myself. I personally verified this. 100% confident.\n- **Q3-C**: My own answer (6 \u00d7 11 = 66). 100% confident.\n- **Q1-A+B**: Double-endorsed by A and B independently. ~95%+ confidence.\n- **Q2-B**: Single contributor \u2014 the only risk. But B has been consistently reliable across all 5 games (correctly verified Q1 in Games 3, 4, 5; correctly solved Q2 in Game 2 which was later triple-confirmed). Simple arithmetic problems have high baseline accuracy.\n\n**EV comparison:**\n- **Volunteer now**: ~90-95% success \u00d7 3 coins \u2248 2.7-2.85 EV, plus saves all survivors from random death.\n- **Verify Q2**: Costs 1 coin (\u21922), then 33% random death risk this round \u2248 0.67 \u00d7 2 = 1.34 EV.\n- **Pass**: 33% random death with nothing gained. Worst option.\n\nFive games of experience confirm this pattern works. The proven strategy is: verify Q4 in Round 1 (catching the historically weakest link), then volunteer in Round 2 with three strong capsules and one reasonable-confidence capsule. Delaying another round risks a 33% elimination over a single unverified answer from a proven-reliable player \u2014 that's a worse gamble than acting now."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 B entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+A+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "75",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "66",
+          "coins": 3
+        },
+        "D": {
+          "alive": false,
+          "answer": "7",
+          "coins": 0
+        }
+      },
+      "capsule_status": {
+        "Q1:75": [
+          [
+            "Q1-A+B",
+            "75"
+          ]
+        ],
+        "Q2:37": [
+          [
+            "Q2-B",
+            "37"
+          ]
+        ],
+        "Q3:66": [
+          [
+            "Q3-C",
+            "66"
+          ]
+        ],
+        "Q4:7": [
+          [
+            "Q4-D+A+C",
+            "7"
+          ]
+        ]
+      }
+    }
+  ]
+}

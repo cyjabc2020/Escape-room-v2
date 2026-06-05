@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_155429",
+  "start_time": "2026-05-21T15:54:29.486628",
+  "end_time": "2026-05-21T15:54:47.877859",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 48 \u00f7 8?",
+      "answer": "88"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 40 \u00f7 8?",
+      "answer": "83"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 60 \u00f7 10?",
+      "answer": "5"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 9 \u00d7 7?",
+      "answer": "24"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: 48\u00f78=6, trivially correct. This strategy has won Games 3-10 consecutively in Round 1 with all 4 coins preserved. Every answer across all games has been correct. The risk of a basic arithmetic error is far lower than the 25% random elimination risk if no one volunteers. Proven dominant strategy.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer to Q2 (40 \u00f7 8 = 5) is sealed and I'm confident. The coordination pattern from Games 3-10 is perfectly established: I verify Q1, C verifies Q4, and A volunteers in Round 1. This has produced eight consecutive Round-1 escapes with all players surviving. Spending 1 coin (\u21923) to verify Q1 continues this winning formula.",
+        "C": "DECISION: Verify: Q4\nREASONING: Eight consecutive successful escapes using the exact same coordination pattern. My answer (Q3: 60 \u00f7 10 = 6) is 100% confident. B verifies Q1, I verify Q4, A volunteers \u2014 this has worked flawlessly every single game since Game 3. Spending 1 coin to verify D's answer ensures Q4-D+C is dual-endorsed, giving A full confidence to volunteer immediately. Don't fix what isn't broken.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "5",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "6",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "63",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:6": [
+          [
+            "Q1-A+B",
+            "6"
+          ]
+        ],
+        "Q2:5": [
+          [
+            "Q2-B",
+            "5"
+          ]
+        ],
+        "Q3:6": [
+          [
+            "Q3-C",
+            "6"
+          ]
+        ],
+        "Q4:63": [
+          [
+            "Q4-D+C",
+            "63"
+          ]
+        ]
+      }
+    }
+  ]
+}

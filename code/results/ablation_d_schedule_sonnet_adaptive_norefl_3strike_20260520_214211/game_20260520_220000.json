@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_220000",
+  "start_time": "2026-05-20T22:00:00.129954",
+  "end_time": "2026-05-20T22:00:40.315649",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 40 \u00f7 8?",
+      "answer": "48"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 35 \u00f7 5?",
+      "answer": "86"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 55 \u00f7 5?",
+      "answer": "11"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 68 - 25?",
+      "answer": "48"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q4",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: It's Round 1 and all capsules except my own (Q1-A) are single-endorsed with no independent verification. I know my answer to Q1 (40 \u00f7 8 = 5) is correct, but I have zero information about Q2, Q3, or Q4. Volunteering now would mean risking my life on 3 completely unverified answers \u2014 if any one of them is wrong, I die and lose all my coins. By spending 1 coin to verify Q2, I can independently check B's answer and start building consensus. This is the same systematic strategy that has successfully led to escape in all 7 previous games: always verify before committing, and never volunteer based on unverified information alone.",
+        "B": "DECISION: Verify: Q4\nREASONING: My Q2 answer (35\u00f75=7) is correct and sealed \u2014 A will almost certainly endorse it as usual, establishing Q2-B+A. Q1-A and Q3-C have been consistently reliable across all 7 previous games and don't need my verification. Q4-D has historically been wrong in approximately 40% of games, making it the highest-risk capsule by far. By independently verifying Q4 now, I either add my endorsement to D's correct answer (giving C a well-verified Q4-D+B to use) or immediately create a correct Q4-B capsule before anyone volunteers with a wrong answer. This exact strategy has succeeded in Games 4, 5, 6, and 7 \u2014 the cost of 1 coin is well worth the security, and it typically enables C to volunteer confidently in Round 1 with all four capsules verified.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 55 \u00f7 5 = 11, definitely correct (sealed in Q3-C). EV analysis consistently favors immediate R1 volunteering: ~2.92 expected coins vs ~1.64 for verify-then-volunteer strategy. Games 5, 6, and 7 all confirmed that volunteering immediately with single-endorsed capsules on elementary arithmetic problems succeeds. Every round of delay costs 1+ coins through verification expenses or 25% random death risk. The dominant strategy is to act now with 4 coins rather than delay for marginal information gains.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D+B\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "5",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "7",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "43",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:5": [
+          [
+            "Q1-A",
+            "5"
+          ]
+        ],
+        "Q2:7": [
+          [
+            "Q2-B+A",
+            "7"
+          ]
+        ],
+        "Q3:11": [
+          [
+            "Q3-C",
+            "11"
+          ]
+        ],
+        "Q4:43": [
+          [
+            "Q4-D+B",
+            "43"
+          ]
+        ]
+      }
+    }
+  ]
+}

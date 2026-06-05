@@ -1,0 +1,125 @@
+{
+  "game_id": "20260518_223856",
+  "start_time": "2026-05-18T22:38:56.726682",
+  "end_time": "2026-05-18T22:40:29.143813",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 71 - 28?",
+      "answer": "66"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 4 \u00d7 15?",
+      "answer": "47"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 6 \u00d7 4?",
+      "answer": "86"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 16 + 67?",
+      "answer": "11"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Game 3 proved the optimal strategy decisively \u2014 volunteering Round 1 with all single-endorsed capsules yielded a correct password and maximum coins (4). The key insight: these are simple arithmetic problems (addition, subtraction, multiplication) where the probability of any player making an error is extremely low. My own answer is 43 (71 - 28), which I'm 100% confident in. The other players face similarly trivial calculations. The probability all 4 answers are correct is ~97%+. Meanwhile, passing means a 25% chance of random death this round with 0 coin return, and verifying costs a coin while still exposing me to that 25% random death risk. Expected value of volunteering now: ~0.97 \u00d7 4 = 3.88 coins. Expected value of passing: ~0.75 \u00d7 4 = 3.0 coins (and that's before accounting for future rounds' risks). The math strongly favors immediate volunteering. Let's save everyone on Round 1 again.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer to Q2 is 60 (4 \u00d7 15 = 60), which I'm fully confident about. Across three prior games, I've learned key lessons: (1) pure passivity leads to random elimination (Game 1 death), (2) building verification early enables safe volunteering (Game 2 win), and (3) bold early action can pay off hugely (Game 3, Player A volunteered Round 1 and everyone kept max coins).\n\nRight now all capsules have single endorsements \u2014 volunteering blind on 3 unverified answers carries ~5-10% risk of death, which isn't terrible but is avoidable. Verifying Q1 for 1 coin starts building consensus. Based on prior game patterns, Player A often verifies my Q2, and Player C often verifies Q4, so natural cross-verification should give us multi-endorsed capsules by end of this round. \n\nIf someone (perhaps Player A, who has been bold in past games) volunteers this round with the improved endorsements, great \u2014 everyone escapes early. If not, I'll be ready to volunteer in Round 2 with strong consensus on most answers. The critical thing is to NOT let this drag past Round 2 \u2014 every extra round risks random eliminations that hurt everyone.",
+        "C": "DECISION: Verify: Q4\nREASONING: My answer for Q3 is 6 \u00d7 4 = 24, which I'm completely confident about. All capsules are single-contributor, so volunteering now means blindly trusting three unknown answers \u2014 even with simple math, a ~15% combined error risk isn't worth dying over.\n\nFrom Games 1-3, a clear pattern has emerged: B tends to verify Q1, I verify Q4, and then A volunteers with strong enough coverage. In Game 3, this exact pattern led to a Round 1 escape with all 4 players surviving. By verifying Q4 (cost: 1 coin, 4\u21923), I replicate that winning formula:\n\n- Q1: Likely verified by B \u2192 Q1-A+B (2 players)\n- Q2: Q2-B (1 player, but A can see it's simple math)\n- Q3: My own answer (confident) \n- Q4: Q4-D+C after my verification (2 players)\n\nThis gives A (or another player) enough confidence to volunteer this round with 3 of 4 questions having multi-player consensus. The goal is a Round 1 escape saving all players, just like Game 3. Verifying Q4 is especially important since D's answer was wrong in Game 1 \u2014 I want to confirm it before anyone risks their life on it.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "43",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "60",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "24",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "83",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:43": [
+          [
+            "Q1-A+B",
+            "43"
+          ]
+        ],
+        "Q2:60": [
+          [
+            "Q2-B",
+            "60"
+          ]
+        ],
+        "Q3:24": [
+          [
+            "Q3-C",
+            "24"
+          ]
+        ],
+        "Q4:83": [
+          [
+            "Q4-D+C",
+            "83"
+          ]
+        ]
+      }
+    }
+  ]
+}

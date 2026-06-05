@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_004837",
+  "start_time": "2026-05-22T00:48:37.552080",
+  "end_time": "2026-05-22T00:49:08.982149",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 88 - 51?",
+      "answer": "36"
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 59 + 25?",
+      "answer": "38"
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 6 \u00d7 4?",
+      "answer": "38"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 33 + 27?",
+      "answer": "80"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q1",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: Based on the highly consistent pattern from the previous successful games, verifying Q2 in Round 1 reliably establishes the consensus needed. Player B verifies my capsule (Q1), and Player C uses our verified capsules along with the unverified Q3 and Q4 to volunteer with the correct password. Spending 1 coin is a small price to pay to guarantee our collective survival and an immediate win.",
+        "B": "DECISION: Verify: Q1\nREASONING: Since it's Round 1, the contents of capsules Q1-A, Q3-C, and Q4-D are unverified. Volunteering right now with unverified answers is extremely risky, as even one incorrect answer from another player will result in my death. I will verify Q1 to start building consensus. Although not volunteering risks a random elimination, taking a 25% chance of random elimination is safer than the high likelihood of dying from entering an incorrect password.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: The puzzles are very simple math questions, so I am highly confident that players A, B, and D have the correct answers sealed in their respective capsules. Volunteering in Round 1 prevents the risk of a random player being eliminated due to inaction, ensures everyone escapes immediately, and allows us to keep all of our coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A+B, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "84",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "24",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "60",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:37": [
+          [
+            "Q1-A+B",
+            "37"
+          ]
+        ],
+        "Q2:84": [
+          [
+            "Q2-B+A",
+            "84"
+          ]
+        ],
+        "Q3:24": [
+          [
+            "Q3-C",
+            "24"
+          ]
+        ],
+        "Q4:60": [
+          [
+            "Q4-D",
+            "60"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "game_id": "20260519_210719",
+  "start_time": "2026-05-19T21:07:19.429051",
+  "end_time": "2026-05-19T21:08:39.512204",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 17 + 19?",
+      "answer": "86"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 11 \u00d7 6?",
+      "answer": "72"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 49 \u00f7 7?",
+      "answer": "43"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 9 \u00d7 10?",
+      "answer": "83"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: It's Round 1 with all single-endorsement capsules \u2014 no cross-verification exists yet. My own answer (17 + 19 = 36) is straightforward, and these puzzles are likely simple arithmetic, but Game 1 taught me that errors DO happen (C found a conflict with D's Q4 answer). Volunteering now means trusting 3 completely unverified capsules, and even a small per-question error rate compounds across three unknowns.\n\nMy proven strategy from Games 1 and 2 has been to verify one question in Round 1 to build consensus. This costs 1 coin (4\u21923) but gives me personal confidence in a second answer. If other players also verify in parallel (as they have in previous games), we can rapidly reach sufficient confidence for a safe volunteer attempt \u2014 possibly even this round if someone feels bold like B did in Game 2.\n\nThe 1/4 random elimination risk from passing is unfortunate but acceptable compared to the ~10-15% risk of death from volunteering blind on 3 unverified answers. Building one round of consensus is the right balance between speed and safety.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 11 \u00d7 6 = 66 \u2014 trivially simple arithmetic. Based on two previous games, all puzzles have been basic math, and every player's answer has been correct. \n\nMy track record confirms this strategy: In Game 1, I was cautious and got randomly eliminated (lost everything). In Game 2, I volunteered immediately in Round 1 and won with full 4 coins. The expected value strongly favors volunteering:\n\n- **Volunteering**: ~95%+ chance all simple math answers are correct \u2192 keep 4 coins. EV \u2248 3.8+\n- **Passing**: 25% chance of random death even if I do nothing, plus coins drain from verification costs in future rounds. EV \u2248 3.0 at best.\n- **Verifying**: Costs 1 coin, still risks random death if nobody volunteers.\n\nThere are no conflicting capsules (each question has exactly one capsule), which is a good sign \u2014 no one has found reason to disagree. The risk of dying to a wrong answer on elementary arithmetic is far lower than the 25% random elimination risk. I'm volunteering immediately again.",
+        "C": "DECISION: Verify: Q1\nREASONING: Lessons from previous games are clear: Game 1 I died from waiting too long (random elimination in Round 2), while Game 2 succeeded in Round 1 because we quickly built consensus and someone volunteered early. These are simple arithmetic puzzles (my answer: 49 \u00f7 7 = 7), so errors are unlikely but possible (Game 1 showed D had a wrong Q4 answer). \n\nBy verifying Q1, I spend 1 coin (4\u21923) to either confirm or flag Player A's answer. This builds a multi-endorsed capsule that gives confidence to a potential volunteer. If other players similarly verify different questions, we can create enough trust for someone to volunteer this round and avoid the deadly random elimination. The pattern from Game 2 worked perfectly \u2014 a couple of verifications plus a brave volunteer in Round 1 saved everyone. I'm replicating that strategy. If nobody else volunteers after verifications are done, I'll be ready to step up in Round 2 with better information.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A \u2192 now Q1-A+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A+C, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "36",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "66",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "7",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "90",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:36": [
+          [
+            "Q1-A+C",
+            "36"
+          ]
+        ],
+        "Q2:66": [
+          [
+            "Q2-B+A",
+            "66"
+          ]
+        ],
+        "Q3:7": [
+          [
+            "Q3-C",
+            "7"
+          ]
+        ],
+        "Q4:90": [
+          [
+            "Q4-D",
+            "90"
+          ]
+        ]
+      }
+    }
+  ]
+}

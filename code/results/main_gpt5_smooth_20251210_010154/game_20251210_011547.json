@@ -1,0 +1,125 @@
+{
+  "game_id": "20251210_011547",
+  "start_time": "2025-12-10T01:15:47.701944",
+  "end_time": "2025-12-10T01:18:42.724095",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 9 \u00d7 5?",
+      "answer": "11"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 41 + 38?",
+      "answer": "8"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 71 - 28?",
+      "answer": "86"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 38 + 46?",
+      "answer": "11"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: I know my own answer (9 \u00d7 5) is correct, and all the puzzles so far have been simple arithmetic with no wrong capsules observed, so the chance any answer is wrong is very low. If no one volunteers this round, there\u2019s a 1-in-4 chance I die randomly, which is a higher risk than trusting everyone\u2019s arithmetic. Verifying would cost coins and still leave the random-death risk this round, so volunteering now maximizes my survival probability while keeping all 4 coins if the password is correct.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: I\u2019m confident my own arithmetic answer is correct, and so far across all games no one has submitted a wrong capsule on these simple puzzles. Verifying would cost a coin and still leave the risk of random elimination if no one volunteers. With single, uncontested capsules for each question and a perfect success record so far, the chance the full password is wrong is very low, so I\u2019ll volunteer now to avoid any random-death risk and keep all 4 coins if we escape.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My puzzle (71 - 28) is trivial, so I\u2019m fully confident Q3-C is correct. There is exactly one capsule for each question and, in all previous games, everyone has consistently solved similar arithmetic correctly, so using Q1-A, Q2-B, Q3-C, and Q4-D is very likely to yield the correct password. If no one volunteers, there\u2019s a 1/4 chance I die randomly, which is worse than the small residual risk that someone mis-solved their puzzle. Verifying would just cost coins and still leave the random-death risk if everyone hesitates. Volunteering now best protects my survival while keeping all 4 coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 A entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "45",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "79",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "43",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "84",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:45": [
+          [
+            "Q1-A",
+            "45"
+          ]
+        ],
+        "Q2:79": [
+          [
+            "Q2-B",
+            "79"
+          ]
+        ],
+        "Q3:43": [
+          [
+            "Q3-C",
+            "43"
+          ]
+        ],
+        "Q4:84": [
+          [
+            "Q4-D",
+            "84"
+          ]
+        ]
+      }
+    }
+  ]
+}

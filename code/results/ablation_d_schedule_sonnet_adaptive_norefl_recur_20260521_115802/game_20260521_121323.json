@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_121323",
+  "start_time": "2026-05-21T12:13:23.368072",
+  "end_time": "2026-05-21T12:13:40.571543",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 6 \u00d7 11?",
+      "answer": "37"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 24 + 63?",
+      "answer": "8"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 4 \u00d7 15?",
+      "answer": "54"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 76 - 39?",
+      "answer": "9"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer to 6 \u00d7 11 = 66 is definitely correct. Game history shows 7 consecutive successes with immediate volunteering (Games 3,4,6,7,8,9,10), giving ~87% historical success rate. EV of volunteering (~3.43 coins) significantly exceeds verification (~2.7 coins) or passing (25% random death risk). Simple multiplication has near-zero error probability across all players. No reason to deviate from this proven dominant strategy.",
+        "B": "DECISION: Verify: Q1\nREASONING: My puzzle is 24 + 63 = 87, which I'm certain about (that's my Q2-B capsule). The established pattern across Games 3, 4, 6, 7, 8, 9, and 10 has been highly effective: when I verify Q1 in Round 1, C also verifies Q1, giving Q1 a 3-person consensus (Q1-A+B+C), which then gives A the confidence to volunteer successfully and everyone escapes in Round 1 with minimal coin loss. All four capsules currently have only single-person confidence, so volunteering blind right now carries risk. The 1-coin investment to verify Q1 builds consensus and consistently leads to a successful escape in Round 1.",
+        "C": "DECISION: Verify: Q1\nREASONING: My own answer (4\u00d715=60) is sealed in Q3-C with complete confidence. Following the proven coordination pattern from Games 6-10: verifying Q1 builds the multi-player consensus (Q1-A+B+C) that signals to A they can safely volunteer. This strategy has delivered successful Round 1 escapes five consecutive times. Spending 1 coin to establish this consensus is the optimal cooperative play.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A+B \u2192 now Q1-A+B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B+C, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "66",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "87",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "60",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "37",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:66": [
+          [
+            "Q1-A+B+C",
+            "66"
+          ]
+        ],
+        "Q2:87": [
+          [
+            "Q2-B",
+            "87"
+          ]
+        ],
+        "Q3:60": [
+          [
+            "Q3-C",
+            "60"
+          ]
+        ],
+        "Q4:37": [
+          [
+            "Q4-D",
+            "37"
+          ]
+        ]
+      }
+    }
+  ]
+}

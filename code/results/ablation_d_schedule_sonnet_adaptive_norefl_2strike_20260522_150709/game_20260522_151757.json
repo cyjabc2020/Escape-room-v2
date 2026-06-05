@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_151757",
+  "start_time": "2026-05-22T15:17:57.360908",
+  "end_time": "2026-05-22T15:18:17.485753",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 99 \u00f7 9?",
+      "answer": "7"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 32 \u00f7 4?",
+      "answer": "77"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 96 - 58?",
+      "answer": "79"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 70 \u00f7 7?",
+      "answer": "9"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q4",
+        "B": "Verify: Q4",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q4\nREASONING: My answer to Q1 is 99 \u00f7 9 = 11, which I'm certain is correct. Based on my game history, the proven optimal strategy is to verify Q4 in Round 1. In Games 1 and 2, both failures occurred because Q4-D was wrong and never independently verified before volunteering. In Games 3, 4, and 5, verifying Q4 first led to successful escapes every time \u2014 B would also verify, building a Q4-D+A+B consensus, and then C would volunteer with confidence. This 1-coin investment has consistently enabled everyone to escape safely. Q4-D remains the historically weakest link, and verifying it immediately either confirms D's answer or flags an error before it can cause another catastrophic failure.",
+        "B": "DECISION: Verify: Q4\nREASONING: The proven winning formula across Games 3, 4, and 5 is to verify Q4 (Player D's answer) in Round 1. My own answer (Q2-B: 32\u00f74=8) is certain. Q4 was the historically problematic component that caused Game 1's wrong password and was never checked in Game 2. By verifying Q4, A also endorses it, giving C the confidence to volunteer with the full correct password \u2014 this has succeeded three consecutive times. There's no reason to deviate from what clearly works.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Games 3, 4, and 5 all confirmed this strategy works perfectly. My puzzle (96 - 58 = 38) is correct and sealed in Q3-C. Each player has solved their own simple arithmetic puzzle, and the capsules contain their own answers. Players are essentially certain to solve their own basic math problems correctly. Volunteering immediately avoids the trap of endless verification loops that caused everyone to die in Games 1 and 2. The expected value clearly favors volunteering now: we escape with 4 coins each rather than risking random elimination from no-volunteer rounds. Taking the initiative again!",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q4-D \u2192 now Q4-D+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q4-D+A \u2192 now Q4-D+A+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+A+B\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "11",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "8",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "10",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:11": [
+          [
+            "Q1-A",
+            "11"
+          ]
+        ],
+        "Q2:8": [
+          [
+            "Q2-B",
+            "8"
+          ]
+        ],
+        "Q3:38": [
+          [
+            "Q3-C",
+            "38"
+          ]
+        ],
+        "Q4:10": [
+          [
+            "Q4-D+A+B",
+            "10"
+          ]
+        ]
+      }
+    }
+  ]
+}

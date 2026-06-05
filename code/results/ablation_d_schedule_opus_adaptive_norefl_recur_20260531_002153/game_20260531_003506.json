@@ -1,0 +1,125 @@
+{
+  "game_id": "20260531_003506",
+  "start_time": "2026-05-31T00:35:06.189188",
+  "end_time": "2026-05-31T00:36:58.994568",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 92 - 56?",
+      "answer": "18"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 9 \u00d7 5?",
+      "answer": "39"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 72 \u00f7 9?",
+      "answer": "39"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 8 \u00d7 6?",
+      "answer": "7"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q4",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 92 - 56 = 36, straightforward arithmetic. Let me weigh the lessons from ALL my games holistically:\n\n**Games 2, 3, 4:** Volunteered immediately \u2192 succeeded, kept 4 coins each time.\n**Game 5:** Volunteered immediately \u2192 died (someone had a wrong answer). ~15% error risk materialized.\n**Game 6:** Played cautiously, verified first \u2192 randomly eliminated in Round 1 anyway. The 25% random death risk materialized.\n\nThe critical comparison is: **~15% risk of wrong password vs. 25% risk of random death per round.**\n\nEstimating from data: across ~24 individual puzzle solutions, roughly 1 error occurred. That's ~4% individual error rate, meaning P(other 3 all correct) \u2248 (0.96)\u00b3 \u2248 88.5%.\n\n- **Volunteer EV:** 0.885 \u00d7 4 = **3.54 coins**\n- **Pass EV:** 0.75 \u00d7 ~3.0 (optimistic future value after verification costs and repeated death risk) = **2.25 coins**\n\nGame 6 proved that caution doesn't protect you \u2014 the 25% random elimination is brutal and compounds each round. Volunteering remains the higher EV play despite Game 5's outcome. One bad result doesn't invalidate a strategy that's +EV by a wide margin. The math clearly favors boldness with simple arithmetic puzzles.",
+        "B": "DECISION: Verify: Q4\nREASONING: My answer to Q2 (9 \u00d7 5 = 45) is rock solid. The critical lesson from Game 5 was that Q4-D went unverified and turned out wrong, killing A and eventually me. Meanwhile, Games 2-4 had B and C both piling on Q1, leaving Q3 and Q4 completely unchecked \u2014 a dangerous blind spot.\n\nBy verifying Q4 (as I successfully did in Game 6), I diversify our verification coverage. If C follows their usual pattern of verifying Q1, we'd have: Q1-A+C (double), Q2-B (mine, certain), Q3-C (single), Q4-D+B (double). That's three strongly-backed capsules with only Q3 as a single-endorsement risk \u2014 much better than the old pattern of triple-endorsing Q1 while Q3 and Q4 go unchecked.\n\nD has never spent coins to verify anyone across all games \u2014 consistently free-riding. While that doesn't mean D's answers are wrong, Q4 was specifically the failure point in Game 5. Spending 1 coin (4\u21923) to independently check D's work is a smart insurance investment. If nobody volunteers this round, I'm prepared to step up in Round 2 with the improved coverage rather than risk another random elimination like we saw in Game 6.",
+        "C": "DECISION: Verify: Q1\nREASONING: The proven winning pattern from Games 2-6 continues to work: I verify Q1 in Round 1, B typically also verifies Q1, building triple consensus (A+B+C) on Q1. This gives either A or me the confidence to volunteer. My own puzzle (72 \u00f7 9 = 8) is trivially correct, so Q3-C is solid. Spending 1 coin to verify Q1 is a small, reliable investment. The pattern has produced successful escapes in every game where it's been followed. If A volunteers with Q1-A+B+C, Q2-B, Q3-C, Q4-D we can escape in Round 1. If not, I'll have enough information to consider volunteering in Round 2 like I did in Game 6. No reason to deviate from the winning formula.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A \u2192 now Q1-A+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+C, Q2-B, Q3-C, Q4-D+B\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "36",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "45",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "8",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "48",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:36": [
+          [
+            "Q1-A+C",
+            "36"
+          ]
+        ],
+        "Q2:45": [
+          [
+            "Q2-B",
+            "45"
+          ]
+        ],
+        "Q3:8": [
+          [
+            "Q3-C",
+            "8"
+          ]
+        ],
+        "Q4:48": [
+          [
+            "Q4-D+B",
+            "48"
+          ]
+        ]
+      }
+    }
+  ]
+}

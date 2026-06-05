@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_204456",
+  "start_time": "2026-05-20T20:44:56.375067",
+  "end_time": "2026-05-20T20:45:27.366356",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 64 - 19?",
+      "answer": "33"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 36 \u00f7 4?",
+      "answer": "54"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 73 - 29?",
+      "answer": "36"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 88 \u00f7 8?",
+      "answer": "37"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "Looking at the current situation:\n\n**Round 1 Analysis:**\n- Q1-A: My own answer (64-19=45) \u2014 I know this is correct \u2705\n- Q2-B: Unverified by me\n- Q3-C: Unverified by me\n- Q4-D: Unverified by me\n\n**Pattern Recognition from Recent Games:**\n- Games 3, 4, 5: I verified Q2 (-1 coin), then B or C volunteered successfully anyway \u2192 I ended at 3 coins while others had 4\n- Game 6: I attempted to volunteer directly, C also volunteered \u2192 everyone escaped with 4 coins\n- All four games featured correct answers from all players on simple arithmetic\n\n**Risk Assessment:**\n- Simple arithmetic problems (64-19=45) have shown near-perfect accuracy across all recent players\n- B had wrong answers in Game 1, but that was early on \u2014 recent games show consistent accuracy\n- Verifying costs 1 coin for information that hasn't actually been necessary given the pattern\n- The expected value of volunteering (4 coins \u00d7 ~high probability of success) outweighs the verification approach\n\n**Strategic Decision:**\nThe 5-game trend shows everyone solving simple arithmetic correctly. Continuing to verify and \"donate\" 1 coin per game while others volunteer anyway is suboptimal. Time to volunteer and lead.\n\nDECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer to 64-19 is 45. Based on the consistent accuracy pattern across Games 3-6 where all players correctly solved simple arithmetic puzzles, the probability all four answers are correct is very high. Volunteering directly keeps my full 4 coins rather than spending 1 on verification that hasn't proven necessary \u2014 others have been volunteering successfully with the same unverified Q3 and Q4 capsules. Taking the lead maximizes coin retention while maintaining group escape success.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle is 36 \u00f7 4 = 9, which I'm certain about. Games 3 through 6 all demonstrated that volunteering immediately in Round 1 is optimal for simple arithmetic puzzles \u2014 four consecutive successes with everyone keeping maximum coins. These are basic arithmetic questions with extremely high probability of correct answers (~96%+ combined). My earlier verification-loop strategy in Games 1 and 2 led to random elimination with 0 coins both times. Volunteering now preserves everyone's maximum coins and avoids the 25% random death risk from passing.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer (73 - 29 = 44) is definitely correct. The consistent pattern across Games 3-6 shows that volunteering immediately in Round 1 leads to successful escapes with full coins preserved. All puzzles have been simple arithmetic with 100% accuracy in recent games. The 25% random death risk from not volunteering is far worse than the negligible risk of a basic arithmetic error. Taking initiative to volunteer now is the dominant strategy.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "45",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "9",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "44",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:45": [
+          [
+            "Q1-A",
+            "45"
+          ]
+        ],
+        "Q2:9": [
+          [
+            "Q2-B",
+            "9"
+          ]
+        ],
+        "Q3:44": [
+          [
+            "Q3-C",
+            "44"
+          ]
+        ],
+        "Q4:11": [
+          [
+            "Q4-D",
+            "11"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "game_id": "20251210_220704",
+  "start_time": "2025-12-10T22:07:04.258622",
+  "end_time": "2025-12-10T22:12:09.997685",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 11 \u00d7 8?",
+      "answer": "76"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 73 - 29?",
+      "answer": "38"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 6 \u00d7 15?",
+      "answer": "88"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 50 - 23?",
+      "answer": "73"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: I know my own Q1 answer is correct, and the others\u2019 puzzles have consistently been simple arithmetic with a very strong accuracy record (only one known mistake across all previous games). That makes it quite likely that Q2\u2013Q4 are also correct this round. \n\nIf I delay by verifying or passing, we risk a repeat of earlier games where no one volunteers in Round 1 and a random player dies with a 25% chance it\u2019s me. Verifying would also cost a coin and still wouldn\u2019t remove that random-death risk. Given the high probability that all four arithmetic answers are right, volunteering immediately with Q1-A, Q2-B, Q3-C, Q4-D gives me better survival odds than waiting and facing possible random elimination.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: All four puzzles are simple arithmetic, and across multiple games every verification has always matched the existing capsules\u2014no disagreements have ever appeared\u2014so the chance that any given answer is wrong now seems quite low. By contrast, in half of the previous games there was no Round 1 volunteer, which triggered a random elimination; when that happens, my death chance is 1/4 regardless of how careful I was. I\u2019d rather accept the relatively small risk that one of these basic answers is wrong than gamble on another no-volunteer round with a substantial random-death risk. Volunteering also avoids spending coins on verifications and lets me keep all 4 coins if the password is correct.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: I know my own answer for Q3 (6 \u00d7 15) is correct. All the puzzles so far have been simple arithmetic, and across the previous games we\u2019ve only seen one actual computation mistake (D\u2019s first Q4), followed by multiple correct and often verified answers from everyone, including D. So each of the other three capsules (Q1-A, Q2-B, Q4-D) is very likely correct.\n\nIf I don\u2019t volunteer, I still face the random-death risk this round if nobody else steps up, and spending a coin to verify something doesn\u2019t reduce that immediate risk at all\u2014it just leaves me poorer next round. With no conflicting capsules and a strong track record of accuracy, the chance that this full password is correct is higher than my survival odds under random elimination. So volunteering with Q1-A, Q2-B, Q3-C, Q4-D maximizes my chances of living and escaping with all 4 coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "88",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "44",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "90",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "27",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:88": [
+          [
+            "Q1-A",
+            "88"
+          ]
+        ],
+        "Q2:44": [
+          [
+            "Q2-B",
+            "44"
+          ]
+        ],
+        "Q3:90": [
+          [
+            "Q3-C",
+            "90"
+          ]
+        ],
+        "Q4:27": [
+          [
+            "Q4-D",
+            "27"
+          ]
+        ]
+      }
+    }
+  ]
+}

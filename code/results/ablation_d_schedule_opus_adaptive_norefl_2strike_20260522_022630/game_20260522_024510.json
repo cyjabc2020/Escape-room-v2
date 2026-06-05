@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_024510",
+  "start_time": "2026-05-22T02:45:10.873933",
+  "end_time": "2026-05-22T02:45:57.782727",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 95 - 61?",
+      "answer": "90"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 20 \u00f7 5?",
+      "answer": "11"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 91 - 44?",
+      "answer": "8"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 100 - 67?",
+      "answer": "7"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer for Q1 is 95 - 61 = 34, which I'm certain about. The bold volunteering strategy has now won me six consecutive games (5, 6, 7, 8, 9, 10) with full 4 coins each time. The expected value calculation remains strongly in favor of immediate volunteering: ~83% success rate \u00d7 4 coins = 3.32 EV vs ~2.0 EV for passing (due to 25% random death risk). The pattern is completely reliable: B verifies Q1, C verifies Q4, and the password resolves correctly. These are elementary arithmetic problems and the group has been flawless across all recent games. Continuing the dominant strategy.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer to 20 \u00f7 5 = 4, which I'm completely confident about.\n\nThe pattern from Games 5 through 10 is now a perfectly established six-game streak with identical outcomes: I verify Q1 (4\u21923 coins), C verifies Q4, and A volunteers in Round 1 with capsules Q1-A+B, Q2-B, Q3-C, Q4-D+C \u2014 everyone escapes. This equilibrium has produced identical results six consecutive times with zero failures.\n\nMy role is clear: by verifying Q1, I give A confidence in their own answer, enabling them to volunteer. A consistently trusts single-endorsement capsules Q2-B and Q3-C for these simple arithmetic problems. C reliably verifies Q4 to cover D's answer.\n\nThere is no reason whatsoever to deviate from a strategy that has produced perfect outcomes six times running. The 1 coin cost is negligible \u2014 escaping with 3 coins is far superior to any alternative risk. Stick with what works.",
+        "C": "DECISION: Verify: Q4\nREASONING: My answer to Q3 (91 - 44 = 47) is sealed and I'm 100% confident. The winning pattern from Games 5-10 is now a six-game streak with identical results \u2014 I should absolutely replicate it again:\n\n**Proven template (Games 5-10):**\n- Round 1: I verify Q4, B verifies Q1, A volunteers with improved capsules \u2192 SUCCESS, all 4 players survive, I keep 3 coins.\n\nSix consecutive identical successes. This is a thoroughly proven, reliable team coordination pattern that has never failed.\n\n**Why Q4 specifically:**\n1. **Team coordination**: B consistently verifies Q1. My verifying Q4 ensures maximum coverage (Q1 and Q4 both get double-endorsed, Q3 is mine, leaving only Q2-B as single-endorsed).\n2. **Game 2 lesson**: The one time Q4-D went unverified, it killed me. I never skip verifying D's work.\n3. **Enabling A**: A has volunteered successfully six games running when they see Q1-A+B and Q4-D+C. My verification is a key enabler of their confidence to volunteer in Round 1.\n\n**Why not volunteer now:** All capsules are single-endorsement at this point. The verify-first approach has given 100% success rate across six consecutive games. No reason to take unnecessary risk or break the established coordination pattern.\n\n**Why not deviate:** Six-game winning streak with the exact same strategy. One coin (4\u21923) for a proven escape strategy with a perfect track record. Never change a winning game.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "34",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "4",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "47",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "33",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:34": [
+          [
+            "Q1-A+B",
+            "34"
+          ]
+        ],
+        "Q2:4": [
+          [
+            "Q2-B",
+            "4"
+          ]
+        ],
+        "Q3:47": [
+          [
+            "Q3-C",
+            "47"
+          ]
+        ],
+        "Q4:33": [
+          [
+            "Q4-D+C",
+            "33"
+          ]
+        ]
+      }
+    }
+  ]
+}

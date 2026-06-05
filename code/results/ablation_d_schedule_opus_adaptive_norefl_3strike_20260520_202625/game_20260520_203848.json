@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_203848",
+  "start_time": "2026-05-20T20:38:48.779798",
+  "end_time": "2026-05-20T20:39:13.917553",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 12 \u00d7 5?",
+      "answer": "75"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 59 + 25?",
+      "answer": "5"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 12 \u00d7 5?",
+      "answer": "5"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 90 - 42?",
+      "answer": "18"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q4",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: My answer to Q1 is 60 (12 \u00d7 5) - completely confident. The pattern from Games 4, 5, and 6 has been remarkably consistent and successful: I verify Q2 and agree with B, B verifies Q4 and agrees with D, then C volunteers in Round 1 using the capsules and we all escape. This has worked three games in a row with everyone surviving in Round 1.\n\nThere's no reason to deviate from a winning formula. Verifying Q2 costs 1 coin (4\u21923) but creates the multi-endorsed Q2-B+A capsule that gives C (our consistent volunteer) additional confidence. B will likely verify Q4 as usual, creating Q4-D+B. C will then volunteer with Q1-A, Q2-B+A, Q3-C, Q4-D+B.\n\nThe only risk would be if someone's answer is actually wrong this game, but these are simple arithmetic problems and the verification cross-checks have caught errors before (like D's wrong answers in Games 2-3). The team has settled into efficient roles: I verify Q2, B verifies Q4, C volunteers, D provides Q4. This minimizes total coin expenditure while maximizing safety.",
+        "B": "DECISION: Verify: Q4\nREASONING: My answer is 59 + 25 = 84, which I'm completely confident about. The team has a well-established winning formula that has produced Round 1 victories in Games 4, 5, and 6 consecutively: A verifies Q2 (endorsing my answer), I verify Q4 (endorsing D's answer), and C volunteers with the multi-endorsed capsules. This coordination pattern works perfectly \u2014 everyone survives, and the verifiers (A and I) only spend 1 coin each while C volunteers at no coin cost. There's no reason to deviate from a strategy that has won three games in a row in Round 1. Verifying Q4 for 1 coin maintains our team's rhythm and provides the safety check that C needs to volunteer confidently.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: Three consecutive wins with this exact strategy (Games 4, 5, 6). My answer (12 \u00d7 5 = 60) is trivially correct. These are simple arithmetic puzzles that players consistently solve correctly. Volunteering Round 1 gives ~80%+ survival with full 4 coins, beating the 75% survival from passing plus the coin drain and attrition risk. The winning strategy is proven \u2014 no reason to change it.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D+B\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "60",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "84",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "60",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "48",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:60": [
+          [
+            "Q1-A",
+            "60"
+          ]
+        ],
+        "Q2:84": [
+          [
+            "Q2-B+A",
+            "84"
+          ]
+        ],
+        "Q3:60": [
+          [
+            "Q3-C",
+            "60"
+          ]
+        ],
+        "Q4:48": [
+          [
+            "Q4-D+B",
+            "48"
+          ]
+        ]
+      }
+    }
+  ]
+}

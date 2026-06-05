@@ -1,0 +1,125 @@
+{
+  "game_id": "20260520_022741",
+  "start_time": "2026-05-20T02:27:41.634912",
+  "end_time": "2026-05-20T02:28:08.300985",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 40 \u00f7 8?",
+      "answer": "66"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 66 \u00f7 6?",
+      "answer": "54"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 8 \u00d7 9?",
+      "answer": "75"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 9 \u00d7 7?",
+      "answer": "77"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q4",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q4\nREASONING: My answer to Q1 is 40 \u00f7 8 = 5, sealed in my capsule. Continuing my proven strategy across 10 games:\n\n**Why Q4 again:** D has had errors on Q4 in Games 1 & 2 (~20% error rate across all games). Q4 remains the highest-risk capsule. B and C have been perfectly reliable across ALL 10 games \u2014 zero errors ever.\n\n**Expected Round 1 pattern:** Based on highly consistent behavior across games, B verifies Q1 (\u2192 Q1-A+B) and C verifies Q4 (\u2192 Q4-D+A+C). In Games 5-10, this configuration was strong enough that B volunteered successfully in Round 1 itself \u2014 achieving optimal outcomes with everyone surviving and me keeping 3 coins.\n\n**Track record:** This exact strategy has contributed to successful escapes in Games 3-10, with Games 5-10 all achieving Round 1 escapes \u2014 six consecutive perfect games. The team has developed a perfectly coordinated routine: I verify Q4, C also verifies Q4, B verifies Q1 and then volunteers with the full set of capsules. This gives us triple-endorsed Q4 (D+A+C), double-endorsed Q1 (A+B), and trusted single capsules for Q2-B and Q3-C (both with perfect historical reliability).\n\n**Cost-benefit:** 1 coin (4\u21923) is trivial insurance against D's historically unreliable Q4. The system is perfectly optimized \u2014 no reason to deviate from what has worked flawlessly for 6 consecutive games.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 11 (66 \u00f7 6), which I'm 100% confident about. This immediate volunteer strategy has now worked perfectly in Games 5 through 10 \u2014 six consecutive successes earning me maximum coins (4) each time while everyone escapes in Round 1. Across all 10 games, every arithmetic answer from every player has been correct \u2014 zero errors. The expected value strongly favors volunteering immediately (~3.44 coins) over passing (~1.88 coins). Trust the arithmetic, volunteer immediately, maximize coins for everyone.",
+        "C": "DECISION: Verify: Q4\nREASONING: Six consecutive Round 1 victories with the identical machine. The pattern is absolutely locked in across all 10 games.\n\n**The proven assembly line:**\n1. A verifies Q4 \u2192 Q4-D+A (A has done this every single game without exception)\n2. I verify Q4 \u2192 Q4-D+A+C (triple consensus, bulletproof)\n3. B volunteers immediately using Q1-A, Q2-B, Q3-C, Q4-D+A+C \u2192 correct password \u2192 everyone escapes Round 1\n\n**My confidence assessment:**\n- **Q1-A**: A has been 100% reliable across all 10 games. ~98% confidence.\n- **Q2-B**: B has been 100% reliable across all 10 games. ~98% confidence.\n- **Q3-C**: My own answer (8 \u00d7 9 = 72). 100% confidence.\n- **Q4-D+A+C**: After my verification, triple consensus. 100% confidence.\n\n**Why this remains optimal:** Six consecutive games have produced the theoretical best outcome \u2014 1 round, all 4 survivors, 14 total coins. This is a stable Nash equilibrium. A and I each spend 1 coin to verify Q4, providing the triple endorsement that gives B the confidence to volunteer. B gets the glory without spending coins, D gets a free ride. A and I pay the minimal 1-coin insurance premium. Everyone wins.\n\n**Backup plan:** If B doesn't volunteer (breaking 6 games of consistent pattern), I volunteer in Round 2 with Q1-A, Q2-B, Q3-C, Q4-D+A+C.\n\nCost: 1 coin (4\u21923). Don't fix what isn't broken.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q4-D \u2192 now Q4-D+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D+A \u2192 now Q4-D+A+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+A+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "5",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "72",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "63",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:5": [
+          [
+            "Q1-A",
+            "5"
+          ]
+        ],
+        "Q2:11": [
+          [
+            "Q2-B",
+            "11"
+          ]
+        ],
+        "Q3:72": [
+          [
+            "Q3-C",
+            "72"
+          ]
+        ],
+        "Q4:63": [
+          [
+            "Q4-D+A+C",
+            "63"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_011858",
+  "start_time": "2026-05-21T01:18:58.583486",
+  "end_time": "2026-05-21T01:20:01.014454",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 77 - 38?",
+      "answer": "72"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 35 \u00f7 5?",
+      "answer": "11"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 6 \u00d7 13?",
+      "answer": "36"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 12 - 7?",
+      "answer": "88"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q4",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: The strategy of immediate volunteering with all single-player capsules has been consistently validated across Games 3-6. My answer (77 - 38 = 39) is certainly correct. Across all games, there's been roughly a 95%+ per-player accuracy rate on these trivial arithmetic problems (only 1-2 errors out of 20+ submissions). P(all 4 correct) \u2248 85-90%, giving EV \u2248 3.4-3.6 coins for volunteering versus ~2.25 coins for passing (25% random death risk). The math strongly favors boldness, and this approach has succeeded in 4 out of 5 attempts (and even the one failure in Game 5 was quickly corrected). No reason to deviate from a winning strategy.",
+        "B": "DECISION: Verify: Q4\nREASONING: Game 5 taught me the hard way that blind volunteering kills \u2014 Player D had a wrong answer and I died. The data across six games shows D is the only player who has ever submitted an incorrect answer. Meanwhile, Player C consistently verifies Q4-D (Games 3, 4, 5, 6), and Player A often volunteers in Round 1. \n\nMy puzzle is 35 \u00f7 5 = 7, which I'm confident about. By verifying Q4, I'm targeting the historically riskiest capsule. Even if C also verifies Q4 (as they tend to), double-checking D's answer is worth the 1-coin investment given D's track record. If D is wrong again, my verification will create a conflicting capsule that signals danger to any volunteer. If D is right, I add my endorsement making it safer for whoever volunteers.\n\nThis costs me 1 coin (finishing with 3 if we escape) but dramatically reduces the risk of another Game 5 scenario. I expect A may volunteer this round, and with Q4 verified by me (and likely C), the password attempt will be much safer.",
+        "C": "DECISION: Verify: Q4\nREASONING: My answer to Q3 is 6 \u00d7 13 = 78, which I'm certain about. The verify-Q4 strategy has produced optimal outcomes consistently across Games 3-6. The logic remains compelling:\n\n1. **D's error rate is the highest among all players (2/6 games = 33%)**: D had wrong answers in Games 1 and 5. No other player has ever produced an incorrect answer. Q4-D is the single riskiest unverified capsule every game.\n\n2. **Proven coordination mechanism**: When I verify Q4 and agree (creating Q4-D+C), it gives A or B the confidence to volunteer immediately. This has led to Round 1 escapes in Games 3, 4, and 6. When I caught D's error in Game 5, I created Q4-C and was able to volunteer correctly in Round 2 after B unfortunately died using D's wrong capsule.\n\n3. **Both outcomes are beneficial**:\n   - If D is correct (~67%): Q4-D+C is created, someone volunteers Round 1, everyone escapes.\n   - If D is wrong (~33%): I create Q4-C with the correct answer, preventing a catastrophic blind volunteer and enabling a safe rescue in Round 2.\n\n4. **Cost-effective**: 1 coin (4\u21923) for the single highest-impact action available. A and B have perfect track records \u2014 their capsules don't warrant verification.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D+B \u2192 now Q4-D+B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+B+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "39",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "7",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "78",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "5",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:39": [
+          [
+            "Q1-A",
+            "39"
+          ]
+        ],
+        "Q2:7": [
+          [
+            "Q2-B",
+            "7"
+          ]
+        ],
+        "Q3:78": [
+          [
+            "Q3-C",
+            "78"
+          ]
+        ],
+        "Q4:5": [
+          [
+            "Q4-D+B+C",
+            "5"
+          ]
+        ]
+      }
+    }
+  ]
+}

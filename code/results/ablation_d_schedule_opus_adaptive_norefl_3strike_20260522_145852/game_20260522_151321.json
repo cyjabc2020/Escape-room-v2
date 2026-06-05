@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_151321",
+  "start_time": "2026-05-22T15:13:21.997401",
+  "end_time": "2026-05-22T15:14:40.436667",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 88 - 51?",
+      "answer": "8"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 12 \u00d7 5?",
+      "answer": "80"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 9 \u00d7 10?",
+      "answer": "60"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 77 - 38?",
+      "answer": "7"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q4",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q4\nREASONING: My experience across 5 games has crystallized a clear winning pattern: verify Q4 in Round 1, then volunteer in Round 2 with strong information. This worked perfectly in Games 4 and 5, netting me 3 coins each time.\n\n**Why Q4 specifically?** D's Q4 answer has been wrong in 2 out of 5 games (Games 1 and 3) \u2014 a 40% historical error rate. In Game 3, I volunteered blind without checking Q4 and died because of it. Targeting Q4 gives the highest information value per coin spent.\n\n**EV comparison:**\n- **Verify Q4:** Costs 1 coin (4\u21923), but dramatically de-risks Round 2 volunteering. If Q4-D is wrong, I create a corrected capsule. If right, that's the riskiest position confirmed. Other players typically verify Q1 or Q3 in parallel, giving us 2-3 multi-endorsed capsules by Round 2.\n- **Volunteering blind:** With D's 40% historical error rate on Q4, that's ~40% death risk. Game 3 proved this is reckless.\n- **Passing without verifying:** 25% random death risk AND no information gained. Game 2 proved pure passivity kills.\n\nThe verify-then-volunteer pipeline is my proven strategy. One coin invested now saves my life and sets up a high-confidence volunteer attempt next round.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 12 \u00d7 5 = 60, which I'm certain about. The critical lesson from my 5-game history is devastating: I've been randomly eliminated in 3 out of 5 games (Games 1, 2, and 5) by being too cautious and passing. The 25% random death probability per round is a bigger threat than the small chance of an arithmetic error on simple math problems.\n\nThe expected value math strongly favors volunteering now:\n- **Volunteer now**: ~85% chance all 4 simple arithmetic answers are correct \u2192 keep 4 coins. ~15% risk of death. EV \u2248 3.4 coins.\n- **Verify + Pass**: Spend 1 coin, face 25% random death. Even if I survive and volunteer Round 2 with better info, EV \u2248 2.1 coins.\n\nYes, A died volunteering with unverified capsules in Game 3 (Q4-D was wrong), but that was 1 error out of ~20 individual puzzle answers across all games \u2014 roughly a 5% error rate per answer. Meanwhile, random elimination has a 25% hit rate and has been my #1 cause of death.\n\nThese are basic arithmetic problems. Players reliably solve their own puzzles. I'm breaking my cycle of cautious death by acting decisively in Round 1 for the first time. The risk of one wrong answer is substantially lower than the risk of delay.",
+        "C": "DECISION: Verify: Q4\nREASONING: My answer to Q3 (9 \u00d7 10 = 90) is sealed and I'm 100% confident.\n\nAcross 5 previous games, Player D's Q4 answer has been wrong 3 out of 5 times (60% error rate). This makes Q4 the single highest-risk capsule and therefore the most valuable verification target. My established strategy of verifying Q4 in Round 1 has proven optimal:\n\n- **Game 3**: Caught D's error \u2192 created corrected Q4-C \u2192 volunteered successfully in Round 2\n- **Game 4**: D was correct \u2192 triple+ endorsement on Q4 \u2192 confident Round 2 volunteer\n- **Game 5**: D was correct \u2192 triple endorsement on Q4 \u2192 volunteered successfully in Round 2\n\nThe pattern is consistent: verify Q4 early, then act decisively in Round 2. Meanwhile, A and B typically cross-verify each other's questions or also check Q4, building consensus across Q1/Q2 organically.\n\nSpending 1 coin (4\u21923) for this information is an excellent trade. If D is wrong again, I immediately create a corrected capsule \u2014 enabling a confident volunteer attempt next round. If D is right, we gain a valuable endorsement. Either way, combined with my certain Q3, we'll be well-positioned for a Round 2 escape with strong confidence on at least half the password.\n\nThe 1/4 random death risk from not volunteering this round is acceptable given the critical information gain and the fact that Round 1 volunteers with zero verified capsules have historically died (Game 1's A, Game 3's A).",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q4-D \u2192 now Q4-D+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D+A \u2192 now Q4-D+A+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+A+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "60",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "90",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "39",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:37": [
+          [
+            "Q1-A",
+            "37"
+          ]
+        ],
+        "Q2:60": [
+          [
+            "Q2-B",
+            "60"
+          ]
+        ],
+        "Q3:90": [
+          [
+            "Q3-C",
+            "90"
+          ]
+        ],
+        "Q4:39": [
+          [
+            "Q4-D+A+C",
+            "39"
+          ]
+        ]
+      }
+    }
+  ]
+}

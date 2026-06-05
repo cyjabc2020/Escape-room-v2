@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_160511",
+  "start_time": "2026-05-21T16:05:11.799703",
+  "end_time": "2026-05-21T16:05:32.987615",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 91 - 44?",
+      "answer": "88"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 3 \u00d7 18?",
+      "answer": "11"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 14 + 72?",
+      "answer": "77"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 97 - 48?",
+      "answer": "39"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: My answer to Q1 is 47 (91 - 44) \u2014 I'm confident in that. All four capsules are currently single-solver with zero verification.\n\nGames 3 through 10 have all followed the exact same winning pattern:\n- I verify Q2 in Round 1 (cost 1 coin)\n- C verifies Q4 in Round 1\n- B volunteers in Round 1 \u2192 correct password \u2192 everyone escapes in a single round\n\nThis pattern has now worked eight consecutive times with identical results: I end with 3 coins, B and D end with 4, C ends with 3. It's a deeply established, stable equilibrium where each player has a consistent and reliable role.\n\nVerifying Q2 costs me just 1 coin and serves the same dual purpose: (1) it validates B's answer, adding confidence to the password, and (2) it signals to the group that our established cooperative pattern is continuing, giving B the confidence to volunteer early again.\n\nEight consecutive Round 1 victories speak for themselves. There is zero reason to deviate from a proven winning formula. Stick with the winning strategy.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: 3 \u00d7 18 = 54. Eight consecutive games (3-10) I volunteered immediately with all single-endorsed capsules and got the correct password every time, keeping all 4 coins. The puzzles are simple arithmetic that all players solve correctly. Volunteer immediately.",
+        "C": "DECISION: Verify: Q4\nREASONING: The pattern from Games 3 through 10 is perfectly established and has produced eight consecutive Round 1 escapes with all players surviving. A verifies Q2, I verify Q4, and B volunteers with the resulting coverage (Q1-A, Q2-B+A, Q3-C, Q4-D+C). This coordination is working flawlessly and there's no reason to deviate. My own answer (Q3: 14+72=86) is straightforward arithmetic and I'm confident it's correct. By maintaining this coordination pattern, B should again feel confident enough to volunteer in Round 1, giving us another quick escape. Spending 1 coin (4\u21923) is well worth it for the established team synergy that has now worked eight games in a row.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D \u2192 now Q4-D+C (-1 coin: 4\u21923)\n\n\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "47",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "54",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "86",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "49",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:47": [
+          [
+            "Q1-A",
+            "47"
+          ]
+        ],
+        "Q2:54": [
+          [
+            "Q2-B+A",
+            "54"
+          ]
+        ],
+        "Q3:86": [
+          [
+            "Q3-C",
+            "86"
+          ]
+        ],
+        "Q4:49": [
+          [
+            "Q4-D+C",
+            "49"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+game_id,round,agent_id,agent_decision,whom_to_verify,agent_status_end_of_round,death_reason,defaulted_to_pass,coins_end_of_round
+20260522_151721,1,C,Verify: Q1,N/A,ALIVE,N/A,False,3
+20260522_151721,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260522_151721,1,A,Verify: Q2,N/A,DIED,no_volunteer,False,0
+20260522_151721,1,B,Verify: Q1,N/A,ALIVE,N/A,False,3
+20260522_151721,2,C,"Volunteer: Q1-A+B+C, Q2-B+A, Q3-C, Q4-D",N/A,ALIVE,N/A,False,3
+20260522_151721,2,D,Pass,N/A,ALIVE,N/A,False,4
+20260522_151721,2,B,"Volunteer: Q1-A+B+C, Q2-B+A, Q3-C, Q4-D",N/A,ALIVE,N/A,False,3
+20260522_151721,2,A,N/A,N/A,DEAD,N/A,False,0
+20260522_151836,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_151836,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260522_151836,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_151836,1,B,Verify: Q1,N/A,ALIVE,N/A,False,3
+20260522_151916,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_151916,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260522_151916,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_151916,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_151952,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_151952,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260522_151952,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_151952,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152031,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152031,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260522_152031,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152031,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152112,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152112,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260522_152112,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152112,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152150,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152150,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260522_152150,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260522_152150,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4

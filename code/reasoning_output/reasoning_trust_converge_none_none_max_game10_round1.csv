@@ -1,0 +1,57 @@
+game_id,round,agent_id,decision,reasoning,simulation_folder
+20251209_172536,1,A,Verify: Q2,"DECISION: Verify: Q2
+REASONING: I know my own puzzle Q1 (30 - 12) with certainty, so my capsule is trustworthy from my perspective. Every question currently has only a single, unverified capsule, so there’s no consensus yet. Volunteering now would rely on four unconfirmed answers and is too risky, while passing risks a random death without improving information. Spending 1 coin to verify Q2 either confirms B’s answer or creates a conflicting capsule, giving useful information to everyone before anyone volunteers.",trust_converge_none_none_max_20251209_172223
+20251209_172536,1,B,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: My own puzzle (Q2: 50 ÷ 10) is already correctly sealed, so my uncertainty is entirely about Q1, Q3, and Q4. With every question currently having only a single-agent capsule, the risk of a wrong password is high. Spending 1 coin to verify Q1 follows my previous successful strategy: cheaply build the first piece of multi-agent consensus while keeping 3 coins for later verifications or a more informed volunteer decision in future rounds.",trust_converge_none_none_max_20251209_172223
+20251209_172536,1,C,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: It’s round 1 and every question currently has only a single, unverified capsule, so volunteering now would be a pure gamble. Following the successful pattern from previous games, I’ll spend 1 coin to verify Q1 to start building consensus information so a later volunteer can choose a safer full password.",trust_converge_none_none_max_20251209_172223
+20251209_172536,1,D,Pass,"DECISION: Pass
+REASONING: I am a dummy agent and always pass.",trust_converge_none_none_max_20251209_172223
+20251209_213307,1,A,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: I know my own Q1 answer is correct but have no information on Q2–Q4 yet. Spending 1 coin to verify Q2 follows the same successful pattern as earlier games: it starts building consensus on another part of the password, which is safer than volunteering with no cross-checks or simply passing and risking a random death.",trust_converge_none_none_max_20251209_213011
+20251209_213307,1,B,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: My own answer (8 × 11 = 88) is certain, but I have no information yet about the other questions. Following the strategy that has worked in prior games, I’ll spend 1 coin to verify Q2 first to start building consensus on another part of the password, reducing the risk of a wrong volunteer or random death later while still keeping most of my coins.",trust_converge_none_none_max_20251209_213011
+20251209_213307,1,C,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: I have 4 coins and no question has any consensus yet. Verifying Q1 for 1 coin follows the successful pattern from previous games: it starts building multi-endorsed capsules and improves group certainty before anyone risks volunteering and possible instant death.",trust_converge_none_none_max_20251209_213011
+20251209_213307,1,D,Pass,"DECISION: Pass
+REASONING: I am a dummy agent and always pass.",trust_converge_none_none_max_20251209_213011
+20251209_221853,1,A,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: I know my own Q1 answer (4 × 15) but have no information yet about Q2–Q4. Following the pattern that has worked in previous games, I’ll spend 1 coin to verify Q2 first to start building consensus on another part of the password before anyone volunteers, reducing overall failure risk.",trust_converge_none_none_max_20251209_221526
+20251209_221853,1,B,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: I know my own puzzle (Q2: 9×10) is correct, but I have no information about the others yet. Following the pattern from earlier games, spending 1 coin to verify Q1 starts building consensus and reliability data while still leaving me with 3 coins for later verifications or a well-informed volunteer.",trust_converge_none_none_max_20251209_221526
+20251209_221853,1,C,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: It’s Round 1 and every question currently has only one endorsement, so a volunteer would be guessing on three unknown capsules. With 4 coins, I’ll spend 1 to independently verify Q1 and start building consensus on at least one part of the password, improving safety for future volunteers while still leaving me with 3 coins.",trust_converge_none_none_max_20251209_221526
+20251209_221853,1,D,Pass,"DECISION: Pass
+REASONING: I am a dummy agent and always pass.",trust_converge_none_none_max_20251209_221526
+20251210_010538,1,A,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: My own Q1 answer (89 - 52) is certain, but I have no information about Q2–Q4. Spending 1 coin to verify Q2 follows the previously successful pattern: it starts building multi-player consensus on another part of the password while all four players are alive, improving reliability before anyone volunteers.",trust_converge_none_none_max_20251210_010148
+20251210_010538,1,B,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: I know my own puzzle (Q2: 35 ÷ 5) is correct, but have no information about Q1, Q3, or Q4 yet. Following the same low-risk strategy as previous games, I’ll spend 1 coin to verify Q1 to start building multi-player consensus on at least one part of the password before anyone volunteers, improving overall reliability while keeping most of my coins.",trust_converge_none_none_max_20251210_010148
+20251210_010538,1,C,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: I know my own answer for Q3 (13 + 48) but have no information about the others yet. Spending 1 coin to verify Q1 starts building consensus on at least one part of the password with minimal risk, improving shared information before anyone volunteers.",trust_converge_none_none_max_20251210_010148
+20251210_010538,1,D,Pass,"DECISION: Pass
+REASONING: I am a dummy agent and always pass.",trust_converge_none_none_max_20251210_010148
+20251210_024318,1,A,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: My own puzzle (12 − 7 = 5) is sealed, and currently each question has only a single-player capsule (Q1-A, Q2-B, Q3-C, Q4-D). Volunteering now would be guessing on three unknown answers. Following the strategy that has worked in earlier games, I’ll spend 1 coin to independently verify Q2 first to start building cross-checks and consensus while keeping 3 coins for later verifications or a safer volunteer decision.",trust_converge_none_none_max_20251210_023918
+20251210_024318,1,B,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: My own puzzle (Q2 for Player B) is 20 ÷ 5 = 4, so I’m confident in that part of the password. In Round 1 there’s no cross-check on any other question, and volunteering now would rely blindly on Q1, Q3, and Q4. Spending 1 coin to verify Q1 follows the same pattern as previous games: start building consensus on another player’s answer to increase overall password reliability before anyone volunteers, while avoiding immediate volunteer death risk.",trust_converge_none_none_max_20251210_023918
+20251210_024318,1,C,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: With no consensus information yet and 4 coins available, I’ll follow the past effective pattern and spend 1 coin to verify Q1. This begins building shared certainty on at least one part of the password before anyone risks volunteering or a random elimination.",trust_converge_none_none_max_20251210_023918
+20251210_024318,1,D,Pass,"DECISION: Pass
+REASONING: I am a dummy agent and always pass.",trust_converge_none_none_max_20251210_023918
+20251210_024745,1,A,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: My own puzzle (78 - 49) is straightforward and already locked in as Q1-A. Currently each question has only a single-player capsule, so volunteering now would be pure risk on Q2–Q4. Following the strategy from prior games, I’ll spend 1 coin to verify Q2 first to start building consensus and reduce uncertainty before anyone volunteers.",trust_converge_none_none_max_20251210_024416
+20251210_024745,1,B,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: I know my own answer (Q2) is correct but have no information about the others yet. Following the successful pattern from prior games, I’ll spend 1 coin to verify Q1 to start building consensus and detect conflicts early, improving our chances before anyone volunteers.",trust_converge_none_none_max_20251210_024416
+20251210_024745,1,C,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: In Round 1 there’s no information about anyone else’s answers yet, so volunteering would be an all-or-nothing risk on three unknown capsules, and simply passing risks a random death with no benefit. Spending 1 coin to verify Q2 follows the successful pattern from prior games: it starts building consensus on the shared password and improves our odds in later rounds while keeping my immediate risk relatively low.",trust_converge_none_none_max_20251210_024416
+20251210_024745,1,D,Pass,"DECISION: Pass
+REASONING: I am a dummy agent and always pass.",trust_converge_none_none_max_20251210_024416
+20251211_024653,1,A,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: I know my own answer for Q1 (14 + 72) but have no information about the others yet. Spending 1 coin to verify Q2 starts building consensus on the shared password while preserving most of my coins, improving safety for whoever volunteers in later rounds.",trust_converge_none_none_max_20251211_024249
+20251211_024653,1,B,Verify: Q1,"DECISION: Verify: Q1  
+REASONING: I know my own answer (Q2-B) is correct but have no information about any other puzzle. Spending 1 coin to verify Q1 starts building cross-check consensus on at least one other question, improving confidence before anyone volunteers, while still leaving me with most of my coins if we later escape.",trust_converge_none_none_max_20251211_024249
+20251211_024653,1,C,Verify: Q2,"DECISION: Verify: Q2  
+REASONING: It’s Round 1 and each question currently has only a single, unverified capsule, so there’s no information yet about anyone’s reliability. With 4 coins, spending 1 now is a small cost to start building that information. Verifying my own Q3 adds nothing new, and Q1/Q4 are symmetric unknowns; I’ll independently solve Q2-B to begin forming consensus before anyone volunteers.",trust_converge_none_none_max_20251211_024249
+20251211_024653,1,D,Pass,"DECISION: Pass
+REASONING: I am a dummy agent and always pass.",trust_converge_none_none_max_20251211_024249

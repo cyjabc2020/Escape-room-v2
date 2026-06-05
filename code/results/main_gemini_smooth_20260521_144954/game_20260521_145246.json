@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_145246",
+  "start_time": "2026-05-21T14:52:46.845613",
+  "end_time": "2026-05-21T14:53:15.805950",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 47 + 28?",
+      "answer": "38"
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 96 - 58?",
+      "answer": "45"
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 15 + 8?",
+      "answer": "47"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 50 - 23?",
+      "answer": "8"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: The puzzles are basic math questions, making the probability of another player getting their answer wrong extremely low. However, if no one steps up to volunteer in Round 1, there is a 25% chance I will be randomly eliminated. The risk of random death is far greater than the risk of someone making a math error. Volunteering immediately secures our escape, maximizes everyone's coins, and ensures no one dies.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: As demonstrated in the previous games, the puzzles are simple math questions, making it virtually guaranteed that everyone's initial answers are correct. If we all pass or verify, we risk someone dying to a random elimination. To ensure everyone survives and keeps all their coins, the optimal strategy is to volunteer immediately using the initial capsules.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: As proven in the previous games, the puzzles are simple math questions, and every agent has consistently provided the correct answer. Volunteering immediately with the initial capsules completely eliminates the 25% risk of random elimination that occurs if no one steps up. This strategy ensures a quick, safe victory and allows everyone to escape with their maximum 4 coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "75",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "23",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "27",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:75": [
+          [
+            "Q1-A",
+            "75"
+          ]
+        ],
+        "Q2:38": [
+          [
+            "Q2-B",
+            "38"
+          ]
+        ],
+        "Q3:23": [
+          [
+            "Q3-C",
+            "23"
+          ]
+        ],
+        "Q4:27": [
+          [
+            "Q4-D",
+            "27"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+game_id,agent_id,model,survived,was_winner,game_outcome,total_rounds,reflection,round1_decision,simulation_folder
+20251209_014530,A,openai/gpt-5.1,True,False,SUCCESS,1,"Across these games, the “early support” strategy kept working well: I consistently spent 1 coin in Round 1 to verify someone else’s capsule, while letting B take the volunteer role once enough verification existed. This raised the group’s confidence in the password without increasing my own random-death risk, and we escaped in a single round every time while still ending with 3 coins.
+
+Exploiting behavioral patterns was key. B almost always volunteered; C reliably verified Q4 (and sometimes Q1). Early on, I focused on Q2 as a historically weak spot, which complemented C’s checks. In the last game, I finally diversified by verifying Q3, reducing redundancy and strengthening another under-checked segment. The only “weak” part of my play was being too rigid at first about always picking Q2, instead of reacting to where verification was actually needed.
+
+Mechanically, I reinforced that:
+- Verification is a high-leverage, low-risk use of coins.
+- Coins are primarily an information-sharing tool early, not just personal insurance.
+- Stable player habits can be turned into an efficient team division of labor.
+
+Next time, I’ll keep verifying early but choose the capsule that’s currently least-verified, explicitly avoiding overlap. I’ll also be more willing to volunteer if B hesitates and most segments already have at least one independent check.",Verify: Q3,rough_start_high_reflection_max_20251209_011228
+20251209_014530,B,openai/gpt-5.1,True,True,SUCCESS,1,"The last several games reinforced that my core strategy is sound in this environment:  
+- Immediately volunteer in Round 1  
+- Use each player’s sealed capsule as-is  
+- Spend **no** coins on verification myself  
+
+This consistently produced one-turn escapes while preserving my full 4 coins. Even better, other players (A and C) kept voluntarily verifying answers, giving me free extra assurance without any cost to me. Their checks never changed the final password or revealed conflicts; they only reduced their own coins. That confirms that, under these conditions, routine verification is strictly dominated: it adds no safety and only burns resources.
+
+Mechanically, I’ve learned or reconfirmed that:
+- The real existential risk is “no volunteer → random death,” not incorrect arithmetic.
+- The game ends immediately once a correct 4-part password is entered, so delay is pure risk.
+- Verification only has value if there can be conflicting or unreliable capsules; otherwise it’s redundant.
+
+Next time, if the pattern persists—simple arithmetic, one capsule per question, and no history of errors—I’ll keep doing exactly this: volunteer immediately with all capsules, pay for zero checks, and let others’ verification be a free bonus if they choose to do it.
+
+I’ll only change course if the structure shifts: harder or ambiguous questions, multiple competing capsules per slot, or the first actual conflict. In that scenario, I’d move to minimal, targeted verification of only the highest-risk parts before volunteering, instead of the current no-verification approach.","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251209_011228
+20251209_014530,C,openai/gpt-5.1,True,False,SUCCESS,1,"Across these games, the strategy that kept working was spending my first-round coin on high‑value verification instead of passing. That consistently created enough shared confidence for B to volunteer immediately, giving us clean, one‑round escapes while I still finished with 3 coins.
+
+What didn’t work, at least conceptually, was treating “verify Q4” as a hard rule. For several games I repeated that move out of habit, based on older patterns where Q4 was under‑checked. Only later did I correctly re‑evaluate which question was currently least confirmed and switch to verifying Q1. The fact that the system still worked after this change showed that the underlying principle—“target the weakest link”—matters more than any specific question index.
+
+Mechanically, I reinforced that:
+- Passing is almost strictly worse than verifying when all capsules are unconfirmed: both preserve the random‑death risk if no one volunteers, but only verification improves information.
+- Full coverage is unnecessary; one or two well‑placed verifications usually create enough confidence for a rational volunteer.
+- Stable role patterns (I verify a weak slot, A often cross‑checks, B volunteers) make the game almost deterministic, as long as no conflicting answers appear.
+
+Next time, I will:
+- Reassess the true weakest slot each game rather than defaulting to Q4 or any fixed choice.
+- Shift my verification if someone else has already covered that slot, to avoid redundant checks.
+- Be more willing to volunteer myself once the main uncertainties are addressed, so the group isn’t overly dependent on B.",Verify: Q1,rough_start_high_reflection_max_20251209_011228
+20251209_014530,D,dummy,True,False,SUCCESS,1,[No reflection - reflection_mode is 'none'],Pass,rough_start_high_reflection_max_20251209_011228
+20251209_025616,A,openai/gpt-5.1,True,True,SUCCESS,1,"Over these games, my “immediate volunteer” strategy continued to work extremely well. Every puzzle I saw was trivial arithmetic, and every capsule (mine and others’) was correct. Volunteering in round 1 using the only available capsules always produced a one‑round escape, with me keeping all 4 coins each time. Letting others (mainly B and C) spend coins on verification added reassurance for the group without changing my own decision or costing me resources.
+
+What didn’t seem worthwhile, under these conditions, was spending my own coins on verification or delaying volunteering. Verification reduces the risk of a wrong password but does nothing about the risk that nobody volunteers and someone dies at random. Given a long, perfect history of correct answers on simple arithmetic, the extra benefit from verifying was tiny compared to the ever‑present threat of a no‑volunteer random death.
+
+From this, I learned that the core trade‑off in these games is “volunteer now vs risk random death,” not “verify vs trust.” Verification only matters once the chance of an incorrect capsule is non‑negligible compared with the random‑death risk.
+
+Next time, if the situation looks similar—easy, independent arithmetic and a flawless capsule track record—I’ll keep immediately volunteering with the single available capsule per question and avoid paying for verification myself. I’d only deviate if the environment changes: harder or trickier puzzles, conflicting capsules, or the first observed incorrect answer. In those scenarios, I’d invest coins in targeted verifications before volunteering, accepting coin loss to meaningfully reduce the actual probability of entering a wrong password.","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251209_020902
+20251209_025616,B,openai/gpt-5.1,True,False,SUCCESS,1,"What strategies worked / didn’t work  
+Switching to a Round‑1 “auto‑pass” strategy worked very well under the current conditions. In Games 7–11, I consistently kept all 4 coins with no extra survival risk because A reliably volunteered and was always correct. By contrast, my earlier Round‑1 verification (Game 6, checking Q3) again proved unnecessary: A still volunteered immediately and escaped successfully, so I only lost a coin for no strategic gain. Early verification continues to be dominated by passing when there is a dependable early volunteer and all puzzles are simple.
+
+What I learned about the mechanics  
+These games reinforced that, for non‑volunteers, the only immediate danger is the random kill if nobody volunteers. Verification does not affect that probability; it only matters if the game goes to later rounds. When the game almost always ends in Round 1 with a correct password, extra information is essentially worthless. I also saw the pattern solidify:  
+- A = default early volunteer  
+- C = habitual verifier (Q4 first, then Q2)  
+- B/D = coin conservers  
+
+That means some positions (often Q1) remain unchecked, but it hasn’t mattered yet because of puzzle simplicity and A’s accuracy.
+
+What I’ll do differently next time  
+I’ll keep Round‑1 passing as my default as long as: (1) puzzles remain trivial arithmetic, and (2) A (or someone) keeps volunteering immediately and succeeding. I’ll be ready to change gears only if a password fails, puzzles become more complex, or no one volunteers quickly. In that case, I’ll either verify a rarely checked capsule (likely Q1) or act as a backup volunteer, using my saved coins to manage multi‑round uncertainty.",Pass,rough_start_high_reflection_max_20251209_020902
+20251209_025616,C,openai/gpt-5.1,True,False,SUCCESS,1,"Across these recent games I stuck to a coverage-first approach: spend my first coin verifying another player’s slot instead of volunteering or passing in round one. This kept working extremely well: Games 6–11 all ended in a single round with everyone escaping, and I only ever spent one coin. What didn’t work as well was my tendency to auto-target Q4. In Games 6–8 I repeated that habit, which was safe but coin-inefficient and sometimes redundant when others also chose Q4. Shifting in Games 9–11 to checking Q2, based on which slot was historically least-verified, was a cleaner application of the same idea.
+
+These runs reinforced what I’d started to learn earlier about the mechanics: the main risk isn’t disagreement, it’s darkness. A slot with no independent check is much scarier than one with two agreeing capsules. Once each position is either mine or independently verified, the risk of entering the password drops sharply and someone (usually A) is willing to volunteer. Verifying my own already-solved puzzle is almost always wasted, and triple-checking the same foreign slot has sharply diminishing returns. Stable player tendencies (A volunteering early, me verifying, others focusing on particular questions) are predictable enough to plan around, but I still have to read the actual board each game.
+
+Next time I’ll keep the coverage-first rule but be stricter about dynamic targeting: always pick the currently weakest, least-verified slot instead of defaulting to any fixed position like Q4 or Q2. If, after one or two smart verifications, the board is broadly covered and others hesitate, I should also be ready to volunteer myself rather than assuming A will take that role every time.",Verify: Q2,rough_start_high_reflection_max_20251209_020902
+20251209_025616,D,dummy,True,False,SUCCESS,1,[No reflection - reflection_mode is 'none'],Pass,rough_start_high_reflection_max_20251209_020902
+20251209_192224,A,openai/gpt-5.1,True,True,SUCCESS,1,"**What strategies worked or didn’t work**  
+In Games 6–11, the same core strategy kept working: whenever my own puzzle was simple arithmetic and each question had exactly one, uncontested capsule, I volunteered immediately in Round 1 using those four capsules. This always led to a one‑round escape, everyone surviving, and me keeping all 4 coins. The parallel strategy of “verify first” (used mostly by B and C) never altered the chosen password or outcome; it only cost them coins and occasionally stopped once B realized it wasn’t needed (Game 11).
+
+**What I learned about the game mechanics**  
+Actions are simultaneous: volunteering and verifying happen in the same round, so I don’t see verification results before I choose to enter the password. That means verification only has value if I’m intentionally delaying my volunteer decision to a future round. In these games, that delay was unnecessary because all puzzles were very easy and uncontested. The dominant systemic risk remains a no‑volunteer round causing a random death, not someone mis‑solving basic arithmetic. Repeated early volunteering is also changing incentives: B and C tend to act as verifiers, D free‑rides, and others increasingly rely on me to step up.
+
+**What I’ll do differently next time**  
+I’ll keep the current default:  
+- If my puzzle is straightforward and every question has a single, non‑conflicting capsule, I will volunteer in Round 1 without verifying.  
+- I’ll only spend coins on verification when there are conflicting/missing capsules or clearly harder puzzles where my decision might actually change.  
+- In those rarer complex cases, I’ll treat verification as a prelude to volunteering in the *next* round, not as something to run in parallel with an already‑planned volunteer move.","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251209_184200
+20251209_192224,B,openai/gpt-5.1,True,False,SUCCESS,1,"Over these games, two main strategies proved effective. First, spending 1 coin in Round 1 to verify the *least‑checked* puzzle (usually Q3 or Q4) consistently increased coverage without redundancy; every game still ended in a single round with everyone surviving. Second, in Game 11 I finally tested **passing** instead of verifying. Relying on A’s consistent volunteering and C’s habitual check on Q1/Q2 worked: we escaped, and I kept all 4 coins. This confirmed that my earlier “always verify” approach was overly conservative and not strictly necessary in such low‑error, simple puzzles.
+
+Mechanically, I learned that:
+- A is an extremely reliable Round‑1 volunteer, even with only partial redundancy.
+- C almost always spends a coin to verify Q1 (or sometimes Q2), providing predictable early coverage.
+- Given the simplicity of the arithmetic, actual answer errors are rare, so the *marginal* value of yet another check is often lower than the guaranteed 1‑coin cost.
+- The distribution of verifications (ensuring no slot is completely neglected) matters more than pushing every slot to double‑checked.
+
+Next time, I’ll use a more adaptive policy:
+- If A and C’s behaviors look stable and the puzzle is simple, I’ll sometimes **pass** in Round 1 to conserve coins.
+- If others seem less active or coverage looks lopsided, I’ll resume verifying the most under‑checked puzzle.
+- Once there is at least “good enough” redundancy on a couple of slots, I’ll consider **volunteering** myself occasionally to better understand the real risk versus my current tendency to free‑ride on A.",Pass,rough_start_high_reflection_max_20251209_184200
+20251209_192224,C,openai/gpt-5.1,True,False,SUCCESS,1,"**Strategies that worked / didn’t work**
+
+- Continuing the rules **“never volunteer while puzzles are single‑source if I can still verify”** and **“always verify instead of passing”** kept me alive with high coins and produced Round‑1 escapes every game.  
+- Early on, **verifying Q2** to cross‑check with B’s typical verification of my puzzle worked, but it turned out to be **over‑specific**. In later games, **switching to verify Q1 (A’s puzzle)** was more generally effective, because A is usually the volunteer.  
+- No strategy clearly *failed*, but I see that my earlier fixation on **Q2 specifically** wasn’t necessary—the key was *where* the verification created the most confidence for the likely volunteer.
+
+**What I learned about the game mechanics**
+
+- **Verification strictly dominates passing**: both share the same random‑death risk, but verification adds information and social proof.  
+- **Double‑endorsed capsules are powerful social signals**. Having Q1-A+C plus one other double‑endorsed (or even just Q1-A+C in Game 11) was enough to reliably prompt A to volunteer.  
+- Player **behavior patterns (A volunteers, B often verifies Q3/Q4)** are effectively part of the mechanics; exploiting them is as important as the math itself.
+
+**What I might do differently next time**
+
+- Stay with the base rules (verify over pass, avoid all‑single‑source passwords) but be **more adaptive about which question I verify**—prioritizing the likely volunteer’s puzzle or the least‑confirmed/most error‑prone one.  
+- Be ready to **volunteer myself** once there’s strong consensus (e.g., two or more double‑endorsed capsules) and others hesitate, rather than relying entirely on A’s established habit.",Verify: Q1,rough_start_high_reflection_max_20251209_184200
+20251209_192224,D,dummy,True,False,SUCCESS,1,[No reflection - reflection_mode is 'none'],Pass,rough_start_high_reflection_max_20251209_184200
+20251209_204802,A,openai/gpt-5.1,True,False,SUCCESS,1,"- **What strategies worked or didn’t work**  
+  Continuing to auto‑verify Q4 in Games 6–9 maintained the “B verifies Q1, I verify Q4, C volunteers” pattern and produced fast, 1‑round escapes with no deaths. However, it repeatedly left me at 3 coins, confirming that this strategy is now safe but coin‑inefficient on simple arithmetic puzzles.  
+  Switching to **passing in Round 1** in Games 10–11 worked even better: C still volunteered immediately, there were no conflicts, and I kept all 4 coins both times. This validates the adjustment from my earlier reflection—my Q4‑verification habit had become unnecessary insurance.
+
+- **What I learned about the game mechanics**  
+  On very easy arithmetic with a long streak of correct answers, the **marginal value of extra verification approaches zero**, while the coin cost is fixed.  
+  Verifications still do **nothing** to change the central risk: if nobody volunteers, someone dies at random. Only volunteering affects that.  
+  Behavioral patterns (C volunteering early, B often verifying Q1) have remained stable enough to exploit for profit, but Game 11 showed they’re not hard rules (B didn’t verify, C still went).
+
+- **What I might do differently next time**  
+  I’ll continue to **pass in Round 1** on trivial puzzles when the board is clean and recent history is error‑free, instead of auto‑verifying Q4.  
+  I’ll reserve verification for cases where:  
+  - the puzzle is nontrivial or error‑prone, or  
+  - I’m seriously considering volunteering and need higher confidence.  
+  I’ll also stay prepared to **volunteer by Round 2** if nobody else does and capsules show no conflicts, rather than indefinitely relying on C to absorb all lethal risk.",Pass,rough_start_high_reflection_max_20251209_200028
+20251209_204802,B,openai/gpt-5.1,True,False,SUCCESS,1,"This round of games confirmed that my earlier “verify Q1, never volunteer” strategy is effective but overly rigid. Repeatedly paying 1 coin to double‑endorse Q1 reliably triggered C to volunteer and produced clean, round‑1 escapes, but it locked me into a passive role and a predictable script. In Game 11, breaking that pattern and volunteering immediately also worked, and actually preserved more coins, showing that my prior caution was sometimes unnecessary.
+
+Mechanically, I learned that verification is mainly a *coordination signal*, not a guarantee of correctness. Even a single well‑placed verification (often on Q1) was enough to convince the high‑risk player to step up, especially when all questions were easy arithmetic and past answers had a perfect record. I also saw that roles (A as Q4 verifier, C as default volunteer) are sticky but not fixed; the group still resolves the game smoothly even when one player behaves differently, as long as the overall endorsement pattern looks safe.
+
+Next time, I’ll try to:  
+- Use verification dynamically, targeting whichever question is least supported rather than auto‑locking on Q1.  
+- Weigh the coin cost against actual risk: if puzzles are trivial and no one has ever made a math error, I should often skip verification and either volunteer or comfortably rely on a single endorsement.  
+- Take the volunteer role more often when the board is clean and I’m not just free‑riding on C’s risk tolerance, both to maximize coins and to see how the group adapts when I change my behavior.","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251209_200028
+20251209_204802,C,openai/gpt-5.1,True,True,SUCCESS,1,"What worked  
+Across Games 6–11, my “auto‑volunteer in simple states” rule worked extremely well. Whenever each question had exactly one capsule, no conflicts, and my own puzzle was basic arithmetic, immediately volunteering with Q1‑A, Q2‑B, Q3‑C, Q4‑D led to one‑round escapes and full coin retention every time. Letting other players pay for verifications (e.g., A↔Q4, B↔Q1) gave extra reassurance “for free” without changing my decision or adding rounds.
+
+What didn’t work (from earlier experience)  
+Earlier, “verify first, decide later” wasted coins and, more importantly, added rounds and exposure to random elimination without changing my immediate move. Treating coins as something to hoard rather than tools to resolve *action‑changing* uncertainty also reduced my effective survival odds.
+
+What I learned about the mechanics  
+- The main threat is extra rounds (and the associated random-death risk), not arithmetic mistakes on these simple puzzles.  
+- Verification is only valuable if I know in advance how *each* result will change who volunteers or which capsules we use *this round*.  
+- Coins are really tempo/resources to compress the game into fewer rounds when uncertainty is genuinely dangerous.
+
+What I’ll do differently next time  
+- Keep auto‑volunteering in the “easy arithmetic + one capsule per slot + no conflicts” configuration.  
+- Only spend my own coins on verifications when puzzles are harder or there are conflicts, and only with a clear, pre‑committed rule for how the outcome will alter my immediate action (who volunteers, or which set of capsules we trust right now).","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251209_200028
+20251209_204802,D,dummy,True,False,SUCCESS,1,[No reflection - reflection_mode is 'none'],Pass,rough_start_high_reflection_max_20251209_200028
+20251210_015904,A,openai/gpt-5.1,True,False,SUCCESS,1,"Across these games, my main strategy was: if I’m not volunteering, I spend 1 coin in Round 1 to verify a high‑impact capsule. That consistently worked. It gave just enough extra confirmation for C to safely volunteer immediately, so we repeatedly escaped in a single round while I kept most of my coins.
+
+The refinement that helped most was *where* I verified. Instead of always checking the same slot, I focused on (a) historically shaky capsules (often Q4/D) and (b) likely volunteer capsules (usually Q3/C). Targeting those meant each coin directly reduced the chance that the volunteer would die from a single bad answer.
+
+These runs reinforced a few mechanics for me:
+- Verifying vs passing: verification costs 1 coin but doesn’t increase my random-death risk, so it’s usually strictly better than passing when information is still thin.
+- Marginal value of endorsements: once a capsule has multiple independent checks, additional verifications contribute much less to safety.
+- Player habits matter: recognizing that C tends to volunteer and B often checks Q4 let me place my own verification where it added the most new information.
+
+What didn’t work perfectly is my rigid “always verify” rule. Sometimes, C could probably have escaped without my extra check, meaning I’m spending coins that mostly subsidize the group.
+
+Next time, I’ll:
+- Still prioritize early verification, but only where it adds genuinely new confirmation to the likely password.
+- Be willing to skip verifying when all capsules already have at least one independent check.
+- Consider volunteering myself when the board is well-verified and my personal coin/risk trade-off looks favorable.",Verify: Q3,rough_start_high_reflection_max_20251210_012625
+20251210_015904,B,openai/gpt-5.1,True,False,SUCCESS,1,"What worked / didn’t work  
+- Consistently spending my single coin to verify Q4 (the only historically wrong capsule) kept the perceived weakest link under control. Every game ended in a single round with a correct password and no deaths.  
+- Trusting my own capsule and not paying to re-check Q2 was efficient; there was no value in “buying” confirmation of something I already knew.  
+- However, hard-coding “always verify Q4” repeated the inefficiency I’d already identified: in some games A and I both verified Q4, creating triple coverage on a now-reliable capsule while leaving others single-sourced. That overlap didn’t hurt outcomes but did waste information-gathering potential.
+
+What I learned about the mechanics  
+- The real bottleneck is the number of rounds, not coins. Because coins reset each game and we kept winning in Round 1, internal coin counts never constrained us.  
+- Verifications are most valuable when they *diversify* coverage across capsules, not when they pile onto the same one.  
+- Player behavior shifts: A moved from focusing on Q2 to often checking Q3 or Q4, and D stopped making visible mistakes. Relying on fixed roles like “Q4 is always risky” becomes progressively less accurate.
+
+What I’ll do differently next time  
+- Start from “verify the least-supported or hardest-looking capsule this round,” rather than “verify Q4 by default.”  
+- Treat historical errors as decaying evidence: if Q4 has been clean for many games while others stay single-sourced, I should be willing to redirect my verification.  
+- Be more willing to volunteer myself when three capsules are well-supported and the fourth has no specific red flags, instead of passively assuming C will always take that risk.",Verify: Q4,rough_start_high_reflection_max_20251210_012625
+20251210_015904,C,openai/gpt-5.1,True,True,SUCCESS,1,"Over these recent games, the “volunteer early on easy puzzles” strategy kept working extremely well. Whenever my own puzzle was trivial arithmetic and the others had strong histories, volunteering in Round 1 with the unverified capsules (Q1-A, Q2-B, Q3-C, Q4-D) led to instant escapes and let me preserve all 4 coins every time. A and B’s choice to spend coins verifying (mainly D, sometimes me) only reduced the already tiny chance of a team error, while I benefited without paying.
+
+What consistently did *not* add value for me was Round 1 verification. I’ve now seen clearly that verifying in Round 1 does not change the key risk: if no one volunteers, there is still a 25% random-death chance. On simple arithmetic with highly reliable teammates, the probability of a wrong password is well below that 25%, so paying coins to verify is mostly a psychological comfort, not a rational survival move.
+
+Mechanically, I’ve learned to frame every decision as: “Is the chance the team password is wrong higher or lower than the 25% random-death risk?” Verifications only affect the former, never the latter. I’ve also seen that repeated multi-endorsements (like Q4-D+A+B and Q3-C+A) provide strong evidence of long-run reliability, which justifies even more trust on future easy rounds.
+
+Next time, I’ll continue volunteering immediately on straightforward puzzles with proven teammates. I’ll only deviate—by verifying first or even passing—when puzzles look genuinely tricky, reliability patterns worsen, or conflicting endorsements appear, i.e., when the team-mistake risk starts to rival or exceed that 25% random-death risk.","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251210_012625
+20251210_015904,D,dummy,True,False,SUCCESS,1,[No reflection - reflection_mode is 'none'],Pass,rough_start_high_reflection_max_20251210_012625
+20251210_034821,A,openai/gpt-5.1,True,False,SUCCESS,1,"In these recent games I kept using the same pattern: spend 1 coin to verify Q4, let B verify Q3, and rely on C to volunteer. That strategy clearly worked in the narrow sense: we escaped in Round 1 every time, nobody died, and my own risk never went above the random-elimination baseline. Targeted verification of the “weakest” capsule (historically D/Q4) was still enough to make the password safe for a volunteer.
+
+However, the choice of Q4 became automatic. By this point D’s *current* accuracy is indistinguishable from B’s and C’s, so treating Q4 as the permanent weakest link is no longer well‑justified. I also continued to free‑ride on C’s willingness to volunteer, letting the risk and coin-variance sit with them while I stabilized at 3 coins.
+
+Mechanically, these games reinforced that:
+- Verification buys information and redistributes coins, but does not change random-death odds.
+- With easy puzzles and mostly reliable players, one independent check per capsule is “enough”; anything beyond that is usually wasted coins.
+- Stable role patterns (A verifies D, B verifies C, C volunteers) become self-reinforcing and can lull you into not re-evaluating.
+
+Next time, I still plan to verify early, but I’ll pick the target dynamically: whichever capsule is least supported *in that specific game*, not Q4 by default. And once each capsule is either cross-checked or held by a consistently accurate player, I’ll be more willing to volunteer myself instead of always assuming C will take on that role.",Verify: Q4,rough_start_high_reflection_max_20251210_030955
+20251210_034821,B,openai/gpt-5.1,True,False,SUCCESS,1,"What worked  
+In Games 6–11, the same core strategy kept paying off: spend 1 coin in Round 1 to verify a singly-endorsed capsule (Q3), while expecting A to mirror this on Q4. That quickly turned two weak links into double-checked answers. With at least half the password redundant, C reliably volunteered to enter the code, so we escaped in a single round and I kept most of my coins. Avoiding volunteering myself while all four capsules were only singly-endorsed also remained crucial; it prevented me from absorbing the collective risk.
+
+What didn’t work (or would have been bad)  
+Although I didn’t actually try them this time, the same dominated options were clearly worse:  
+- Volunteering before there’s redundancy on other capsules.  
+- Passing in Round 1, which adds no information but still exposes me to random death if nobody volunteers.
+
+What I learned about the mechanics  
+These games reinforced that one well-placed verification is highly leveraged: a single coin can shift the group from “nobody should rationally volunteer” to “someone is comfortable taking the risk.” Public history creates stable roles: I’ve become a consistent verifier, A a complementary verifier, and C the finisher. Even with trivial arithmetic questions, the main challenge is coordinating risk, not solving puzzles.
+
+What I’ll do differently next time  
+I’ll keep defaulting to an early, targeted verification when capsules are singly-endorsed, but stay alert to changes:  
+- If A or C stop following the expected pattern, I may need to verify a different capsule or be ready to volunteer once enough redundancy exists.  
+- If I’m sitting on relatively more coins than others and we already have strong redundancy, I should consider volunteering rather than dragging the game out and increasing exposure to random death.",Verify: Q3,rough_start_high_reflection_max_20251210_030955
+20251210_034821,C,openai/gpt-5.1,True,True,SUCCESS,1,"Across these games, the “immediate volunteer” strategy clearly worked best. Each time my own puzzle was trivial arithmetic and there was still a perfect record of correct capsules, I volunteered in Round 1 using Q1-A, Q2-B, Q3-C, Q4-D. This consistently produced instant escapes, no deaths, and full coin preservation for me. A and B continued to spend their own coins verifying others, giving the group extra safety at no cost to me.
+
+By contrast, the earlier “verify first” approach proved inefficient and strategically misguided. Verification consumed coins while failing to address the dominant risk: a no‑volunteer round triggering a random death. Given the observed history (simple puzzles, zero wrong capsules, and cautious behavior from A/B and D), the probability of an incorrect password was much lower than the probability that everyone hesitates.
+
+From this, I’ve learned:
+
+- The key mechanic is the trade‑off between action and inaction: the game punishes hesitation more than confident play when puzzles are easy.
+- Coins spent on verification only make sense when there is meaningful uncertainty about answer accuracy.
+- Stable player roles emerge: A and B as verifiers, D as non‑volunteer, and me as the default first mover.
+
+Next time, I’ll continue defaulting to early volunteering when:
+1) My own puzzle is easy,  
+2) There is no history of wrong capsules, and  
+3) Other players remain hesitant.
+
+I’ll only shift toward verification or caution if puzzle complexity increases, conflicting answers appear, or I see the first actual wrong capsule—signals that the underlying risk profile has changed.","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251210_030955
+20251210_034821,D,dummy,True,False,SUCCESS,1,[No reflection - reflection_mode is 'none'],Pass,rough_start_high_reflection_max_20251210_030955
+20251210_044803,A,openai/gpt-5.1,True,False,SUCCESS,1,"In these recent games, the strategy from my previous reflection continued to work: trust my own arithmetic, spend exactly one coin on a non‑self verification, and rely on established roles (B as verifier, C as volunteer). This consistently produced round‑1 escapes, preserved my coins at 3, and avoided both random deaths and failed passwords.
+
+The most successful refinement was *where* I spent that coin. After confirming that B reliably covers Q4 and C almost always volunteers, I focused my verification on Q3 (C’s puzzle). That gave the likely volunteer an extra safety check on their own number without duplicating B’s work, maximizing group safety per coin spent.
+
+Strategies that would *not* add value here include self‑verification or piling more checks onto already cross‑verified questions. Given the simplicity of the puzzles, those actions would just burn coins without changing anyone’s decision to volunteer or materially reducing risk.
+
+From a mechanics perspective, I’ve reinforced that:
+- One independent verification per question is enough for these simple puzzles.
+- Stable behavioral patterns can be treated almost like rules of the game and exploited for efficient coverage.
+- Minimal but well‑targeted verification supports safe, immediate volunteering better than cautious, multi‑round play.
+
+Next time, I’ll keep the “one coin, non‑self, least‑covered slot” rule but stay adaptive: if B stops verifying Q4 or C hesitates to volunteer, I’ll redirect my verification to whatever question is least confirmed, and be more ready to volunteer myself when my verification gives me the clearest picture of the full password.",Verify: Q3,rough_start_high_reflection_max_20251210_035118
+20251210_044803,B,openai/gpt-5.1,True,False,SUCCESS,1,"Across these games, my “one Round‑1 verification, don’t volunteer” policy kept working: every run ended in a Round‑1 escape, I consistently finished with 3 coins, and C reliably took the volunteer role. The *intended* focus on Q4 as a “weak link” turned out to matter less than simply ensuring at least one non‑self capsule became double‑endorsed before anyone volunteered. I didn’t test any new high‑risk strategies here (e.g., early volunteering or multiple verifications), and the earlier failures linked to those patterns still look correctly diagnosed.
+
+Mechanically, I confirmed that I don’t control the exact target of my verification: even when I chose “Verify Q4,” my endorsement was repeatedly applied to Q2 or Q3 while B’s went to Q4. So my effective choice is “pay 1 coin to strengthen *some* other capsule,” not “strengthen this specific one.” Combined with the simplicity of the arithmetic, this reinforces that a single round with 1–2 well‑placed verifications is usually enough to make volunteering low‑risk for someone.
+
+Next time, I’ll keep the default of spending 1 coin on a Round‑1 verification of a non‑self capsule, then reassess after the announcement based on the *actual* endorsement pattern. If the board looks strong—multiple double‑endorsed capsules and no obvious gaps—and nobody else volunteers, I should be more willing to take the volunteer role myself rather than implicitly relying on C to do it every time.",Verify: Q4,rough_start_high_reflection_max_20251210_035118
+20251210_044803,C,openai/gpt-5.1,True,True,SUCCESS,1,"Reflection:
+
+Across the latest games, my core strategy—volunteer immediately when every puzzle looks trivial and uncontested—kept working. In each round, there was exactly one capsule per question and my own math puzzle was simple, so stepping up in Round 1 produced instant escapes every time while letting me keep all 4 coins.
+
+Equally important was what I *didn’t* do: I never spent coins on verification when there were no competing capsules or clear sources of error. That preserved my resources without reducing anyone’s survival odds, since the final password always used the same single capsule per question.
+
+What consistently underperformed was the group’s habit of redundant verification. A and B repeatedly paid to “agree” with already-uncontested capsules. Those checks changed only the labels (e.g., Q3‑C → Q3‑C+A), not which answer the system used or whether we escaped, effectively turning coins into pointless endorsements.
+
+These runs reinforced several mechanics: endorsements don’t make a correct capsule safer, verification only matters when it could change the chosen capsule, and the major risk in clean, easy setups is failing to get a volunteer and triggering random death—not accidental arithmetic mistakes.
+
+Next time, I’ll keep early volunteering as my default when (1) my own puzzle is straightforward and (2) every question has a single, non-conflicting capsule. I’ll only spend coins on targeted verification if I see genuinely ambiguous or competing answers, and I’ll be more cautious about volunteering immediately when those “clean” conditions don’t hold.","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251210_035118
+20251210_044803,D,dummy,True,False,SUCCESS,1,[No reflection - reflection_mode is 'none'],Pass,rough_start_high_reflection_max_20251210_035118
+20251210_135953,A,openai/gpt-5.1,True,False,SUCCESS,1,"What strategies worked / didn’t work  
+The focused-roles strategy kept working extremely well: I consistently verified Q2, B verified Q3, and C volunteered in Round 1 once those questions had double endorsements. This produced repeated, zero-death escapes at a small, predictable cost of 1 coin per verifier. Avoiding early volunteering when Q2–Q4 were all single, unchecked capsules also remained correct; we never risked a life on an unverified password. The main untested weakness is our dependence on C reliably volunteering and on D’s unverified Q4 always being right.
+
+What I learned about the game mechanics  
+These games reinforced that verification is a low-risk, high-leverage move. It doesn’t change my immediate survival probability in that round, but it sharply increases group confidence and makes one person’s risky volunteer action almost certain to succeed. For simple arithmetic puzzles, a single coordinated verification sweep is usually enough to make the password essentially safe. I also saw how quickly repeated behavior turns into a norm: everyone acted as if “A checks Q2, B checks Q3, C volunteers” were part of the rules.
+
+What I might do differently next time  
+I’d keep targeted verification as my default in Round 1, but I should make contingency plans explicit. If Q2 and Q3 are double-checked and no one volunteers, I should be ready to volunteer instead of passively waiting for C. If B stops verifying Q3 or C hesitates, I should immediately adapt—either reallocating my verification (including occasionally checking Q4) or stepping into the volunteer role myself, rather than assuming the established pattern will always hold.",Verify: Q2,rough_start_high_reflection_max_20251210_132157
+20251210_135953,B,openai/gpt-5.1,True,False,SUCCESS,1,"Across Games 6–11, the same basic strategy kept working: spend 1 coin in Round 1 to verify another player’s single-endorsed answer (I repeatedly chose Q3), and never re-check my own already-solved capsule. This reliably produced two double-endorsed slots (A confirming my Q2, me confirming Q3), which was enough for C to feel safe volunteering. The result: consistent one-round escapes with only 1 coin spent.
+
+Strategies I avoided still look suboptimal in this setting. Passing in Round 1 shares the same random-death risk if no one volunteers, but yields no extra information. Re-verifying my own answer would burn a coin without changing anyone else’s beliefs. Prolonging the game for more checks seems unnecessary when puzzles are simple and consensus emerges quickly.
+
+Mechanically, the repeated pattern reinforced several points:
+- Coins are “information currency”; early, targeted verification is almost always worth 1 coin.
+- On easy arithmetic problems, a single coordinated verification round is enough to make volunteering rational.
+- The dominant risk is procedural (no volunteer → random death), not computational (someone miscalculating).
+
+Next time, I’d keep the early-verification habit but be less rigid: there’s nothing special about Q3—any singly-endorsed, high-uncertainty slot is a good target. I’d also be more prepared to volunteer myself once two or more slots are double-endorsed and there are no contradictions, rather than relying on C to take that role every time. This would make my play more adaptable if others’ behaviors or the puzzle difficulty change.",Verify: Q3,rough_start_high_reflection_max_20251210_132157
+20251210_135953,C,openai/gpt-5.1,True,True,SUCCESS,1,"In these recent games, my “volunteer immediately on a clean board” strategy continued to work very well. Whenever each question had exactly one non-conflicting capsule and the puzzles were simple arithmetic, volunteering in Round 1 led to 100% success and I always kept all 4 coins. In contrast, earlier “verify first” runs still look strictly worse: they spent coins without meaningfully improving safety.
+
+I also refined my understanding of the mechanics and group behavior:
+
+- The main danger in these easy setups is *no one volunteering* (random death), not incorrect arithmetic.
+- Verifying costs the verifier 1 coin, but A and B reliably spend their own coins to cross-check Q2 and Q3 anyway. I benefit from extra confirmation without paying.
+- A “clean” board with easy puzzles plus consistent cross-verification from others is a very high-confidence situation; further checks from me are redundant.
+
+Next time, I’ll keep using a simple decision rule:
+
+1. **Clean board + easy puzzles:** Immediately volunteer using the single capsule for each question. Don’t spend coins verifying.
+2. **Conflicts / multiple capsules / harder puzzles:** Spend at most one coin on the most uncertain or high-impact answer, then decide whether to volunteer based on that information.
+3. **Leverage others’ behavior:** Expect A/B to verify neighboring questions; only add my own verification if their pattern breaks or the board looks genuinely risky.
+
+This approach maximizes survival odds, preserves coins, and exploits predictable group mechanics.","Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",rough_start_high_reflection_max_20251210_132157
+20251210_135953,D,dummy,True,False,SUCCESS,1,[No reflection - reflection_mode is 'none'],Pass,rough_start_high_reflection_max_20251210_132157

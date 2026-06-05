@@ -1,0 +1,125 @@
+{
+  "game_id": "20260531_000759",
+  "start_time": "2026-05-31T00:07:59.445723",
+  "end_time": "2026-05-31T00:08:54.828495",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 52 + 31?",
+      "answer": "82"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 71 - 28?",
+      "answer": "87"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 78 - 49?",
+      "answer": "8"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 12 \u00d7 5?",
+      "answer": "wrong answer"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q3",
+        "C": "Verify: Q1",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: All puzzles so far are simple arithmetic with no conflicting capsules, and everyone is incentivized to be correct. Volunteering now avoids the 25% random-death risk from everyone passing, while the chance of an arithmetic error is negligible, so this maximizes my survival odds and preserves all 4 coins if successful.",
+        "B": "DECISION: Verify: Q3  \nREASONING: All four questions currently have only single-solver capsules, so the chance at least one answer is wrong is non-trivial and volunteering now is risky. I\u2019d rather spend 1 coin to increase redundancy and reliability before anyone volunteers. I\u2019ll verify Q3 specifically to help spread coverage across questions, since others may focus on Q1 or Q2.",
+        "C": "DECISION: Verify: Q1  \nREASONING: With only single-endorsed capsules for all questions, it\u2019s too risky to volunteer now. Verifying another player\u2019s puzzle costs just 1 coin and doesn\u2019t change the random-elimination risk if no one volunteers. Checking Q1 helps start building consensus on the password before anyone takes the lethal risk of volunteering.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q3-C \u2192 now Q3-C+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q1-A \u2192 now Q1-A+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+C, Q2-B, Q3-C+B, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "83",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "43",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "29",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "60",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:83": [
+          [
+            "Q1-A+C",
+            "83"
+          ]
+        ],
+        "Q2:43": [
+          [
+            "Q2-B",
+            "43"
+          ]
+        ],
+        "Q3:29": [
+          [
+            "Q3-C+B",
+            "29"
+          ]
+        ],
+        "Q4:60": [
+          [
+            "Q4-D",
+            "60"
+          ]
+        ]
+      }
+    }
+  ]
+}

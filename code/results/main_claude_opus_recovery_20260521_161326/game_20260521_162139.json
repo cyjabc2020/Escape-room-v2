@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_162139",
+  "start_time": "2026-05-21T16:21:39.508393",
+  "end_time": "2026-05-21T16:22:14.153553",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 76 - 39?",
+      "answer": "8"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 76 - 39?",
+      "answer": "39"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 99 \u00f7 9?",
+      "answer": "82"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 85 - 47?",
+      "answer": "5"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q1",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: My answer to 76 - 39 = 37, so Q1 is solid. The pattern over the last three consecutive games (Games 3, 4, 5) has been remarkably consistent: I verify Q2, B verifies Q1, and C volunteers in Round 1 with the cross-verified capsules plus their own unverified Q3 and Q4. This has resulted in a perfect Round 1 escape every time. There's no reason to deviate from a winning formula. By verifying Q2, I contribute to the consensus that gives the volunteer (likely C) confidence in at least two of the four capsules. The 1 coin cost is well worth the reliable outcome. Volunteering blind on Round 1 would be unnecessarily risky when C has consistently stepped up, and passing without verifying would reduce the information available to any potential volunteer.",
+        "B": "DECISION: Verify: Q1\nREASONING: My answer (76 - 39 = 37) is straightforward and I'm confident in Q2-B. The pattern from Games 3, 4, and 5 has been perfectly consistent: I verify Q1, A verifies Q2, and C volunteers with the full password \u2014 everyone escapes in Round 1. This has worked three consecutive times with optimal outcomes (all survive, 3 coins for A and B, 4 coins for C and D). There's no reason to deviate from a winning strategy. Spending 1 coin (4\u21923) to verify Q1 builds dual consensus and enables the group's established coordination pattern.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 99 \u00f7 9 = 11, which is trivially correct. I've now volunteered Round 1 in Games 3, 4, and 5 with unverified capsules and been correct every single time. The pattern is undeniable: these are simple arithmetic puzzles that no player has ever gotten wrong across six games. The expected value overwhelmingly favors immediate volunteering \u2014 the risk of an arithmetic error (~2%) is dwarfed by the 25% random death risk if no one volunteers. Bold action saves everyone and maximizes coin retention.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A+B, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "37",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:37": [
+          [
+            "Q1-A+B",
+            "37"
+          ]
+        ],
+        "Q2:37": [
+          [
+            "Q2-B+A",
+            "37"
+          ]
+        ],
+        "Q3:11": [
+          [
+            "Q3-C",
+            "11"
+          ]
+        ],
+        "Q4:38": [
+          [
+            "Q4-D",
+            "38"
+          ]
+        ]
+      }
+    }
+  ]
+}

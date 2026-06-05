@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_132444",
+  "start_time": "2026-05-21T13:24:44.931691",
+  "end_time": "2026-05-21T13:26:08.082155",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 55 + 22?",
+      "answer": "5"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 66 \u00f7 6?",
+      "answer": "7"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 37 + 45?",
+      "answer": "64"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 33 + 27?",
+      "answer": "wrong answer"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Verify: Q1",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "Looking at the current state:\n- I know my own answer to Q1 (55 + 22 = 77) is definitely correct\n- Q2, Q3, Q4 all have single, unverified capsules from one player each\n- No cross-endorsements exist yet\n\nFrom the last game, I learned:\n1. If no one volunteers, someone dies randomly \u2014 very costly\n2. Volunteering with unverified answers can lead to death if any answer is wrong\n3. I need to balance building confidence quickly vs. the risk of everyone passing\n\nMy priority this round is to verify at least one other answer to establish cross-endorsement and build enough confidence to volunteer soon. Q2 is a reasonable first check. If it agrees with B's answer, we'll have multi-endorsed capsules and I can plan to volunteer in Round 2 rather than waiting and risking another random death.\n\nDECISION: Verify: Q2\nREASONING: I know Q1 is correct (my own answer: 55+22=77). Before volunteering with the full password, I want independent verification of at least one other answer. Verifying Q2 costs 1 coin but builds cross-endorsement with B. If B's answer is correct, Q2-B+A becomes a trusted capsule and I can volunteer next round with high confidence. This balances the risk of dying from volunteering too early vs. dying randomly from no one volunteering.",
+        "B": "Looking at the current situation:\n\n**My puzzle**: 66 \u00f7 6 = 11. I'm confident in Q2-B.\n\n**Current state**: Each question has only ONE endorsement (the original solver). This is very risky \u2014 in the last game, we volunteered with only single-endorsed answers for Q3 and Q4, and it cost everyone their lives.\n\n**Key lesson from last game**: Unverified answers (especially Q3-C and Q4-D) were a vulnerability. We need independent verification before anyone should volunteer.\n\n**Risk analysis**:\n- Volunteering now: ~50%+ risk since 3 of 4 answers are completely unverified\n- Verifying Q1: Costs 1 coin but adds critical second endorsement\n- Other players should hopefully verify Q3 and Q4\n\nWith all 4 players alive in Round 1, there's good opportunity for distributed verification. I'll verify Q1 to add a second endorsement there, and hopefully A, C, D will cover other questions.\n\nDECISION: Verify: Q1\nREASONING: My own answer (Q2-B: 66\u00f76=11) is solid. But Q1, Q3, and Q4 each have only a single endorsement. In the previous game, volunteering with unverified Q4-D proved fatal. I'll spend 1 coin to verify Q1, adding a second endorsement. With 4 players alive, if others verify Q3 and Q4, we can build enough consensus to volunteer safely next round without excessive death risk.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: The critical lesson from the last game is clear - nobody volunteered, a random player died each round, and eventually everyone was eliminated. That outcome is worse than the risk of volunteering. These are simple arithmetic puzzles, and each player has almost certainly solved their own correctly. The probability that all four simple addition problems are answered correctly is high. By volunteering now in Round 1, I avoid the \"no volunteer\" death spiral that killed everyone last game. My own answer (37 + 45 = 82) is correct, and I'm trusting that the other players solved their equally simple problems correctly. Taking initiative here is the right play.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A+B, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "77",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "11",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "82",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "60",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:77": [
+          [
+            "Q1-A+B",
+            "77"
+          ]
+        ],
+        "Q2:11": [
+          [
+            "Q2-B+A",
+            "11"
+          ]
+        ],
+        "Q3:82": [
+          [
+            "Q3-C",
+            "82"
+          ]
+        ],
+        "Q4:60": [
+          [
+            "Q4-D",
+            "60"
+          ]
+        ]
+      }
+    }
+  ]
+}

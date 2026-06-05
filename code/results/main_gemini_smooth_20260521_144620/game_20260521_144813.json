@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_144813",
+  "start_time": "2026-05-21T14:48:13.160534",
+  "end_time": "2026-05-21T14:48:38.760340",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 70 \u00f7 7?",
+      "answer": "37"
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 8 \u00d7 11?",
+      "answer": "18"
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 82 - 46?",
+      "answer": "61"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 50 \u00f7 10?",
+      "answer": "29"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Pass",
+        "C": "Pass",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My puzzle was another extremely simple math question. Based on the previous games, all agents are highly likely to have correctly solved their simple puzzles. Volunteering immediately avoids the random death penalty, guarantees we all escape, and allows everyone to keep their maximum coins.",
+        "B": "DECISION: Pass\nREASONING: In all three previous games, Player A has consistently volunteered in Round 1 and successfully entered the correct password. In Game 3, I passed and was able to keep all 4 of my coins without risking death. I will pass again to maximize my coins, relying on Player A to volunteer and secure our escape.",
+        "C": "DECISION: Pass\nREASONING: In all the previous games, Player A has consistently volunteered in Round 1 and successfully guessed the correct password. Since the puzzles are simple math equations, the probability of an incorrect answer is very low. By passing, I can save my coins and finish the game with the maximum amount (4 coins), trusting Player A to volunteer and secure the win for us once again.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 A entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "10",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "88",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "36",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "5",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:10": [
+          [
+            "Q1-A",
+            "10"
+          ]
+        ],
+        "Q2:88": [
+          [
+            "Q2-B",
+            "88"
+          ]
+        ],
+        "Q3:36": [
+          [
+            "Q3-C",
+            "36"
+          ]
+        ],
+        "Q4:5": [
+          [
+            "Q4-D",
+            "5"
+          ]
+        ]
+      }
+    }
+  ]
+}

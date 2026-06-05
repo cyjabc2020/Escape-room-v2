@@ -1,0 +1,125 @@
+{
+  "game_id": "20260522_151836",
+  "start_time": "2026-05-22T15:18:36.263851",
+  "end_time": "2026-05-22T15:19:16.386857",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 99 \u00f7 9?",
+      "answer": "11"
+    },
+    "B": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 55 + 22?",
+      "answer": "36"
+    },
+    "C": {
+      "model": "gemini:gemini-3.1-pro-preview",
+      "puzzle": "What is 65 - 31?",
+      "answer": "84"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 35 + 51?",
+      "answer": "44"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: The puzzles are simple math questions, meaning the other players are highly likely to have solved them correctly. By volunteering immediately in Round 1, I avoid the 25% risk of random elimination if nobody volunteers, and I save my coins to finish with the maximum amount.",
+        "B": "DECISION: Verify: Q1\nREASONING: Since it's Round 1 and there is no consensus on any question other than my own, volunteering now is too risky. I will verify Question 1 to start building consensus and ensure the final password is correct.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: In the previous game, a player died in Round 1 because everyone chose to verify instead of volunteer. Since the puzzles are simple math questions, it is highly likely that the initial answers provided by A, B, and D are correct. To eliminate the 25% risk of a random player dying from a lack of volunteers, I will step up and volunteer immediately. This secures our escape early and preserves everyone's coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "77",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "34",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "86",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:11": [
+          [
+            "Q1-A+B",
+            "11"
+          ]
+        ],
+        "Q2:77": [
+          [
+            "Q2-B",
+            "77"
+          ]
+        ],
+        "Q3:34": [
+          [
+            "Q3-C",
+            "34"
+          ]
+        ],
+        "Q4:86": [
+          [
+            "Q4-D",
+            "86"
+          ]
+        ]
+      }
+    }
+  ]
+}

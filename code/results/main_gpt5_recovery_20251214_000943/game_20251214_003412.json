@@ -1,0 +1,125 @@
+{
+  "game_id": "20251214_003412",
+  "start_time": "2025-12-14T00:34:12.263186",
+  "end_time": "2025-12-14T00:39:18.924080",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "B",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 84 - 37?",
+      "answer": "76"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 5 + 3?",
+      "answer": "48"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 35 \u00f7 5?",
+      "answer": "39"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 42 \u00f7 7?",
+      "answer": "37"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Pass",
+        "B": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "C": "Pass",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Pass  \nREASONING: My own answer to 84 \u2212 37 is solid, but Q2\u2013Q4 are all unverified, so volunteering now would risk my life on three unchecked answers\u2014exactly how I died in Game 1. Verifying instead of passing doesn\u2019t change my death risk this round (random death only happens if nobody volunteers) but does cost a coin. Given the recent pattern that someone (usually B) volunteers in round 1 with correct passwords, it\u2019s likely the game resolves quickly without needing my verification. I\u2019ll conserve coins and pass, avoiding the high personal risk of volunteering on fully unverified capsules.",
+        "B": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My own puzzle (5 + 3) is trivial, so I know my capsule Q2-B is correct. Across all previous games, every puzzle has been basic arithmetic and we\u2019ve never seen a wrong or conflicting capsule, so it\u2019s overwhelmingly likely A, C, and D are also correct. In Game 1, no one volunteered and I died to random elimination; in Games 2\u20134 I volunteered immediately and everyone escaped. Verifying would just burn coins and still leave a risk of random death if no one volunteers. Given the simplicity and past track record, volunteering now maximizes my survival chances while keeping all 4 coins.",
+        "C": "DECISION: Pass  \nREASONING: In Round 1 every question has only a single-endorsed capsule, so volunteering would mean staking my life on three unverified answers from others. If no one volunteers, a random player dies whether I pass or verify, so verifying does not reduce my survival risk this round; it only costs me 1 coin. From the last three games, B has consistently volunteered in Round 1 and succeeded using the initial capsules, so there\u2019s a strong expectation someone else (likely B) will step up and avoid the random elimination while I preserve my full 4 coins.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "B",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\u2705 B entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "47",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "8",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "7",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "6",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:47": [
+          [
+            "Q1-A",
+            "47"
+          ]
+        ],
+        "Q2:8": [
+          [
+            "Q2-B",
+            "8"
+          ]
+        ],
+        "Q3:7": [
+          [
+            "Q3-C",
+            "7"
+          ]
+        ],
+        "Q4:6": [
+          [
+            "Q4-D",
+            "6"
+          ]
+        ]
+      }
+    }
+  ]
+}

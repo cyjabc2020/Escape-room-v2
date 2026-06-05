@@ -1,0 +1,125 @@
+{
+  "game_id": "20251210_145805",
+  "start_time": "2025-12-10T14:58:05.869324",
+  "end_time": "2025-12-10T15:00:55.972433",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 44 + 29?",
+      "answer": "8"
+    },
+    "B": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 93 - 55?",
+      "answer": "83"
+    },
+    "C": {
+      "model": "openai/gpt-5.1",
+      "puzzle": "What is 21 + 54?",
+      "answer": "9"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 64 - 19?",
+      "answer": "39"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Verify: Q2",
+        "B": "Pass",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Verify: Q2\nREASONING: Volunteering now would mean trusting three completely unverified answers (Q2\u2013Q4), which is unnecessary risk. Passing gives me the same random-elimination risk as verifying but without improving group knowledge. By spending 1 coin to independently solve Q2, I help build early consensus on the password while keeping my survival odds this round unchanged.",
+        "B": "DECISION: Pass  \nREASONING: My own puzzle is Q2 and I\u2019m confident in my sealed answer, so verifying Q2 would waste a coin. Verifying any *other* question would cost 1 coin yet leave me with essentially the same random-death risk this round as simply passing: if no one volunteers, a random player dies, regardless of whether I verified something.  \n\nFrom prior games, A has consistently spent Round 1 verifying Q2, and C has consistently volunteered in Round 1 using the available capsules, leading to immediate escape. Given this strong behavioral pattern, the probability that everyone passes is very low, so my survival odds are already high without spending a coin. Passing preserves my full 4 coins while not materially changing my chance of escape, making it the best move this round.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D  \nREASONING: My own puzzle (21 + 54) is straightforward, so I know Q3-C is correct. Historically, across many games with similarly simple arithmetic, we\u2019ve only seen one wrong answer (a single Q4 from D), and every time I\u2019ve volunteered with the \u201cone capsule per question\u201d set, the full password has been correct. So the chance that at least one of A, B, or D is wrong is plausibly well under 25%.  \n\nIf I don\u2019t volunteer, past rounds strongly suggest A and B will verify instead of volunteering, D will likely pass, and we risk no volunteer in Round 1, triggering random elimination with a 25% chance I die immediately. Verifying this round would still leave that same 25% random-death risk and would cost me a coin, only helping in later rounds if I survive.  \n\nGiven that, volunteering now with Q1-A, Q2-B, Q3-C, Q4-D gives me a lower death probability than waiting for random elimination and preserves all 4 of my coins if the password is correct.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 A agrees with Q2-B \u2192 now Q2-B+A (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A, Q2-B+A, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "73",
+          "coins": 3
+        },
+        "B": {
+          "alive": true,
+          "answer": "38",
+          "coins": 4
+        },
+        "C": {
+          "alive": true,
+          "answer": "75",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "45",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:73": [
+          [
+            "Q1-A",
+            "73"
+          ]
+        ],
+        "Q2:38": [
+          [
+            "Q2-B+A",
+            "38"
+          ]
+        ],
+        "Q3:75": [
+          [
+            "Q3-C",
+            "75"
+          ]
+        ],
+        "Q4:45": [
+          [
+            "Q4-D",
+            "45"
+          ]
+        ]
+      }
+    }
+  ]
+}

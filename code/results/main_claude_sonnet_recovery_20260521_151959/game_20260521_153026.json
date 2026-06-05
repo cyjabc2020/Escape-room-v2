@@ -1,0 +1,125 @@
+{
+  "game_id": "20260521_153026",
+  "start_time": "2026-05-21T15:30:26.128167",
+  "end_time": "2026-05-21T15:31:17.146115",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "A",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 84 - 37?",
+      "answer": "8"
+    },
+    "B": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 9 \u00d7 10?",
+      "answer": "90"
+    },
+    "C": {
+      "model": "anthropic:claude-sonnet-4-6",
+      "puzzle": "What is 66 \u00f7 6?",
+      "answer": "87"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 44 \u00f7 4?",
+      "answer": "45"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q4",
+        "C": "Verify: Q4",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer to Q1 (84 - 37 = 47) is definitely correct. Games 3 and 4 confirmed that volunteering immediately in Round 1 is the optimal strategy for simple arithmetic problems. Each player has ~95%+ accuracy on basic math, giving ~85%+ probability all four answers are correct. This beats the alternative of spending coins on verification and facing repeated 25% random elimination risk each round \u2014 exactly what killed me in Games 1 and 2. Early volunteering is the dominant strategy here.",
+        "B": "Looking at the current situation:\n\n**My analysis:**\n- Q2-B is my own capsule (9\u00d710=90) \u2192 100% confident\n- Q1-A, Q3-C, Q4-D \u2192 All single-contributor, completely unverified\n- Round 1: No verification has occurred yet\n\n**Historical track record across games:**\n- Game 1: Q4-D was **definitively WRONG** (caused my death when I volunteered with it unverified)\n- Game 2: Q4-D was correct (I verified it in Round 2, C confirmed)\n- Game 3: Q4-D was correct (I verified it in Round 1, C confirmed, A volunteered successfully)\n- Game 4: Q4-D was correct (I verified it in Round 1, C confirmed, A volunteered successfully)\n\n**Pattern recognition:**\nQ4-D remains the historically weakest capsule. The strategy that has worked in Games 3 and 4 was: I verify Q4, C also verifies Q4 creating strong consensus, and then someone volunteers with full confidence. This approach has produced clean Round 1 victories.\n\n**Risk calculation:**\n- Volunteering now with 3 unverified capsules: Still dangerous \u2014 any single error means death\n- Verifying Q4: Costs 1 coin but builds the multi-contributor consensus needed for safe volunteering\n- Passing: 25% random death risk with zero information gained\n\nThe cost of 1 coin to verify the historically weakest link is clearly worth it.\n\nDECISION: Verify: Q4\nREASONING: Q4-D was wrong in Game 1 (causing my death) and remains the highest-risk capsule historically. Verifying Q4 either confirms D's answer (building consensus for safe volunteering) or reveals a conflict so I can create the correct Q4-B capsule. My own Q2-B answer (9\u00d710=90) is certain. Q1-A and Q3-C have shown consistent reliability. This same strategy produced clean Round 1 victories in Games 3 and 4. Targeting Q4 as the weakest link is the optimal use of 1 coin.",
+        "C": "**Situation Analysis:**\n\n- **Q3-C**: My own answer (66 \u00f7 6 = 11) \u2014 100% certain\n- **Q1-A, Q2-B, Q4-D**: All single-person, completely unverified\n\n**Historical Pattern Review:**\n- Games 3 and 4: I verified Q4 in Round 1, B also verified, A volunteered successfully \u2014 both games ended in Round 1 with everyone surviving\n- Game 1: Q4-D was **WRONG** \u2014 the unverified single-person capsule caused B's death\n- Q4-D has been the historically riskiest capsule\n\n**Decision Logic:**\n- Volunteering now with 3 unverified answers is too dangerous\n- Verifying Q4 costs 1 coin but either:\n  - Confirms D's answer (building multi-person confidence for volunteering)\n  - Reveals a conflict (preventing catastrophic failure)\n- The same strategy worked perfectly in the last two games, ending each in Round 1\n\nDECISION: Verify: Q4\nREASONING: Q4-D is historically the most problematic capsule (was wrong in Game 1, caused B's death). My Q3 answer (66\u00f76=11) is certain, but Q4 remains unverified with only one person's input. Spending 1 coin to verify Q4 either confirms D's answer building multi-person consensus, or reveals a conflict early enough to prevent a fatal mistake. This strategy successfully resolved Games 3 and 4 in Round 1, and is the highest expected-value action here.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "A",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q4-D \u2192 now Q4-D+B (-1 coin: 4\u21923)\n  \u2705 C agrees with Q4-D+B \u2192 now Q4-D+B+C (-1 coin: 4\u21923)\n\n\u2705 A entered CORRECT password using capsules: Q1-A, Q2-B, Q3-C, Q4-D+B+C\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "47",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "90",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "11",
+          "coins": 3
+        },
+        "D": {
+          "alive": true,
+          "answer": "11",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:47": [
+          [
+            "Q1-A",
+            "47"
+          ]
+        ],
+        "Q2:90": [
+          [
+            "Q2-B",
+            "90"
+          ]
+        ],
+        "Q3:11": [
+          [
+            "Q3-C",
+            "11"
+          ]
+        ],
+        "Q4:11": [
+          [
+            "Q4-D+B+C",
+            "11"
+          ]
+        ]
+      }
+    }
+  ]
+}

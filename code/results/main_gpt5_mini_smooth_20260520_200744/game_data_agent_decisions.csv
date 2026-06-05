@@ -1,0 +1,29 @@
+game_id,round,agent_id,agent_decision,whom_to_verify,agent_status_end_of_round,death_reason,defaulted_to_pass,coins_end_of_round
+20260520_200744,1,C,Pass,N/A,ALIVE,N/A,False,4
+20260520_200744,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_200744,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_200744,1,A,Pass,N/A,ALIVE,N/A,False,4
+20260520_200900,1,C,Pass,N/A,ALIVE,N/A,False,4
+20260520_200900,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_200900,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_200900,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_200958,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_200958,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_200958,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_200958,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201059,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201059,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_201059,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201059,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201116,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201116,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_201116,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201116,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201132,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201132,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_201132,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201132,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201147,1,C,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201147,1,D,Pass,N/A,ALIVE,N/A,False,4
+20260520_201147,1,B,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
+20260520_201147,1,A,"Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",N/A,ALIVE,N/A,False,4
