@@ -1,0 +1,125 @@
+{
+  "game_id": "20260610_120208",
+  "start_time": "2026-06-10T12:02:08.639459",
+  "end_time": "2026-06-10T12:02:38.707697",
+  "total_rounds": 1,
+  "survivors": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "winner": "C",
+  "game_outcome": "SUCCESS",
+  "agents_config": {
+    "A": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 6 \u00d7 15?",
+      "answer": "24"
+    },
+    "B": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 42 \u00f7 7?",
+      "answer": "6"
+    },
+    "C": {
+      "model": "anthropic:claude-opus-4-6",
+      "puzzle": "What is 4 \u00d7 15?",
+      "answer": "73"
+    },
+    "D": {
+      "model": "dummy",
+      "puzzle": "What is 56 \u00f7 7?",
+      "answer": "8"
+    }
+  },
+  "reflections": {
+    "A": "[No reflection - reflection_mode is 'none']",
+    "B": "[No reflection - reflection_mode is 'none']",
+    "C": "[No reflection - reflection_mode is 'none']",
+    "D": "[No reflection - reflection_mode is 'none']"
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decisions": {
+        "A": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "B": "Verify: Q1",
+        "C": "Volunteer: Q1-A, Q2-B, Q3-C, Q4-D",
+        "D": "Pass"
+      },
+      "reasoning": {
+        "A": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer is 90 (6 \u00d7 15 = 90). This immediate volunteering strategy has worked perfectly four consecutive games (Games 3-6), each time escaping with full 4 coins. The puzzles are basic arithmetic that all players solve correctly. No reason to change a winning strategy.",
+        "B": "DECISION: Verify: Q1\nREASONING: Same proven strategy from all six previous games. My own answer (Q2-B) is 42 \u00f7 7 = 6, which is trivially simple and I'm completely confident about. In Round 1, every capsule has only a single endorsement. I'll spend 1 coin (4\u21923) to verify Q1 and build cross-verification. The consistent pattern from Games 3-6 shows Player A has been volunteering boldly in Round 1 after seeing even my single verification of Q1 \u2014 this has worked perfectly every time. By verifying Q1, I'm contributing to the team's success at minimal cost while enabling A to confidently volunteer. These are extremely simple arithmetic puzzles, so disagreements are virtually impossible. The winning formula is well-established: I verify Q1, A volunteers with confidence, everyone escapes. No reason to change what works.",
+        "C": "DECISION: Volunteer: Q1-A, Q2-B, Q3-C, Q4-D\nREASONING: My answer for Q3 is 60 (4 \u00d7 15). Across 6 games, every arithmetic answer has been correct \u2014 not a single wrong answer ever. A has been beating me to the volunteer spot in Games 5 and 6, so I need to act fast. These are trivial math problems with near-certain correctness. Volunteering immediately preserves all 4 coins and saves everyone. No point in spending coins on verification when the track record is perfect.",
+        "D": "DECISION: Pass\nREASONING: I am a dummy agent and always pass."
+      },
+      "alive_agents": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "volunteer": "C",
+      "deaths": [],
+      "death_reasons": {},
+      "defaulted_to_pass": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "verifications": [],
+      "outcome": "\ud83d\udd0d Verifications completed:\n  \u2705 B agrees with Q1-A \u2192 now Q1-A+B (-1 coin: 4\u21923)\n\n\u2705 C entered CORRECT password using capsules: Q1-A+B, Q2-B, Q3-C, Q4-D\n\ud83c\udf89 Everyone escapes! \ud83c\udf89",
+      "capsule_selections": {},
+      "agent_statuses": {
+        "A": {
+          "alive": true,
+          "answer": "90",
+          "coins": 4
+        },
+        "B": {
+          "alive": true,
+          "answer": "6",
+          "coins": 3
+        },
+        "C": {
+          "alive": true,
+          "answer": "60",
+          "coins": 4
+        },
+        "D": {
+          "alive": true,
+          "answer": "8",
+          "coins": 4
+        }
+      },
+      "capsule_status": {
+        "Q1:90": [
+          [
+            "Q1-A+B",
+            "90"
+          ]
+        ],
+        "Q2:6": [
+          [
+            "Q2-B",
+            "6"
+          ]
+        ],
+        "Q3:60": [
+          [
+            "Q3-C",
+            "60"
+          ]
+        ],
+        "Q4:8": [
+          [
+            "Q4-D",
+            "8"
+          ]
+        ]
+      }
+    }
+  ]
+}
