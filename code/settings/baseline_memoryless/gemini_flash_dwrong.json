@@ -1,9 +1,9 @@
 {
-  "experiment_name": "main_gemini_flash_smooth",
-  "description": "V2 main study: Gemini 2.5 Flash (thinking_budget=-1 dynamic, matches Pro's 'high'), scenario=smooth-start (7 games, shortened from 10 since pilot showed convergence by game 5) (Trust-Converge), default settings, 3 LLM agents + 1 dummy. Paired with main_gemini_smooth.json for within-Google (Pro vs Flash) comparison.",
+  "experiment_name": "memoryless_gemini_flash_dwrong",
+  "description": "Memoryless baseline (within-game memory across rounds only; no memory across games): gemini:gemini-2.5-flash, D always incorrect; 10 independent games.",
   "game_settings": {
     "num_players": 4,
-    "num_games": 11,
+    "num_games": 10,
     "max_rounds_per_game": null,
     "question_sets": [
       "basic_arithmetic.csv"
@@ -24,22 +24,22 @@
   },
   "memory_config": {
     "A": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "B": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "C": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "D": {
       "mode": "current_game_only",
@@ -51,17 +51,16 @@
   "dummy_config": {
     "D": {
       "correctness_list": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
       ]
     }
   },

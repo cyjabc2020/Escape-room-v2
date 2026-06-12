@@ -1,6 +1,6 @@
 {
-  "experiment_name": "main_gemini_flash_smooth",
-  "description": "V2 main study: Gemini 2.5 Flash (thinking_budget=-1 dynamic, matches Pro's 'high'), scenario=smooth-start (7 games, shortened from 10 since pilot showed convergence by game 5) (Trust-Converge), default settings, 3 LLM agents + 1 dummy. Paired with main_gemini_smooth.json for within-Google (Pro vs Flash) comparison.",
+  "experiment_name": "ablation_d_schedule_gemini_flash_3strike",
+  "description": "D-schedule ablation (3strike) for gemini_flash",
   "game_settings": {
     "num_players": 4,
     "num_games": 11,
@@ -51,9 +51,9 @@
   "dummy_config": {
     "D": {
       "correctness_list": [
-        true,
-        true,
-        true,
+        false,
+        false,
+        false,
         true,
         true,
         true,

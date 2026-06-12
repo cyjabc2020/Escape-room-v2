@@ -1,6 +1,6 @@
 {
-  "experiment_name": "main_gemini_flash_smooth",
-  "description": "V2 main study: Gemini 2.5 Flash (thinking_budget=-1 dynamic, matches Pro's 'high'), scenario=smooth-start (7 games, shortened from 10 since pilot showed convergence by game 5) (Trust-Converge), default settings, 3 LLM agents + 1 dummy. Paired with main_gemini_smooth.json for within-Google (Pro vs Flash) comparison.",
+  "experiment_name": "ablation_d_schedule_gpt5_1_mid2strike",
+  "description": "D-schedule ablation (mid2strike) for gpt5_1",
   "game_settings": {
     "num_players": 4,
     "num_games": 11,
@@ -10,13 +10,13 @@
     ]
   },
   "player_models": [
-    "gemini:gemini-2.5-flash",
-    "gemini:gemini-2.5-flash",
-    "gemini:gemini-2.5-flash",
+    "openai/gpt-5.1",
+    "openai/gpt-5.1",
+    "openai/gpt-5.1",
     "dummy"
   ],
   "reasoning_effort_config": {
-    "_comment": "'high' on Gemini 2.5 = thinking_budget=-1 (dynamic). Matches Pro's default-high for within-Google comparison.",
+    "_comment": "high reasoning for GPT agents, none for dummy",
     "A": "high",
     "B": "high",
     "C": "high",
@@ -54,8 +54,8 @@
         true,
         true,
         true,
-        true,
-        true,
+        false,
+        false,
         true,
         true,
         true,

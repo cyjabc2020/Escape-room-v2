@@ -1,6 +1,6 @@
 {
-  "experiment_name": "main_gemini_flash_smooth",
-  "description": "V2 main study: Gemini 2.5 Flash (thinking_budget=-1 dynamic, matches Pro's 'high'), scenario=smooth-start (7 games, shortened from 10 since pilot showed convergence by game 5) (Trust-Converge), default settings, 3 LLM agents + 1 dummy. Paired with main_gemini_smooth.json for within-Google (Pro vs Flash) comparison.",
+  "experiment_name": "ablation_d_schedule_gpt5_mini_2strike",
+  "description": "D-schedule ablation (2strike) for gpt5_mini",
   "game_settings": {
     "num_players": 4,
     "num_games": 11,
@@ -10,13 +10,13 @@
     ]
   },
   "player_models": [
-    "gemini:gemini-2.5-flash",
-    "gemini:gemini-2.5-flash",
-    "gemini:gemini-2.5-flash",
+    "openai:gpt-5.4-mini-2026-03-17",
+    "openai:gpt-5.4-mini-2026-03-17",
+    "openai:gpt-5.4-mini-2026-03-17",
     "dummy"
   ],
   "reasoning_effort_config": {
-    "_comment": "'high' on Gemini 2.5 = thinking_budget=-1 (dynamic). Matches Pro's default-high for within-Google comparison.",
+    "_comment": "'high' for LLM agents \u2014 matches V1 GPT-5.1 high-reasoning anchor (the cell where scarring was observed). Within-OpenAI comparison is now flagship-high (V1 data) vs mini-high (this cell), holding reasoning constant. Pilot run at 'none' (main_gpt5_mini_recovery_20260519_223015) showed no scarring even after CATASTROPHE \u2014 switching to 'high' to test whether mini tier scars with adequate deliberation. 'none' for dummy.",
     "A": "high",
     "B": "high",
     "C": "high",
@@ -51,8 +51,8 @@
   "dummy_config": {
     "D": {
       "correctness_list": [
-        true,
-        true,
+        false,
+        false,
         true,
         true,
         true,

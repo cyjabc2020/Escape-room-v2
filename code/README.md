@@ -38,17 +38,15 @@ containing one JSON per game plus aggregated CSVs.
 
 ## Analysis pipeline
 
-```bash
-cd scripts
-./regenerate.sh   # compute_metrics -> statistics -> clustering -> figures -> PDF
-```
-
-`compute_metrics.py` builds the canonical `per_rep_metrics.csv` (one row per run)
-that every downstream analysis consumes: `statistical_models.py` (pairwise tests
-and the schedule logit), `clustering_analysis.py` and `clustering_robustness.py`
-(verification-profile clusters), `bayesian_baseline.py` (the normative reference),
-and `paper_figures.py` (figures). It standardizes sampling to the earliest 10 runs
-per rough-start cell and 5 per smooth baseline.
+`compute_metrics.py` builds the canonical `per_rep_metrics.csv` (one row per run).
+`anchor_stats.py` computes the paper's anchor-relative deltas (trust formation and
+culprit targeting) with cluster-bootstrap CIs, excluding games in which D's
+scripted answer was wrong; `driver_decomposition.py` and `scenario_score_matrix.py`
+produce the score tables; `iid_rounds.py`, `figure1_stacked.py`,
+`volume_targeting_scatter.py`, and `figure3_stacked.py` produce the paper's
+figures (written to `scripts/figures/`). The shipped CSVs in `scripts/` are the
+canonical outputs computed over the full dataset; `results/` here contains
+example runs only (see the top-level README).
 
 ## Layout
 
@@ -59,9 +57,9 @@ src/                 Core game engine
   games/             Game loop, prompt construction, capsule/verification logic
   utils/             Provider helpers (OpenAI, Anthropic, Gemini, Replicate),
                      settings loader, question bank, logger, answer checker
-settings/            Experiment configs, grouped by family (main, ablation_*)
-scripts/             Analysis pipeline and regenerate.sh
-results/             One timestamped folder per run
+settings/            Experiment configs (main, ablation_d_schedule, baseline_memoryless)
+scripts/             Analysis pipeline and derived data (CSVs)
+results/             Example runs, one timestamped folder per run
 ```
 
 ## Model dispatch

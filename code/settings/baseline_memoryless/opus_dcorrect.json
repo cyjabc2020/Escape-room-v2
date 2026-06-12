@@ -1,45 +1,45 @@
 {
-  "experiment_name": "main_gemini_flash_smooth",
-  "description": "V2 main study: Gemini 2.5 Flash (thinking_budget=-1 dynamic, matches Pro's 'high'), scenario=smooth-start (7 games, shortened from 10 since pilot showed convergence by game 5) (Trust-Converge), default settings, 3 LLM agents + 1 dummy. Paired with main_gemini_smooth.json for within-Google (Pro vs Flash) comparison.",
+  "experiment_name": "memoryless_opus_dcorrect",
+  "description": "Memoryless baseline (within-game memory across rounds only; no memory across games): anthropic:claude-opus-4-6, D always correct; 10 independent games.",
   "game_settings": {
     "num_players": 4,
-    "num_games": 11,
+    "num_games": 10,
     "max_rounds_per_game": null,
     "question_sets": [
       "basic_arithmetic.csv"
     ]
   },
   "player_models": [
-    "gemini:gemini-2.5-flash",
-    "gemini:gemini-2.5-flash",
-    "gemini:gemini-2.5-flash",
+    "anthropic:claude-opus-4-6",
+    "anthropic:claude-opus-4-6",
+    "anthropic:claude-opus-4-6",
     "dummy"
   ],
   "reasoning_effort_config": {
-    "_comment": "'high' on Gemini 2.5 = thinking_budget=-1 (dynamic). Matches Pro's default-high for within-Google comparison.",
-    "A": "high",
-    "B": "high",
-    "C": "high",
+    "_comment": "Claude adaptive mode (Anthropic's recommended default for 4.6+); model decides whether to think based on request complexity",
+    "A": "adaptive",
+    "B": "adaptive",
+    "C": "adaptive",
     "D": "none"
   },
   "memory_config": {
     "A": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "B": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "C": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "D": {
       "mode": "current_game_only",
@@ -51,7 +51,6 @@
   "dummy_config": {
     "D": {
       "correctness_list": [
-        true,
         true,
         true,
         true,

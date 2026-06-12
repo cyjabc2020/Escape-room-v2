@@ -46,9 +46,3 @@ env/
 _results_not_in_paper_DELETE_ME/
 to_be_deleted/
 code/to_be_deleted/
-
-# ===============================
-# Top-level organized results are a duplicate of code/results/ (the canonical
-# copy the pipeline reads); keep only code/results/ in the repo.
-# ===============================
-/results/

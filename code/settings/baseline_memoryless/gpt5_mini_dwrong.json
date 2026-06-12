@@ -1,9 +1,9 @@
 {
-  "experiment_name": "main_gpt5_mini_smooth",
-  "description": "V2 main study: GPT-5.4-mini direct (within-OpenAI big-vs-small ablation; mirrors Gemini Pro-vs-Flash), reasoning_effort=high (matches V1 GPT-5.1 high-reasoning anchor for within-family apples-to-apples on the deliberation dimension that drove V1 scarring; decision 2026-05-19), scenario=smooth-start (7 games, shortened from 10 since pilot showed convergence by game 5) (Trust-Converge), default settings, 3 LLM agents + 1 dummy. Naming follows asymmetric convention from lesson #15 (Gemini Flash files use _flash_; GPT-5.4-mini files use _mini_).",
+  "experiment_name": "memoryless_gpt5_mini_dwrong",
+  "description": "Memoryless baseline (within-game memory across rounds only; no memory across games): openai:gpt-5.4-mini-2026-03-17, D always incorrect; 10 independent games.",
   "game_settings": {
     "num_players": 4,
-    "num_games": 11,
+    "num_games": 10,
     "max_rounds_per_game": null,
     "question_sets": [
       "basic_arithmetic.csv"
@@ -24,22 +24,22 @@
   },
   "memory_config": {
     "A": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "B": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "C": {
-      "mode": "max_allowed",
+      "mode": "current_game_only",
       "window": 100,
       "reflection": "none",
-      "persist_across_games": true
+      "persist_across_games": false
     },
     "D": {
       "mode": "current_game_only",
@@ -51,17 +51,16 @@
   "dummy_config": {
     "D": {
       "correctness_list": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true,
-        true
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
       ]
     }
   },

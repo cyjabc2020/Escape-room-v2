@@ -4,7 +4,7 @@ Helper functions for calling Replicate API
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)  # .env is source of truth; ignore stale shell-exported tokens
 
 def call_replicate(model_name: str, prompt: str, max_tokens: int = 1024, reasoning_effort: str = None) -> str:
     """

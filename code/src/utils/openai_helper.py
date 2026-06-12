@@ -15,7 +15,7 @@ Usage:
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)  # .env is source of truth; ignore stale shell-exported tokens
 
 
 def call_openai(

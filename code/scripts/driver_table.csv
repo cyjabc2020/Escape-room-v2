@@ -1,0 +1,7 @@
+model,verif_per_game,rounds_per_game,vol_per_game,redundancy,pct_die_novol,pct_die_wrong,survival_pct,coins_per_agent
+GPT-5.1,1.87,1.58,1.69,1.41,68,32,84.4,2.9
+Opus,2.71,1.64,1.43,1.22,75,25,83.6,2.64
+Sonnet,2.75,1.62,1.33,1.23,82,18,83.4,2.64
+GPT-5.4-mini,2.91,1.95,1.48,1.31,78,22,74.5,2.29
+Gemini Pro,3.31,2.03,1.52,1.21,83,17,74.0,2.18
+Gemini Flash,5.61,3.25,0.86,1.61,99,1,43.8,0.91
