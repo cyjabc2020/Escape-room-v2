@@ -3,7 +3,7 @@
   "description": "V2 main study: GPT-5.1 direct, reasoning_effort=none (provider default), scenario=smooth-start (7 games, shortened from 10 since pilot showed convergence by game 5) (Trust-Converge), default settings, 3 LLM agents + 1 dummy",
   "game_settings": {
     "num_players": 4,
-    "num_games": 10,
+    "num_games": 11,
     "max_rounds_per_game": null,
     "question_sets": [
       "basic_arithmetic.csv"
