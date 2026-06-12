@@ -10,9 +10,9 @@
     ]
   },
   "player_models": [
-    "openai:gpt-5.1-2025-11-13",
-    "openai:gpt-5.1-2025-11-13",
-    "openai:gpt-5.1-2025-11-13",
+    "openai/gpt-5.1",
+    "openai/gpt-5.1",
+    "openai/gpt-5.1",
     "dummy"
   ],
   "reasoning_effort_config": {

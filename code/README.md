@@ -38,7 +38,6 @@ containing one JSON per game plus aggregated CSVs.
 
 ## Analysis pipeline
 
-`compute_metrics.py` builds the canonical `per_rep_metrics.csv` (one row per run).
 `anchor_stats.py` computes the paper's anchor-relative deltas (trust formation and
 culprit targeting) with cluster-bootstrap CIs, excluding games in which D's
 scripted answer was wrong; `driver_decomposition.py` and `scenario_score_matrix.py`

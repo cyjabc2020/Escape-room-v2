@@ -47,7 +47,6 @@ cd code
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 cd scripts
-python compute_metrics.py          # per-run metrics -> per_rep_metrics.csv
 python anchor_stats.py             # anchor-relative deltas + cluster bootstrap CIs
                                    # (excludes games where D's scripted answer was wrong)
 python driver_decomposition.py     # score drivers (Table 3)

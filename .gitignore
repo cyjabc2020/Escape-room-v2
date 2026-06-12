@@ -29,18 +29,6 @@ env/
 *.log
 
 # ===============================
-# LaTeX build artifacts
-# ===============================
-*.aux
-*.bbl
-*.blg
-*.out
-*.toc
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-
-# ===============================
 # Quarantined / non-paper data (not for publication)
 # ===============================
 _results_not_in_paper_DELETE_ME/
