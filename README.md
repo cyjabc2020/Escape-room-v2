@@ -36,10 +36,9 @@ code/
 a GPT-5.1 recovery run, and a memoryless anchor run) so the log format and
 analysis pipeline can be inspected end to end. The full dataset behind the
 paper (170 with-memory runs plus the memoryless anchor cells) is too large
-for the repository; the paper's per-cell numbers are preserved in the derived
-CSVs under `code/scripts/` (`per_rep_metrics.csv`, `anchor_deltas.csv`,
-`driver_table.csv`, `baseline_levels.csv`), and the raw logs are available
-from the author on request.
+for the repository; the paper's anchor-relative deltas are preserved in
+`code/scripts/anchor_deltas.csv`, and the raw logs are available from the
+author on request.
 
 ## Analysis pipeline
 
